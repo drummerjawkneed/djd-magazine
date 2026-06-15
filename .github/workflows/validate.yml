@@ -1,0 +1,43 @@
+name: Validate Magazine Push
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate banner.json
+        run: |
+          python3 -c "
+          import json, sys
+          with open('banner.json') as f:
+              data = json.load(f)
+          required = ['month', 'headline', 'summary', 'link', 'updated']
+          missing = [k for k in required if k not in data]
+          if missing:
+              print(f'ERROR: banner.json missing fields: {missing}')
+              sys.exit(1)
+          print(f'OK: banner.json valid for {data[\"month\"]}')
+          "
+
+      - name: Check index.html exists in latest/
+        run: |
+          if [ ! -f "latest/index.html" ]; then
+            echo "ERROR: latest/index.html missing"
+            exit 1
+          fi
+          echo "OK: latest/index.html exists ($(wc -c < latest/index.html) bytes)"
+
+      - name: Notify Discord on deploy
+        if: success()
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_MAGAZINE }}
+        run: |
+          MONTH=$(python3 -c "import json; print(json.load(open('banner.json'))['month'])")
+          curl -s -X POST "$DISCORD_WEBHOOK" \
+            -H "Content-Type: application/json" \
+            -d "{\"embeds\":[{\"title\":\"✅ Magazine Deployed\",\"description\":\"Drummers & Dreamers eMagazine — $MONTH is live.\",\"color\":15022918,\"url\":\"https://magazine.drummerjawkneed.com\"}]}"
