@@ -36,6 +36,20 @@ Run this checklist on every fact:
 
 ---
 
+## ✅ Pre-Publish Fact-Check Checklist
+
+Run this on every issue **before** it ships, not after. Every item below traces back to an actual correction made in Issue 01 — treat it as the minimum bar, not a suggestion.
+
+- [ ] **Full lineup check** — for any band/act covered, list every current member by name and cross-reference against the official site. Don't drop members (Loren Gold was initially omitted from the Rush lineup).
+- [ ] **Tour/album naming** — verify the *exact* official name of a tour or album. Don't infer or paraphrase a name (Rush's "Fifty Something" was wrongly called a "50th anniversary tour").
+- [ ] **Historical dates** — for any "last time X happened" or "ended in" claim, verify the precise end date against a primary source (R40 tour ended August 1, 2015 — not 2011, not 2013).
+- [ ] **Ages** — calculate from birth year against the *current* publication date, not the date a fact was researched or an event was announced.
+- [ ] **Discography counts** — list every album by title and year from the artist's official site or label page before stating a count (Anika Nilles: 4 albums — *Pikalar* (2017), *For a Colorful Soul* (2020), *Opuntia* (2022), *False Truth* (2025) — not 2).
+- [ ] **Photo credit** — every photo has a named photographer + publication + year, or it doesn't run (Art Cruz photo required explicit credit: Travis Shinn for Modern Drummer).
+- [ ] **Final read-through** — one pass reading only for factual claims (names, numbers, dates, titles), separate from the voice/style pass.
+
+---
+
 ## 📷 Image Policy
 
 ### Permitted Sources (in order of preference)
@@ -202,6 +216,7 @@ Editorial news commentary, criticism, and education = generally protected. Produ
 ├── latest/index.html       → Always current issue
 ├── june-2026/index.html    → Archived Issue 01
 ├── july-2026/index.html    → Issue 02 (when published)
+├── drafts/issue-XX-month-year/ → In-progress issue (brief, research, draft HTML, candidate assets) — not deployed, promoted to a dated folder above at publish time
 ├── style.css               → Shared styles (extract from HTML each issue)
 ├── banner.json             → Homepage embed data (auto-updated by n8n)
 ├── STANDARDS.md            → This file
