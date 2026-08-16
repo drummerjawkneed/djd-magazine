@@ -14,6 +14,7 @@ Monthly eMagazine for the global drum streaming community.
 | `banner.json` | Homepage embed data (auto-updated by n8n) |
 | `STANDARDS.md` | Editorial standards and style guide |
 | `CHANGELOG.md` | Issue history and corrections |
+| `drafts/` | In-progress issues (not deployed) |
 
 ## Deploy
 
