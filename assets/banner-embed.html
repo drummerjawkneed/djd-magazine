@@ -1,0 +1,199 @@
+<!-- ============================================================
+  DRUMMERS & DREAMERS MAGAZINE — HOMEPAGE BANNER EMBED
+  Paste this into your Fourthwall custom HTML block.
+  Never needs updating — fetches banner.json automatically each month.
+  ============================================================ -->
+
+<style>
+  .djd-mag-banner {
+    font-family: 'Rajdhani', 'Inter', sans-serif;
+    background: #111118;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-left: 3px solid #E63946;
+    padding: 1.5rem 1.75rem;
+    max-width: 640px;
+    margin: 1.5rem auto;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    text-decoration: none;
+    display: block;
+    color: inherit;
+  }
+  .djd-mag-banner:hover {
+    border-left-color: #00B4D8;
+    background: #16161F;
+  }
+  .djd-mag-banner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 80% at 90% 50%, rgba(230,57,70,0.06), transparent);
+    pointer-events: none;
+  }
+  .djd-mag-eyebrow {
+    font-size: 0.58rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #E63946;
+    font-family: 'Space Mono', monospace;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .djd-mag-eyebrow::before {
+    content: '';
+    width: 16px;
+    height: 1px;
+    background: #E63946;
+    flex-shrink: 0;
+  }
+  .djd-mag-title {
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1.15;
+    margin-bottom: 0.5rem;
+    font-family: 'Rajdhani', sans-serif;
+    letter-spacing: 0.01em;
+  }
+  .djd-mag-summary {
+    font-size: 0.85rem;
+    color: #888899;
+    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    margin-bottom: 0.9rem;
+  }
+  .djd-mag-cta {
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #00B4D8;
+    font-family: 'Space Mono', monospace;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .djd-mag-cta-arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+  }
+  .djd-mag-banner:hover .djd-mag-cta-arrow {
+    transform: translateX(4px);
+  }
+  .djd-mag-month-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(230,57,70,0.12);
+    border: 1px solid rgba(230,57,70,0.2);
+    color: #E63946;
+    font-size: 0.56rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    font-family: 'Space Mono', monospace;
+  }
+  .djd-mag-loading {
+    font-size: 0.75rem;
+    color: #555566;
+    font-family: 'Space Mono', monospace;
+    padding: 1rem;
+    text-align: center;
+  }
+  @media (max-width: 480px) {
+    .djd-mag-banner { padding: 1.25rem 1.25rem; }
+    .djd-mag-month-badge { display: none; }
+  }
+</style>
+
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&family=Inter:wght@300;400&family=Space+Mono&display=swap" rel="stylesheet">
+
+<div id="djd-magazine-banner">
+  <div class="djd-mag-loading">Loading latest issue...</div>
+</div>
+
+<script>
+(function() {
+  var BANNER_URL = 'https://magazine.drummerjawkneed.com/banner.json';
+  var container = document.getElementById('djd-magazine-banner');
+
+  fetch(BANNER_URL + '?v=' + Date.now())
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      container.innerHTML = [
+        '<a class="djd-mag-banner" href="' + data.link + '" target="_blank" rel="noopener">',
+          '<div class="djd-mag-month-badge">' + data.month + '</div>',
+          '<div class="djd-mag-eyebrow">Drummers &amp; Dreamers Magazine</div>',
+          '<div class="djd-mag-title">' + data.headline + '</div>',
+          '<div class="djd-mag-summary">' + data.summary + '</div>',
+          '<div class="djd-mag-cta">Read This Issue <span class="djd-mag-cta-arrow">→</span></div>',
+        '</a>'
+      ].join('');
+    })
+    .catch(function() {
+      // Fallback static banner if fetch fails
+      container.innerHTML = [
+        '<a class="djd-mag-banner" href="https://magazine.drummerjawkneed.com/latest" target="_blank" rel="noopener">',
+          '<div class="djd-mag-eyebrow">Drummers &amp; Dreamers Magazine</div>',
+          '<div class="djd-mag-title">The Drumming World Is Alive Again</div>',
+          '<div class="djd-mag-summary">Rush returns. New gear drops. The drum streaming scene keeps growing. Read what moved the sticks this month.</div>',
+          '<div class="djd-mag-cta">Read This Issue <span class="djd-mag-cta-arrow">→</span></div>',
+        '</a>'
+      ].join('');
+    });
+})();
+</script>
+
+
+<!-- ============================================================
+  BANNER.JSON SCHEMA
+  File lives at: https://magazine.drummerjawkneed.com/banner.json
+  Updated automatically each month by n8n pipeline.
+  ============================================================
+
+{
+  "month": "June 2026",
+  "headline": "The Drumming World Is Alive Again",
+  "summary": "Rush returns, Anika Nilles kills it, and new gear is collapsing the gap between bedroom and stage.",
+  "link": "https://magazine.drummerjawkneed.com/june-2026",
+  "updated": "2026-06-01T08:00:00.000Z"
+}
+
+============================================================ -->
+
+
+<!-- ============================================================
+  CLOUDFLARE PAGES REPO STRUCTURE
+  ============================================================
+
+  djd-magazine/ (GitHub repo → Cloudflare Pages auto-deploy)
+  ├── banner.json              ← Updated monthly by n8n
+  ├── style.css                ← Shared styles (from magazine template)
+  ├── latest/
+  │   └── index.html           ← Always the current issue
+  ├── june-2026/
+  │   └── index.html
+  ├── july-2026/
+  │   └── index.html
+  └── _redirects               ← Cloudflare Pages redirect rules
+      /magazine          /latest     301
+      /mag               /latest     301
+
+  Cloudflare Pages Settings:
+  - Build command: (none — static HTML)
+  - Output dir: /
+  - Custom domain: magazine.drummerjawkneed.com
+
+  GitHub PAT scopes needed:
+  - repo (read/write contents)
+
+  n8n env vars needed:
+  - KIT_API_KEY          → Kit API key (from kit.com account settings)
+  - DISCORD_WEBHOOK_MAGAZINE  → Discord webhook for #djd-magazine channel
+  - GITHUB_PAT           → Set as HTTP Header Auth credential in n8n
+
+============================================================ -->
