@@ -10,7 +10,9 @@ Monthly eMagazine for the global drum streaming community.
 | Path | Content |
 |---|---|
 | `/june-2026/` | Issue 01 — June 2026 |
-| `/latest/` | Always the current issue |
+| `/july-2026/` | Issue 02 — July 2026 |
+| `/august-2026/` | Issue 03 — August 2026 (current) |
+| `/latest/` | Always the current issue (mirrors the newest issue folder) |
 | `banner.json` | Homepage embed data (auto-updated by n8n) |
 | `STANDARDS.md` | Editorial standards and style guide |
 | `CHANGELOG.md` | Issue history and corrections |
