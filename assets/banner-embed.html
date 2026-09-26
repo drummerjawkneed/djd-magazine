@@ -121,29 +121,61 @@
   var BANNER_URL = 'https://magazine.drummerjawkneed.com/banner.json';
   var container = document.getElementById('djd-magazine-banner');
 
+  function renderBanner(link, month, headline, summary) {
+    var a = document.createElement('a');
+    a.className = 'djd-mag-banner';
+    a.href = link;
+    a.target = '_blank';
+    a.rel = 'noopener';
+
+    if (month) {
+      var badge = document.createElement('div');
+      badge.className = 'djd-mag-month-badge';
+      badge.textContent = month;
+      a.appendChild(badge);
+    }
+
+    var eyebrow = document.createElement('div');
+    eyebrow.className = 'djd-mag-eyebrow';
+    eyebrow.textContent = 'Drummers & Dreamers Magazine';
+    a.appendChild(eyebrow);
+
+    var title = document.createElement('div');
+    title.className = 'djd-mag-title';
+    title.textContent = headline;
+    a.appendChild(title);
+
+    var summaryEl = document.createElement('div');
+    summaryEl.className = 'djd-mag-summary';
+    summaryEl.textContent = summary;
+    a.appendChild(summaryEl);
+
+    var cta = document.createElement('div');
+    cta.className = 'djd-mag-cta';
+    cta.appendChild(document.createTextNode('Read This Issue '));
+    var arrow = document.createElement('span');
+    arrow.className = 'djd-mag-cta-arrow';
+    arrow.textContent = '→';
+    cta.appendChild(arrow);
+    a.appendChild(cta);
+
+    container.innerHTML = '';
+    container.appendChild(a);
+  }
+
   fetch(BANNER_URL + '?v=' + Date.now())
     .then(function(r) { return r.json(); })
     .then(function(data) {
-      container.innerHTML = [
-        '<a class="djd-mag-banner" href="' + data.link + '" target="_blank" rel="noopener">',
-          '<div class="djd-mag-month-badge">' + data.month + '</div>',
-          '<div class="djd-mag-eyebrow">Drummers &amp; Dreamers Magazine</div>',
-          '<div class="djd-mag-title">' + data.headline + '</div>',
-          '<div class="djd-mag-summary">' + data.summary + '</div>',
-          '<div class="djd-mag-cta">Read This Issue <span class="djd-mag-cta-arrow">→</span></div>',
-        '</a>'
-      ].join('');
+      renderBanner(data.link, data.month, data.headline, data.summary);
     })
     .catch(function() {
       // Fallback static banner if fetch fails
-      container.innerHTML = [
-        '<a class="djd-mag-banner" href="https://magazine.drummerjawkneed.com/latest" target="_blank" rel="noopener">',
-          '<div class="djd-mag-eyebrow">Drummers &amp; Dreamers Magazine</div>',
-          '<div class="djd-mag-title">The Drumming World Is Alive Again</div>',
-          '<div class="djd-mag-summary">Rush returns. New gear drops. The drum streaming scene keeps growing. Read what moved the sticks this month.</div>',
-          '<div class="djd-mag-cta">Read This Issue <span class="djd-mag-cta-arrow">→</span></div>',
-        '</a>'
-      ].join('');
+      renderBanner(
+        'https://magazine.drummerjawkneed.com/latest',
+        null,
+        'The Drumming World Is Alive Again',
+        'Rush returns. New gear drops. The drum streaming scene keeps growing. Read what moved the sticks this month.'
+      );
     });
 })();
 </script>
