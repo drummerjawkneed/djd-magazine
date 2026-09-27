@@ -1,0 +1,5 @@
+# Dependencies for scripts/image_pipeline.py's post-processing step (webp conversion, resize,
+# focal-point-aware crop). The sourcing functions themselves have no hard dependency beyond the
+# standard library plus whatever SearchProvider/PlatformClient the caller injects.
+Pillow>=10.0
+requests>=2.31

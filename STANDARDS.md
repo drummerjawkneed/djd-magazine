@@ -52,14 +52,31 @@ Run this on every issue **before** it ships, not after. Every item below traces 
 
 ## 📷 Image Policy
 
-### Permitted Sources (in order of preference)
+**Updated September 2026 — every image in every issue must be a precisely-matching real photo
+of the actual subject. Generic stock is never a default choice, only a documented last resort.**
+This is implemented as a reusable pipeline, `scripts/image_pipeline.py`, that the monthly
+generation workflow calls once per image slot — see that file's own docstring for the full
+design. The rules below are that pipeline's actual policy, not just guidance for a human editor.
 
-1. **Original photos** — shot by DJD or submitted by subjects with permission
-2. **Unsplash / Pexels** — free commercial license, download properly
-3. **Official product CDN images** — JBL, Roland, Yamaha etc. linking to product pages (editorial use)
-4. **Twitch og:image** — fetched directly from `twitch.tv/{channel}` page meta, public
-5. **YouTube channel avatars** — `yt3.googleusercontent.com` format
-6. **Press photos with explicit attribution** — credit photographer + publication, link to source
+### Sourcing rules, by subject type
+
+| Subject type | Real source | Notes |
+|---|---|---|
+| **Touring artist/band** | Official EPK / press-kit photo — search `"<name> EPK"` and `"<name> press kit photos"`, prefer a hit on the artist's or label's own domain | EPKs are built by artists/labels specifically for this kind of use and expect a photo credit in return — that credit is mandatory, not optional |
+| **Streamer (Twitch/Kick/YouTube)** | The streamer's own public profile photo or channel banner | Publicly displayed by the platform for exactly this identification/promotional purpose — always link the channel as attribution |
+| **Gear/product** | The manufacturer's own official product photography, from the manufacturer's own product page | Never a third-party retailer's photo if the manufacturer's own page has one |
+| **DJD/DrummerJawkneeD himself** | His own real footage/photos ONLY — check `assets/djd-real-photos/` (and the `obsidian-vault` repo, if checked out alongside this one) first | **Never** falls through to an external search for his own content — if nothing real is found locally, that's a genuine "no photo available" result, not a reason to substitute a stand-in |
+
+### Last-resort fallback — documented, never a default
+
+Wikimedia Commons (public-domain/historical subjects) or a stock-photo API with clear visible
+attribution, used **only** when a real, precisely-matching photo genuinely cannot be found after
+trying the table above. Every fallback use is written into the issue's `image-manifest.json`
+with `is_fallback: true` — visible to whoever reviews the issue before it publishes, never
+silently normalized into looking like a real sourced photo. Same principle covers a source that's
+blocked or unreachable in a given run (e.g. a sandboxed environment that can't reach a given
+platform) — that's recorded as `none-available`/`unverified-candidate` in the manifest, not
+guessed at.
 
 ### Prohibited
 
@@ -67,15 +84,35 @@ Run this on every issue **before** it ships, not after. Every item below traces 
 - ❌ Stock photos representing real named people or specific real events
 - ❌ Images that misrepresent what is being described (e.g., generic "singer" photo for "drummer" article)
 - ❌ AI-generated photos of real named people
+- ❌ Treating a fallback/unverified image as if it were a confirmed real sourced photo — the
+  manifest's `is_fallback`/`approved` fields must stay honest, not optimistic
 
 ### Attribution Format
 ```
 Photo: [Photographer Name] for [Publication] · [Year]
 ```
-Always link to original source article.
+Always link to original source article. For a manifest-sourced image, `credit` and
+`source_kind` in `image-manifest.json` are the attribution record; the rendered page's visible
+caption should match it.
+
+### Human approval before publish
+
+Every issue's `image-manifest.json` starts with `"approved": false` at the issue level, and each
+individual slot defaults to approved only if it's a real, non-fallback source (`is_fallback:
+false`). Any fallback slot needs a human to review it and flip it to `approved: true` — in
+practice, that review happens as part of reviewing this issue's draft PR; merging the PR is the
+approval gate, not a separate tool. Run `python scripts/image_pipeline.py approve --issue
+<slug>` (optionally `--slot <id>` for one slot at a time) once reviewed.
+
+### Post-processing (also handled by the pipeline)
+
+Every sourced image is converted to compressed WebP at a sane max width, gets real (non-generic)
+alt text generated from its actual credit/subject data, and is cropped toward a focal point so a
+subject's face never gets cut off by an aspect-ratio change — see `process_image()` and
+`generate_alt_text()` in `scripts/image_pipeline.py`.
 
 ### If No Real Photo Available
-Use **branded SVG illustration** (our drum icon system) rather than a misleading stock photo. Honesty > aesthetics.
+Use **branded SVG illustration** (our drum icon system) rather than a misleading stock photo. Honesty > aesthetics. This is also the fallback the pipeline uses for a subject-type-appropriate source it couldn't reach or verify this run.
 
 ---
 
@@ -123,7 +160,9 @@ Editorial news commentary, criticism, and education = generally protected. Produ
 |---|---|
 | Editor's Note | Personal, direct, punchy |
 | Cover Story | Long-form journalism, earned authority |
+| Drummer Spotlight (Historical) | Reverent but not hagiographic — real biography, real context |
 | Gear & Tech | Factual, useful, with opinion |
+| Drummer Pick of the Month | Opinionated, specific, argues its case in a paragraph or two |
 | Drum Lesson | Teaching voice, clear steps, encouraging |
 | Streamer Scene | Enthusiastic but accurate, community-first |
 | DJD Spotlight | Honest, never self-promotional |
@@ -137,10 +176,12 @@ Editorial news commentary, criticism, and education = generally protected. Produ
 | Section | Content | Notes |
 |---|---|---|
 | Editor's Note | 200-250 words | Must reference biggest story of month |
-| Cover Story | 400-600 words | One major feature, full-bleed photo |
+| Cover Story | 400-600 words | One major feature |
+| Drummer Spotlight (Historical) | 250-350 words | **Added September 2026.** Goes backward, not forward — a real historical figure, not this month's news. Drummerworld-style biographical depth |
 | Gear & Tech | 3-5 items | Mix of big releases + smaller news |
+| Drummer Pick of the Month | 100-200 words | **Added September 2026.** One specific, curated piece of drumming, argued for directly (Pitchfork-style single-work focus) — not a roundup entry |
 | Drum Lesson | 1 lesson + 4 steps | Intermediate or beginner, rotating difficulty |
-| Streamer Scene | 4 streamers | Rotate monthly, always verified data |
+| Streamer Scene | 4 streamers | Rotate monthly, always verified data, never the same 4 as last issue |
 | DJD Spotlight | 250-300 words | Honest, not hype |
 | Drum Culture | 4 takes, 150-200 words each | Opinionated, linked |
 | Gear Picks | 4 affiliate cards | Mark clearly as affiliate |
@@ -166,6 +207,8 @@ Editorial news commentary, criticism, and education = generally protected. Produ
 - [ ] Run Claude composition pass via n8n Anthropic node
 - [ ] Review and edit Claude output — apply voice corrections
 - [ ] Build HTML using current template
+- [ ] Call `scripts/image_pipeline.py source` for every image slot (cover, spotlight, gear, streamers) — never hand-pick a stock photo instead
+- [ ] Review the issue's `image-manifest.json`; resolve every `is_fallback: true` slot (real photo, illustration, or an explicit call to leave it) before approving
 - [ ] Embed all real images with attribution
 - [ ] Test all links (no dead links)
 - [ ] Spell check all names against official sources
@@ -194,9 +237,10 @@ Editorial news commentary, criticism, and education = generally protected. Produ
 ### What MD Does We Should Adopt
 - [ ] **Readers Poll** — annual poll for best drum streamer, best gear release, best lesson
 - [ ] **Recording Reviews** — short reviews of albums with notable drumming
-- [ ] **New Products** roundup — brief notes on gear announcements
+- [x] **New Products** roundup — brief notes on gear announcements — **live as the Gear & Tech recurring department, September 2026**
 - [ ] **Educational Department rotation** — different lesson topics each issue by guest contributors
 - [ ] **Letters/Community** section — curated community responses/tips
+- [x] **Drummerworld-style historical depth** — **live as the Drummer Spotlight (Historical) recurring department, September 2026** — see Structure Per Issue above
 
 ### What We Do They Can't
 - ✅ Drum streaming community coverage at depth
@@ -217,6 +261,10 @@ Editorial news commentary, criticism, and education = generally protected. Produ
 ├── june-2026/index.html    → Archived Issue 01
 ├── july-2026/index.html    → Issue 02 (when published)
 ├── drafts/issue-XX-month-year/ → In-progress issue (brief, research, draft HTML, candidate assets) — not deployed, promoted to a dated folder above at publish time
+├── <month>-<year>/image-manifest.json → Per-issue real-photo sourcing record (see Image Policy) — reviewed as part of that issue's PR, not deployed as a page itself but committed alongside one
+├── scripts/image_pipeline.py → Reusable real-photo sourcing module, called once per image slot by the monthly generation pipeline
+├── assets/djd-real-photos/ → Real DJD/DrummerJawkneeD photos & footage, checked first for any "self" image slot
+├── requirements.txt        → Python deps for scripts/image_pipeline.py (Pillow, requests)
 ├── style.css               → Shared styles (extract from HTML each issue)
 ├── banner.json             → Homepage embed data (auto-updated by n8n)
 ├── STANDARDS.md            → This file
