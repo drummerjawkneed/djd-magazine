@@ -187,6 +187,22 @@
       "notes": "Checked /home/user/djd-magazine/assets/djd-real-photos \u2014 no matching real asset found. Per policy this NEVER falls through to an external search for Johnny's own content. Use the site's branded-illustration treatment instead of stock, and flag this slot for Johnny to drop a real photo/clip into assets/djd-real-photos for next month.",
       "search_queries_tried": [],
       "approved": false
+    },
+    "gear_tech_department_header": {
+      "subject_type": "original-design",
+      "name": "Gear & Tech department header",
+      "url": "assets/gear-tech-department-header.png",
+      "credit": "Original Drummers and Dreamers design (Canva)",
+      "license": "owned",
+      "source_kind": "original-design",
+      "is_fallback": false,
+      "alt_text": "Drummers and Dreamers Gear and Tech department header, red and black editorial banner with drum hardware silhouettes",
+      "focal_point": [
+        0.5,
+        0.5
+      ],
+      "notes": "Original graphic generated in Canva specifically as a reusable department header -- deliberately does not reference any specific brand, since this department rotates gear brands every issue. Not sourced from an external search; created for this exact purpose.",
+      "approved": true
     }
   },
   "fallback_count": 10
