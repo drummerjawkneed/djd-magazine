@@ -208,6 +208,15 @@ body::after{content:'';position:fixed;inset:0;background:repeating-linear-gradie
 .slnk.ki{color:var(--gr);border-color:rgba(83,252,24,.2);background:rgba(83,252,24,.04)}
 .slnk.wb{color:var(--c);border-color:rgba(0,180,216,.2);background:rgba(0,180,216,.04)}
 
+.deal-note{font-size:.76rem;color:rgba(120,120,146,.55);line-height:1.6;margin-top:.5rem}
+
+.nl-box{background:linear-gradient(135deg,rgba(230,57,70,.08) 0%,rgba(0,180,216,.06) 100%);border:1px solid rgba(0,180,216,.2);padding:clamp(2rem,5vw,3rem);text-align:center;position:relative;overflow:hidden}
+.nl-box::before{content:'';position:absolute;top:-1.5rem;right:-1rem;font-size:9rem;font-family:var(--fd);font-weight:900;color:rgba(255,255,255,.025);line-height:1;pointer-events:none}
+.nl-kick{font-family:var(--fm);font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--c);margin-bottom:.9rem}
+.nl-h{font-family:var(--fd);font-size:clamp(1.5rem,3.4vw,2.2rem);font-weight:700;color:#fff;margin-bottom:.6rem;line-height:1.1}
+.nl-p{font-size:.92rem;color:var(--dm);margin-bottom:1.6rem;max-width:46ch;margin-left:auto;margin-right:auto;line-height:1.7}
+.nl-foot{margin-top:1rem;font-family:var(--fm);font-size:.52rem;letter-spacing:.1em;color:rgba(120,120,146,.45);text-transform:uppercase}
+
 .spot{position:relative;margin:4rem calc(-1 * var(--pd)) 0;overflow:hidden;min-height:64vh;display:flex;align-items:center;background:radial-gradient(ellipse 90% 100% at 85% 40%,rgba(230,57,70,.10),transparent 60%),var(--deep)}
 .spot-art{position:absolute;inset:0;display:flex;align-items:center;justify-content:flex-end;opacity:.5;pointer-events:none}
 .spot-art svg{height:70%;width:auto;max-width:46%}
@@ -334,9 +343,12 @@ body::after{content:'';position:fixed;inset:0;background:repeating-linear-gradie
       <li><a onclick="gs('news');cl()"><span class="tn">03</span><span class="tt">This Month</span><span class="ts">News</span></a></li>
       <li><a onclick="gs('gear');cl()"><span class="tn">04</span><span class="tt">Gear &amp; Tech</span><span class="ts">Department · New</span></a></li>
       <li><a onclick="gs('pick');cl()"><span class="tn">05</span><span class="tt">Pick of the Month</span><span class="ts">Curated · New</span></a></li>
+      <li><a onclick="gs('deals');cl()"><span class="tn">05b</span><span class="tt">Gear Deals</span><span class="ts">Sweetwater</span></a></li>
       <li><a onclick="gs('streamers');cl()"><span class="tn">06</span><span class="tt">Streamer Scene</span><span class="ts">Community</span></a></li>
       <li><a onclick="gs('spotlight');cl()"><span class="tn">07</span><span class="tt">DJD Spotlight</span><span class="ts">Feature</span></a></li>
       <li><a onclick="gs('culture');cl()"><span class="tn">08</span><span class="tt">Drum Culture</span><span class="ts">4 Takes</span></a></li>
+      <li><a onclick="gs('work-with-djd');cl()"><span class="tn">08b</span><span class="tt">Work With DJD</span><span class="ts">Lessons</span></a></li>
+      <li><a onclick="gs('newsletter');cl()"><span class="tn">08c</span><span class="tt">Newsletter</span><span class="ts">Subscribe</span></a></li>
       <li><a onclick="gs('next');cl()"><span class="tn">09</span><span class="tt">What's Next</span><span class="ts">Coming Up</span></a></li>
     </ul>
   </div>
@@ -348,9 +360,12 @@ body::after{content:'';position:fixed;inset:0;background:repeating-linear-gradie
   <div class="fd2" onclick="gs('news')"><span class="fl">This Month</span><span class="fp2"></span></div>
   <div class="fd2" onclick="gs('gear')"><span class="fl">Gear &amp; Tech</span><span class="fp2"></span></div>
   <div class="fd2" onclick="gs('pick')"><span class="fl">Pick of the Month</span><span class="fp2"></span></div>
+  <div class="fd2" onclick="gs('deals')"><span class="fl">Gear Deals</span><span class="fp2"></span></div>
   <div class="fd2" onclick="gs('streamers')"><span class="fl">Streamer Scene</span><span class="fp2"></span></div>
   <div class="fd2" onclick="gs('spotlight')"><span class="fl">DJD Spotlight</span><span class="fp2"></span></div>
   <div class="fd2" onclick="gs('culture')"><span class="fl">Drum Culture</span><span class="fp2"></span></div>
+  <div class="fd2" onclick="gs('work-with-djd')"><span class="fl">Work With DJD</span><span class="fp2"></span></div>
+  <div class="fd2" onclick="gs('newsletter')"><span class="fl">Newsletter</span><span class="fp2"></span></div>
   <div class="fd2" onclick="gs('next')"><span class="fl">What's Next</span><span class="fp2"></span></div>
 </div></nav>
 
@@ -534,6 +549,34 @@ body::after{content:'';position:fixed;inset:0;background:repeating-linear-gradie
   </div>
 </section>
 
+<section id="deals" class="w">
+  <div class="sl rv"><div class="sbar g"></div><div class="slh"><span class="st">Gear Deals</span><div class="sr2"></div><span class="sn">05b</span></div></div>
+</section>
+<div class="nx rv">
+  <div class="nc">
+    <div class="ncs g"></div>
+    <div class="ncl">Sweetwater · Drums &amp; Percussion Deal Zone</div>
+    <div class="nct">Closeouts, Open Box &amp; B-Stock</div>
+    <div class="ncb">Sweetwater's standing drums-and-percussion markdown section — closeout, Certified Open Box, and B-stock pricing across kits, hardware, and pedals from major brands.</div>
+    <div class="deal-note"><a href="https://www.sweetwater.com/dealzone/drum-percussion-deals" target="_blank" rel="noopener" style="color:var(--c)">See current deals ↗</a></div>
+  </div>
+  <div class="nc">
+    <div class="ncs g"></div>
+    <div class="ncl">Sweetwater · Cymbal Deal Zone</div>
+    <div class="nct">Marked-Down Cymbals</div>
+    <div class="ncb">The same closeout/open-box treatment, cymbal-specific — worth a look before paying full retail on your next crash or ride.</div>
+    <div class="deal-note"><a href="https://www.sweetwater.com/dealzone/c1018--Cymbals-deals" target="_blank" rel="noopener" style="color:var(--c)">See current deals ↗</a></div>
+  </div>
+  <div class="nc">
+    <div class="ncs g"></div>
+    <div class="ncl">Sweetwater · Drum Month</div>
+    <div class="nct">0% Interest Financing</div>
+    <div class="ncb">Sweetwater's recurring Drum Month promotion runs 0%-interest financing (via the Sweetwater Card) on select manufacturers' drum gear when it's active — check the page directly for current dates and eligible brands.</div>
+    <div class="deal-note"><a href="https://www.sweetwater.com/shop/drum-month/" target="_blank" rel="noopener" style="color:var(--c)">Check Drum Month status ↗</a></div>
+  </div>
+</div>
+<div class="w rv" style="padding-top:0"><div class="deal-note" style="max-width:70ch">No affiliate code is claimed here — we couldn't verify a genuine, currently-active Sweetwater discount code this issue (a few appear on third-party coupon-aggregator sites, but those go stale constantly and we won't repeat one we can't confirm). The three links above go straight to Sweetwater's own real deal pages.</div></div>
+
 <section class="str-sec" id="streamers">
   <div class="str-in">
     <div class="str-intro rv"><h2>Streamer Scene</h2><p>Four drum streamers worth watching this month — real channels, rotated fresh every issue, never repeated back to back.</p></div>
@@ -648,6 +691,35 @@ body::after{content:'';position:fixed;inset:0;background:repeating-linear-gradie
   </div>
 </section>
 
+<section id="work-with-djd" class="w">
+  <div class="sl rv"><div class="sbar c"></div><div class="slh"><span class="st">Work With DJD</span><div class="sr2"></div><span class="sn">08b</span></div></div>
+</section>
+<div class="cg rv">
+  <div class="cc2">
+    <div class="cbg2">01</div>
+    <div class="ctag">1-on-1 · Booked via TidyCal</div>
+    <div class="ctt">Drum Lessons — $35/hr</div>
+    <div class="ctb">Real, live-booked lessons with DrummerJawkneeD, priced and scheduled through the "Work With Me" section on <a href="https://drummerjawkneed.com" target="_blank" rel="noopener" style="color:var(--c)">drummerjawkneed.com</a>. Level and format are worked out directly when you book — this isn't a packaged course.</div>
+  </div>
+  <div class="cc2">
+    <div class="cbg2">02</div>
+    <div class="ctag">1-on-1 · Booked via TidyCal</div>
+    <div class="ctt">Streamer Consultation — $55/hr</div>
+    <div class="ctb">For creators building their own drum-streaming setup — OBS, multi-platform routing, gear choices. Same "Work With Me" booking flow as lessons, same site.</div>
+  </div>
+</div>
+<div class="w rv" style="padding-top:0"><div class="deal-note" style="max-width:70ch">We didn't add a third "book a concert" option here — nothing on drummerjawkneed.com or the linktree currently lists a separate booking flow for that, so writing one in would've meant inventing pricing and availability that isn't real. Lessons and streamer consultations are the two live, bookable services as of this issue.</div></div>
+
+<section id="newsletter" class="w">
+  <div class="nl-box rv">
+    <div class="nl-kick">Free · Monthly · No Spam</div>
+    <div class="nl-h">Get October in Your Inbox</div>
+    <div class="nl-p">Next issue's Drummer Spotlight, whatever the Fifty Something tour's next stops turn up, and another curated Pick of the Month — first of every month, straight to your email.</div>
+    <a href="https://app.kit.com/forms/designers/9489280" target="_blank" rel="noopener" class="sp-cta">Subscribe Free <span style="font-size:1rem">→</span></a>
+    <div class="nl-foot">Join the community · Dream Loud</div>
+  </div>
+</section>
+
 <main class="page">
   <section id="next" class="w">
     <div class="sl rv"><div class="sbar r"></div><div class="slh"><span class="st">What's Next</span><div class="sr2"></div><span class="sn">09</span></div></div>
@@ -690,7 +762,7 @@ document.querySelectorAll('.rv').forEach(function(el){ob.observe(el)});
 function gs(id){var el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'})}
 function cl(){document.getElementById('toc').classList.remove('open')}
 document.getElementById('toc').addEventListener('click',function(e){if(e.target===this)this.classList.remove('open')});
-var secs=["ed","feature","hspot","news","gear","pick","streamers","spotlight","culture","next"];
+var secs=["ed","feature","hspot","news","gear","pick","deals","streamers","spotlight","culture","work-with-djd","newsletter","next"];
 var dots=document.querySelectorAll('.fd2');
 window.addEventListener('scroll',function(){
   var y=window.scrollY+130;
