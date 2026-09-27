@@ -1,0 +1,209 @@
+{
+  "issue": "september-2026",
+  "generated_by": "scripts/image_pipeline.py",
+  "approved": false,
+  "slots": {
+    "cover_rush_band": {
+      "subject_type": "artist",
+      "name": "Rush",
+      "url": "https://www.rush.com/band/",
+      "credit": "",
+      "license": "editorial-press-use",
+      "source_kind": "unverified-candidate",
+      "is_fallback": true,
+      "alt_text": "Rush \u2014 candidate official page found, not confirmed as a usable press photo",
+      "focal_point": [
+        0.5,
+        0.35
+      ],
+      "notes": "Real search found rush.com/band/ (the artist's own official domain, so the official-domain heuristic matched) but it's a bio page, not confirmed to contain a dedicated, downloadable EPK/press photo -- this run had no way to fetch the page and check. Recorded as an unverified candidate, not a sourced photo: a human (or a future run with real network access) should open rush.com/band/ directly, confirm whether it links usable press photos, and update this slot before treating it as approved.",
+      "search_queries_tried": [
+        "Rush EPK",
+        "Rush press kit photos"
+      ],
+      "approved": false
+    },
+    "cover_and_spotlight_peart": {
+      "subject_type": "artist",
+      "name": "Neil Peart",
+      "url": "https://commons.wikimedia.org/wiki/Category:Neil_Peart",
+      "credit": "Wikimedia Commons (verify exact license/photographer before publish) \u2014 Neil Peart",
+      "license": "verify-before-publish",
+      "source_kind": "wikimedia-fallback",
+      "is_fallback": true,
+      "alt_text": "Historical photo of Neil Peart",
+      "focal_point": [
+        0.5,
+        0.3
+      ],
+      "notes": "Real search confirmed a genuine candidate: a 2008 photo of Neil Peart by Matt Becker, CC-licensed, in Wikimedia Commons' Category:Neil_Peart. This module could not fetch commons.wikimedia.org directly from this sandbox to pull the exact file URL/license text (confirmed blocked by the egress proxy, not merely unattempted) -- so the exact file was NOT verified closely enough to hotlink safely. Recorded here as a found-but-unverified fallback candidate for a human (or a future run with real network access) to confirm and drop in; this issue ships with an original editorial illustration instead, captioned as such, rather than guessing at an unverified Commons file URL.",
+      "search_queries_tried": [
+        "Neil Peart EPK",
+        "Neil Peart press kit photos",
+        "Neil Peart official press photo",
+        "Neil Peart Wikimedia Commons public domain photo"
+      ],
+      "approved": false
+    },
+    "gear_rohema": {
+      "subject_type": "gear",
+      "name": "Rohema Nick Petrella signature drumsticks",
+      "url": null,
+      "credit": "",
+      "license": "",
+      "source_kind": "none-available",
+      "is_fallback": true,
+      "alt_text": "Rohema Nick Petrella signature drumsticks \u2014 no photo available this run",
+      "focal_point": null,
+      "notes": "No real photo found via official source OR Wikimedia fallback. Use the site's branded-illustration system, not a generic stock photo, and flag this slot in the manifest for manual sourcing.",
+      "search_queries_tried": [
+        "Rohema Nick Petrella signature drumsticks official product page",
+        "site:rohema.com Nick Petrella signature drumsticks",
+        "Rohema Nick Petrella signature drumsticks Wikimedia Commons public domain photo"
+      ],
+      "approved": false
+    },
+    "gear_spaun": {
+      "subject_type": "gear",
+      "name": "Spaun Drums 40-ply maple snare",
+      "url": "https://spaundrums.com/collections/multi-ply",
+      "credit": "Product photo courtesy Spaun Drums",
+      "license": "manufacturer-editorial-use",
+      "source_kind": "manufacturer-product",
+      "is_fallback": false,
+      "alt_text": "Official product photo of the Spaun Drums 40-ply maple snare",
+      "focal_point": [
+        0.5,
+        0.5
+      ],
+      "notes": "Matched manufacturer domain on query: 'Spaun Drums 40-ply maple snare official product page'",
+      "search_queries_tried": [
+        "Spaun Drums 40-ply maple snare official product page"
+      ],
+      "approved": true
+    },
+    "gear_code_drum_heads": {
+      "subject_type": "gear",
+      "name": "Code Drum Heads UK distribution announcement",
+      "url": null,
+      "credit": "",
+      "license": "",
+      "source_kind": "none-available",
+      "is_fallback": true,
+      "alt_text": "Code Drum Heads UK distribution announcement \u2014 no photo available this run",
+      "focal_point": null,
+      "notes": "No real photo found via official source OR Wikimedia fallback. Use the site's branded-illustration system, not a generic stock photo, and flag this slot in the manifest for manual sourcing.",
+      "search_queries_tried": [
+        "Code Drum Heads UK distribution announcement official product page",
+        "site:codedrumheads.com UK distribution announcement",
+        "Code Drum Heads UK distribution announcement Wikimedia Commons public domain photo"
+      ],
+      "approved": false
+    },
+    "gear_zildjian_greiner": {
+      "subject_type": "gear",
+      "name": "Zildjian Matt Greiner Blast Bell",
+      "url": null,
+      "credit": "",
+      "license": "",
+      "source_kind": "none-available",
+      "is_fallback": true,
+      "alt_text": "Zildjian Matt Greiner Blast Bell \u2014 no photo available this run",
+      "focal_point": null,
+      "notes": "No real photo found via official source OR Wikimedia fallback. Use the site's branded-illustration system, not a generic stock photo, and flag this slot in the manifest for manual sourcing.",
+      "search_queries_tried": [
+        "Zildjian Matt Greiner Blast Bell official product page",
+        "site:zildjian.com Matt Greiner Blast Bell",
+        "Zildjian Matt Greiner Blast Bell Wikimedia Commons public domain photo"
+      ],
+      "approved": false
+    },
+    "streamer_sina_drums": {
+      "subject_type": "streamer",
+      "name": "Sina Drums",
+      "url": null,
+      "credit": "",
+      "license": "",
+      "source_kind": "none-available",
+      "is_fallback": true,
+      "alt_text": "Sina Drums \u2014 channel avatar placeholder (real photo not fetched this run)",
+      "focal_point": null,
+      "notes": "No platform_client supplied (or the platform call failed) \u2014 this environment likely can't reach twitch.com directly. Falls back to the site's existing branded-initial SVG treatment, not a stock photo. Re-run from an environment with real network/API access to fetch the real avatar.",
+      "search_queries_tried": [],
+      "approved": false
+    },
+    "streamer_mitch_bruzzese": {
+      "subject_type": "streamer",
+      "name": "Mitch Bruzzese",
+      "url": null,
+      "credit": "",
+      "license": "",
+      "source_kind": "none-available",
+      "is_fallback": true,
+      "alt_text": "Mitch Bruzzese \u2014 channel avatar placeholder (real photo not fetched this run)",
+      "focal_point": null,
+      "notes": "No platform_client supplied (or the platform call failed) \u2014 this environment likely can't reach twitch.com directly. Falls back to the site's existing branded-initial SVG treatment, not a stock photo. Re-run from an environment with real network/API access to fetch the real avatar.",
+      "search_queries_tried": [],
+      "approved": false
+    },
+    "streamer_officedrummer": {
+      "subject_type": "streamer",
+      "name": "OfficeDrummer",
+      "url": null,
+      "credit": "",
+      "license": "",
+      "source_kind": "none-available",
+      "is_fallback": true,
+      "alt_text": "OfficeDrummer \u2014 channel avatar placeholder (real photo not fetched this run)",
+      "focal_point": null,
+      "notes": "No platform_client supplied (or the platform call failed) \u2014 this environment likely can't reach kick.com directly. Falls back to the site's existing branded-initial SVG treatment, not a stock photo. Re-run from an environment with real network/API access to fetch the real avatar.",
+      "search_queries_tried": [],
+      "approved": false
+    },
+    "streamer_danger_drums": {
+      "subject_type": "streamer",
+      "name": "Danger Drums",
+      "url": null,
+      "credit": "",
+      "license": "",
+      "source_kind": "none-available",
+      "is_fallback": true,
+      "alt_text": "Danger Drums \u2014 channel avatar placeholder (real photo not fetched this run)",
+      "focal_point": null,
+      "notes": "No platform_client supplied (or the platform call failed) \u2014 this environment likely can't reach twitch.com directly. Falls back to the site's existing branded-initial SVG treatment, not a stock photo. Re-run from an environment with real network/API access to fetch the real avatar.",
+      "search_queries_tried": [],
+      "approved": false
+    },
+    "djd_spotlight_self": {
+      "subject_type": "self",
+      "name": "DJD Spotlight September 2026",
+      "url": null,
+      "credit": "",
+      "license": "",
+      "source_kind": "none-available",
+      "is_fallback": true,
+      "alt_text": "DrummerJawkneeD \u2014 DJD Spotlight September 2026 (no real photo available this run)",
+      "focal_point": null,
+      "notes": "Checked /home/user/djd-magazine/assets/djd-real-photos \u2014 no matching real asset found. Per policy this NEVER falls through to an external search for Johnny's own content. Use the site's branded-illustration treatment instead of stock, and flag this slot for Johnny to drop a real photo/clip into assets/djd-real-photos for next month.",
+      "search_queries_tried": [],
+      "approved": false
+    },
+    "gear_tech_department_header": {
+      "subject_type": "original-design",
+      "name": "Gear & Tech department header",
+      "url": "assets/gear-tech-department-header.png",
+      "credit": "Original Drummers and Dreamers design (Canva)",
+      "license": "owned",
+      "source_kind": "original-design",
+      "is_fallback": false,
+      "alt_text": "Drummers and Dreamers Gear and Tech department header, red and black editorial banner with drum hardware silhouettes",
+      "focal_point": [
+        0.5,
+        0.5
+      ],
+      "notes": "Original graphic generated in Canva specifically as a reusable department header -- deliberately does not reference any specific brand, since this department rotates gear brands every issue. Not sourced from an external search; created for this exact purpose.",
+      "approved": true
+    }
+  },
+  "fallback_count": 10
+}
