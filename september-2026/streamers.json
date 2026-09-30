@@ -1,0 +1,38 @@
+{
+ "id": "streamers",
+ "type": "streamer",
+ "label": "Streamer Scene",
+ "tone": "c",
+ "kicker": "Watch this month",
+ "headline": "Six drum streamers worth your Tuesday night",
+ "body": [
+  "Six channels that play drums live, in the Twitch and Kick music categories. Follower counts were read from public stats pages on September 30, 2026 and will have moved since; schedules are quoted only where the streamer's own About page states one.",
+  "<b><a href=\"https://www.twitch.tv/the8bitdrummer\" target=\"_blank\" rel=\"noopener\">The8BitDrummer</a></b> plays live to viewer song suggestions, leaning on video-game and internet music. About 458,000 followers.",
+  "<b><a href=\"https://www.twitch.tv/kriss_drummer\" target=\"_blank\" rel=\"noopener\">Kriss_Drummer</a></b> streams rock drum requests. His About page says he streams every Wednesday, Friday and Sunday, and lists a GEWA G5 as his streaming kit. About 207,000 followers. A 2025 Drumeo Awards nominee for YouTube Drummer of the Year (<a href=\"https://www.drummingnewsnetwork.com/drumeo-announces-the-nominees-for-the-2025-drumeo-awards/\" target=\"_blank\" rel=\"noopener\">Drumming News Network</a>).",
+  "<b><a href=\"https://www.twitch.tv/66samus\" target=\"_blank\" rel=\"noopener\">66Samus</a></b> streams drums on Twitch; his About page says he has been drumming for 30+ years and uploads to YouTube weekly. About 93,000 followers. He won YouTube Drummer of the Year at the 2025 Drumeo Awards (<a href=\"https://www.drumeo.com/beat/2025-drumeo-awards-winners/\" target=\"_blank\" rel=\"noopener\">Drumeo</a>).",
+  "<b><a href=\"https://kick.com/officedrummer\" target=\"_blank\" rel=\"noopener\">Office Drummer</a></b> (Kick) improvises live drums to viewer song requests, with priority requests and a request wheel. Its About page says the stream is for sharing music, not for stumping the drummer. About 4,100 followers (<a href=\"https://kick.com/officedrummer/about\" target=\"_blank\" rel=\"noopener\">Kick About page</a>). He played Kai Cenat's Mafiathon 3 in 2025 (<a href=\"https://www.youtube.com/watch?v=XrfIrd4WlTc\" target=\"_blank\" rel=\"noopener\">VOD</a>).",
+  "<b><a href=\"https://www.twitch.tv/kristinaschianodrums\" target=\"_blank\" rel=\"noopener\">Kristina Schiano</a></b> runs drum-request streams with subscriber-controlled lights. Her channel says it is live every Friday at 5pm ET. About 10,300 followers. A 2025 Drumeo Awards nominee for YouTube Drummer of the Year.",
+  "<b><a href=\"https://www.twitch.tv/dangerdrums\" target=\"_blank\" rel=\"noopener\">DangerDrums</a></b> is a New York drummer and producer who takes live requests with flashing lights and releases his own electronic music. Per his YouTube channel, the rig is a Yamaha DTX750K with a Roland SPD-SX triggering Get Good Drums samples in Ableton Live. About 4,100 followers.",
+  "Our own channel, DrummerJawkneeD, streams on Twitch and Kick; check drummerjawkneed.com for the current schedule."
+ ],
+ "link": "https://www.twitch.tv/drummerjawkneed",
+ "cta": "Watch DrummerJawkneeD on Twitch",
+ "sources": [
+  [
+   "Drumeo: 2025 Drumeo Awards winners",
+   "https://www.drumeo.com/beat/2025-drumeo-awards-winners/"
+  ],
+  [
+   "Drumming News Network: 2025 Drumeo Awards nominees",
+   "https://www.drummingnewsnetwork.com/drumeo-announces-the-nominees-for-the-2025-drumeo-awards/"
+  ],
+  [
+   "SullyGnome (follower counts, Sept. 30, 2026)",
+   "https://sullygnome.com/"
+  ],
+  [
+   "Channel About pages (Twitch and Kick), as linked above",
+   "https://www.twitch.tv/"
+  ]
+ ]
+}
