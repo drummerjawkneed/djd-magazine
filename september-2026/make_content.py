@@ -1,0 +1,137 @@
+#!/usr/bin/env python3
+"""Revised edition of the September 2026 issue (rebuilt 2026-09-30 with real photos, verified sources and corrections).
+Fills content.json; credits/dimensions come from assets/*.credit.json. Streamer section is merged from streamers.json if present."""
+import json, os
+HERE = os.path.dirname(os.path.abspath(__file__)); A = os.path.join(HERE, "assets")
+
+def cj(name):
+    d = json.load(open(os.path.join(A, name + ".credit.json"), encoding="utf-8"))
+    return f'Photo: {d["author"]} / <a href="{d["page"]}" target="_blank" rel="noopener">Wikimedia Commons</a> ({d["license"]})'
+
+def img(file, alt, caption, w, h, credit=None):
+    return {"file": file, "alt": alt, "caption": caption, "credit": credit or cj(file.rsplit(".", 1)[0]), "w": w, "h": h}
+
+IM = {
+  "beard": img("frank-beard-2014-jpg.webp", "Frank Beard, ZZ Top's drummer, seated behind his kit on stage.", "Frank Beard with ZZ Top, June 30, 2014.", 1700, 1275),
+  "beard2": img("frank-beard-of-zz-top-performing-in-san-antonio-texas-2015-jpg.webp", "Frank Beard drumming with ZZ Top in San Antonio, Texas.", "Frank Beard with ZZ Top in San Antonio, Texas, January 18, 2015.", 1700, 1675),
+  "peart": img("neil-peart-jpg.webp", "Neil Peart playing drums on stage at the Air Canada Centre.", "Neil Peart with Rush at the Air Canada Centre, Toronto, July 17, 2010.", 1700, 1191),
+  "rubin": img("ilan-rubin-w-nine-inch-nails-santa-barbara-2009-jpg.webp", "Ilan Rubin behind a drum kit on stage with Nine Inch Nails.", "Ilan Rubin with Nine Inch Nails, Santa Barbara, May 21, 2009.", 1700, 2550),
+  "foos": img("foo-fighters-at-hbf-park-29-november-2023-15-jpg.webp", "Foo Fighters performing on a large stage at HBF Park in Perth.", "Foo Fighters at HBF Park, Perth, November 29, 2023.", 1700, 1275),
+  "zild": img("zildjian-alesis-press.webp", "Promotional artwork for the Alesis and Zildjian partnership.", "Promotional artwork for the Zildjian and Alesis partnership.", 1920, 1080,
+              'Image: inMusic Brands, from the <a href="https://www.inmusicbrands.com/press/zildjian/" target="_blank" rel="noopener">Zildjian and Alesis press release</a>'),
+}
+S = lambda t, u: (t, u)
+WIKI_BEARD = S("Wikipedia: Frank Beard (drummer)", "https://en.wikipedia.org/wiki/Frank_Beard_(drummer)")
+HPM = S("Houston Public Media (Aug. 18, 2026): Frank Beard dies at 77", "https://www.houstonpublicmedia.org/articles/arts-culture/2026/08/18/559795/frank-beard-zz-top-houston-obit/")
+CBS = S("CBS News: Frank Beard, ZZ Top drummer, dies at age 77", "https://www.cbsnews.com/news/frank-beard-zz-top-drummer-dies-age-77/")
+ABC = S("ABC News (Australia): ZZ Top drummer Frank Beard dies", "https://www.abc.net.au/news/2026-08-19/zz-top-drummer-frank-beard-dies/107052768")
+AXS = S("AXS TV: ZZ Top drummer Frank Beard dies at 77", "https://axs.tv/news-story/zz-top-drummer-frank-beard-dies-at-77/")
+
+c = {
+  "issue_number": "04", "month": "September 2026", "kicker": "September 2026 · Cover Story · Revised edition",
+  "headline": "Frank Beard, 1949–2026: the backbeat behind ZZ Top",
+  "dek": "ZZ Top's drummer died on August 17 at his ranch in Texas. He was 77, and he had been in the band since 1969.",
+  "summary": "Frank Beard of ZZ Top dies at 77, the Guitar Center Drum-Off returns, Zildjian and Alesis team up, Anika Nilles talks to Rolling Stone Canada, and Neil Peart gets this month's Drummer Spotlight.",
+  "headline_short": "Frank Beard, 1949–2026: the backbeat behind ZZ Top", "date_published": "2026-09-01T12:00:00Z",
+  "hero_image": "beard", "images": IM,
+  "ticker": ["Frank Beard of ZZ Top dies at 77 (Aug. 17)", "Guitar Center Drum-Off returns after a decade; Jonathan Fortson wins", "Zildjian and Alesis announce a sound partnership (Aug. 6)",
+             "Pearl launches the Elimin8R pedals (Aug. 13)", "Rush add Houston, St. Louis, Cincinnati and Pittsburgh (announced Aug. 31)"],
+  "sections": [
+   {"id": "ed", "type": "editor", "label": "Editor's Note", "tone": "r", "body": [
+     "August took a heavy toll on the drumming world. Frank Beard, who held down ZZ Top's backbeat for more than fifty years, died on August 17. Kevin Feeney, who built Creative Percussion with his wife Cheri, died the same day. Earth, Wind &amp; Fire drummer John Paris spent weeks in intensive care. We cover them because drummers are a small community, and we notice when someone leaves the room.",
+     "The month was not all dark. The Guitar Center Drum-Off came back after a decade and found a champion among more than 2,600 entrants. Zildjian opened its artist vault to Alesis and BFD. And Anika Nilles gave Rolling Stone Canada a candid look at what it is like to sit on Neil Peart's chair.",
+     "You are reading a rebuilt edition of September. The first version went out without photographs of its subjects, leaned on a few facts we had not checked hard enough, and missed the month's biggest story. We fixed it, and the corrections box lists exactly what changed.",
+     "If you play, play something for Frank this week."],
+     "sign": "DRUMMERJAWKNEED &middot; DREAM LOUD"},
+   {"id": "cover", "type": "cover", "label": "Cover Story", "tone": "g", "image": "beard",
+     "headline": "The man with no beard, and the pocket that sold ten million records",
+     "dek": "Frank Beard's drumming was never flashy. It was the reason everything else in ZZ Top worked.",
+     "body": [
+      "Frank Beard died on August 17 under hospice care at his ranch in Richmond, Texas. He was 77. ZZ Top announced the news on August 18. Guitarist Billy Gibbons called him &ldquo;one of the most naturally innovative drummers&rdquo; and said that &ldquo;his signature backbeat was key to keeping ZZ on top.&rdquo; Gibbons also said the band would keep touring, as Beard had wished, with bassist Elwood Francis and drummer Michael Monahan.",
+      "Beard was born June 11, 1949, in Frankston, Texas, and raised in Irving. He met bassist Dusty Hill as a teenager when their bands played the same Fort Worth club, and the two played together in a string of groups before ZZ Top. When the band's first drummer, Dan Mitchell, left in 1969, Beard took his place. He is also the one who introduced Gibbons to Hill.",
+      "The sound they built, Texas boogie and blues with a heavy swing, broke through with <em>Tres Hombres</em> (1973) and &ldquo;La Grange.&rdquo; &ldquo;Tush&rdquo; followed in 1975 as the band's first Top 20 hit. Billboard wrote this year that Beard's &ldquo;explosive-but-swinging&rdquo; playing was a huge part of the band's identity. <em>Eliminator</em> (1983), with &ldquo;Gimme All Your Lovin',&rdquo; &ldquo;Legs&rdquo; and &ldquo;Sharp Dressed Man,&rdquo; became the only ZZ Top album certified diamond by the RIAA, for more than ten million copies."],
+     "pull": {"text": "&ldquo;His signature backbeat was key to keeping ZZ on top.&rdquo;", "cite": "Billy Gibbons, on Frank Beard &middot; statement on Beard's death"},
+     "body2": [
+      "Beard was open about his hardest years. In the late 1970s he spent heavily on drugs, went through rehab, and ZZ Top went on hiatus for three years. &ldquo;I just wanted to get sober,&rdquo; he later recalled. Engineer Terry Manning has said that Beard's condition affected his playing on <em>Eliminator</em> so badly that the drummer was dismissed from the sessions, and that Manning programmed drum machines and used samples for much of the album's percussion. Both things can be true: the record sold ten million copies, and Beard was the drummer who made the band worth seeing live.",
+      "Off the kit he was a character. He was known as &ldquo;The Man With No Beard,&rdquo; the only member of ZZ Top without one while Gibbons and Hill wore theirs to their chests, and he was credited as &ldquo;Rube Beard&rdquo; on the first two albums. In the early 1990s he raced sports cars at the 24 Hours of Daytona and the 12 Hours of Sebring, and the band cameoed in <em>Back to the Future Part III</em>. ZZ Top went into the Rock and Roll Hall of Fame in 2004.",
+      "His last years were quiet. He left the Elevation tour briefly in March 2025 because of illness, then returned. His final public show with ZZ Top was November 2, 2025, at Viejas Casino &amp; Resort in Alpine, California. The band canceled its August 5 Hollywood Bowl date this year, reportedly because of his health. He is the second member of the classic lineup to die, after Dusty Hill in 2021.",
+      "Put on &ldquo;Tush&rdquo; and listen to nothing but the drums. The part is simple, it sits back, and it swings. That is harder than it sounds, and it is why the song still works."],
+     "gallery": ["beard2"],
+     "sources": [WIKI_BEARD, HPM, CBS, ABC, AXS]},
+   {"id": "news", "type": "news", "label": "This Month", "tone": "c", "items": [
+     {"tag": "Competition", "headline": "The Guitar Center Drum-Off is back, and Jonathan Fortson wins it", "body": [
+        "The Drum-Off returned after nearly a decade with a national finale on August 20 at the Fonda Theatre in Hollywood, hosted by Bill Burr and Stephen Perkins. Six finalists had been drawn from more than 2,600 entrants. Jonathan Fortson of Hamilton, Alabama won.",
+        "Fortson takes home $25,000, a brand-endorsement opportunity, a pro acoustic kit with hardware and cymbals, a Roland electronic kit, and a trip to Drumeo to shoot original content. The other finalists were Chris &ldquo;CJ&rdquo; Darden, Jacob &ldquo;Jake&rdquo; Golden Ward, Mitchell &ldquo;Mitch&rdquo; Gorman, Caleb Robinson and Michael-Andrew Tao Cornish."],
+        "sources": [S("Guitar Center press release, Aug. 24, 2026", "https://www.clynemedia.com/guitarcenter/DrumOff26_PE/GC_DrumOff2026_Champion_PostEvent.html")]},
+     {"tag": "Rush", "headline": "Anika Nilles on sitting in Peart's chair, and four more dates", "body": [
+        "In Rolling Stone Canada's August 14 cover story on the Fifty Something tour, Anika Nilles, 43, described coaching herself in rehearsal not to get lost in the weight of the chair. The main thing she took from Neil Peart, she said, was how he composes a part so that it keeps building. She added that Peart's widow, Carrie Nuttall, sent her a message before the first show.",
+        "On August 31 the band added Houston (Toyota Center, October 1), St. Louis (Enterprise Center, October 21), Cincinnati (Heritage Bank Center, October 23) and Pittsburgh (PPG Paints Arena, November 15). Presales opened September 1 and general sales September 4. The tour was already booked through April 10, 2027."],
+        "sources": [S("Ultimate Classic Rock: Anika Nilles on Peart's widow and first-show nerves", "https://ultimateclassicrock.com/neil-peart-widow-anika-nilles-nerves/"), S("Rolling Stone Canada: Rush cover story", "https://ca.rollingstone.com/fr/musique/rush-couverture-aout-2026/"), S("Blabbermouth: Rush add four new U.S. cities", "https://blabbermouth.net/news/rush-adds-four-new-u-s-cities-to-fifty-something-tour")]},
+     {"tag": "Auction", "headline": "Stephen Perkins opens his drum archive", "body": [
+        "Modern Drummer reported on August 21 that Jane's Addiction's Stephen Perkins would auction played kits, percussion and touring gear from his personal archive on September 10 through ArtistFirst on ANALOGr.com, with a portion of proceeds going to the Watts Conservatory of Music, where he is a board member.",
+        "Kits named in the story include a 1992 DW Porno for Pyros orange kit, a 1997 DW champagne sparkle short stack, a 2006 DW Jimmy Page custom, a 2008 DW Tribes exotic kit, a 2010 DW Jazz Series in titanium satin and a 2011 DW custom in black gunmetal sparkle."],
+        "sources": [S("Modern Drummer: Stephen Perkins opens his personal drum archive", "https://www.moderndrummer.com/2026/08/stephen-perkins-opens-his-personal-drum-archive-for-a-special-artistfirst-auction/")]},
+     {"tag": "Community", "headline": "Two notes from the drum community", "body": [
+        "Earth, Wind &amp; Fire drummer John Paris, 58, suffered a medical emergency before the band's August 6 show in San Francisco and was placed in an induced coma. By August 20 and 21, friends and family said he had woken and was stable, with two major surgeries and a longer ICU stay ahead. Sonny Emory filled in, and the San Francisco date was moved to September 26.",
+        "Kevin Feeney, who founded Creative Percussion with his wife Cheri in 2018, died on August 17 at 60 after colorectal cancer. Drumming News Network published the family notice on August 22."],
+        "sources": [S("USA Today (Aug. 11): Earth, Wind & Fire's John Paris medical emergency", "https://www.usatoday.com/story/entertainment/music/2026/08/11/earth-wind-fire-john-paris-medical-emergency/91218693007/"), S("Billboard (Aug. 21): John Paris wakes from coma", "https://www.billboard.com/music/rb-hip-hop/earth-wind-fire-drummer-john-paris-wakes-coma-2-major-surgeries-1236321781/"), S("Drumming News Network: Kevin Feeney has passed away", "https://www.drummingnewsnetwork.com/creative-percussion-creator-kevin-feeney-has-passed-away/")]}]},
+   {"id": "hspot", "type": "spotlight", "label": "Drummer Spotlight", "tone": "bz", "image": "peart", "kicker": "Historical", "headline": "Neil Peart, the Professor",
+     "dek": "September 12, 1952 to January 7, 2020. A new documentary about him premieres at TIFF on September 16.",
+     "body": [
+      "Neil Peart was born in Hamilton, Ontario, and grew up in Port Dalhousie, now part of St. Catharines. After a discouraging stint in England he came home to concentrate on music and joined Rush, a Toronto band, in mid-1974. Rush's first tour with him began that August. He played on every Rush studio album from <em>Fly by Night</em> (1975) through <em>Clockwork Angels</em> (2012), and wrote most of the lyrics.",
+      "For all his reputation as a student of the instrument, the nickname &ldquo;the Professor&rdquo; actually came from his resemblance to a character on <em>Gilligan's Island</em>. The studying was real, though. He began as a hard-rock player drawing on Keith Moon, Ginger Baker and John Bonham, then moved toward jazz and big-band drumming inspired by Gene Krupa and Buddy Rich. In 1994 he became a friend and pupil of the jazz teacher Freddie Gruber and rebuilt his playing with jazz and swing in it. He also produced and played on two Buddy Rich tribute albums, <em>Burning for Buddy</em> (1994 and 1997).",
+      "At 30 he became the youngest person ever inducted into the Modern Drummer Readers Poll Hall of Fame. Rush went into the Rock and Roll Hall of Fame in 2013. Peart announced his retirement from touring in December 2015 after health problems, and he died of glioblastoma in Santa Monica on January 7, 2020, after a three-and-a-half-year illness."],
+     "facts": [["41", "years with Rush, 1974 to 2015"], ["1983", "youngest Modern Drummer Hall of Famer"], ["2013", "Rush Rock Hall induction"]],
+     "sources": [S("Wikipedia: Neil Peart", "https://en.wikipedia.org/wiki/Neil_Peart"), S("Rush.com: Neil Peart", "https://www.rush.com/band/neil-peart/"), S("NPR (Jan. 10, 2020): Neil Peart has died", "https://www.npr.org/2020/01/10/795385342/rush-drummer-and-lyricist-neil-peart-has-died")]},
+   {"id": "gear", "type": "gear", "label": "Gear & Tech", "tone": "c", "items": [
+     {"tag": "Sampled cymbals", "headline": "Zildjian opens its artist vault to Alesis and BFD", "image": "zild", "body": [
+        "Announced August 6. Zildjian and Alesis Drums are putting Zildjian cymbal recordings into Alesis and BFD products, using cymbals from Zildjian's Artist Vault, which was historically reserved for endorsed artists. The first pack, Zildjian Session Mix Vol. 1, shipped the same day for BFD Player, BFD 3.5 and Alesis Strata modules.",
+        "DrumSpy listed its contents as 17- and 19-inch A Custom Rezo crashes, 15-inch A New Beat hi-hats and a 20-inch K Custom Dark Medium ride, plus a bubinga kit, at $39. More packs were scheduled through the rest of the year. This is sampled sound, not new metal."],
+        "specs": ["BFD Player / BFD 3.5 / Alesis Strata", "$39 (per DrumSpy)", "Packs through year end"],
+        "sources": [S("inMusic / Zildjian press release", "https://www.inmusicbrands.com/press/zildjian/")]},
+     {"tag": "Pedals", "headline": "Pearl Elimin8R bass drum pedals", "body": [
+        "Pearl introduced Elimin8R on August 13 to bring the best ideas from its Eliminator line down to a working drummer's budget: $139.99 for the P-1000CX single and $349.99 for the P-1002CX double. Both have a removable cam (progressive or linear action), a three-position PowerShifter, Click-Lock spring tension, a side-access hoop clamp, Uni-Lock beater angle, Control Core DuoBeaters and a sprocketless double-chain drive. The double adds an adjustable universal joint."],
+        "specs": ["Single $139.99", "Double $349.99", "Chain drive", "Two cam options"],
+        "sources": [S("Drumming News Network: Pearl introduces the Elimin8R bass drum pedals", "https://www.drummingnewsnetwork.com/pearl-introduces-the-elimin8r-bass-drum-pedals-professional-performance-at-an-exceptional-value/")]},
+     {"tag": "Heads", "headline": "Attack Proflex 1 Premium", "body": [
+        "Attack Drumheads added the Proflex 1 Premium tom and snare batters on August 2: a single-ply 10-mil Dynaflex film with the company's sandblasted coating, in Frost White and Matte Black. Tom sizes run from 8 to 18 inches, and the snare head is 14 inches."],
+        "sources": [S("Drumming News Network: Attack Drumheads introduces Proflex 1 Premium", "https://www.drummingnewsnetwork.com/attack-drumheads-introduces-proflex-1-premium-tom-and-snare-heads/")]},
+     {"tag": "Electronic", "headline": "Gear4music Touchbeat e-kit", "body": [
+        "Released August 24 by the York retailer for players in shared housing who still want a stage-capable setup. Gear4music's own overview specifies a 7-inch HD touchscreen, 950 samples and its AnchorLock rack; YorkMix describes dual-zone mesh pads, plus a Touchbeat+ with a larger kick, an extra tom, a second crash and a 14-inch ride."],
+        "sources": [S("YorkMix: York-based retailer unveils new electronic drum kit", "https://www.yorkmix.com/york-based-music-retailer-unveils-new-electronic-drum-kit-for-shared-living/")]}]},
+   {"id": "pick", "type": "pick", "label": "Pick of the Month", "tone": "r", "kicker": "Drummer Pick of the Month", "headline": "Ilan Rubin on <em>Your Favorite Toy</em> (Foo Fighters, 2026)",
+     "dek": "A new drummer, no click track, and a record made by two people in a room.",
+     "body": [
+       "<em>Your Favorite Toy</em> came out April 24 on Roswell/RCA. It is Foo Fighters' twelfth studio album and the first with Ilan Rubin behind the kit. Dave Grohl and Rubin tracked the rhythm section live, without a click, and the rest of the band overdubbed on top.",
+       "Rubin spent 17 years with Nine Inch Nails, where the grooves had to be mechanical and lock to a click. Joining Foo Fighters was, by reports of the band's own comments, the first time in 17 years he had played without one. Grohl has said Rubin started out thinking everything had to be patterned and sound like the record, and that he encouraged him to loosen up.",
+       "That is our pick: not the flashiest playing of the month, but a real bet on feel over convenience. Put the record on, then listen for what a click track would have fixed. You will not find much, and that is the point."],
+     "sources": [S("Wikipedia: Your Favorite Toy", "https://en.wikipedia.org/wiki/Your_Favorite_Toy"), S("Radio X: Foo Fighters break down Your Favorite Toy track by track", "https://www.radiox.co.uk/artists/foo-fighters/your-favorite-toy-album-playback-track-by-track-dave-grohl/"), S("Wikipedia: Ilan Rubin", "https://en.wikipedia.org/wiki/Ilan_Rubin")]},
+   {"id": "streamers", "type": "streamer", "label": "Streamer Scene", "tone": "c", "kicker": "Watch this month", "headline": "Streamer Scene", "body": ["Coming together."], "link": "https://www.twitch.tv", "cta": "Twitch", "sources": [S("Twitch", "https://www.twitch.tv")]},
+   {"id": "work", "type": "work", "label": "Work With DJD", "tone": "c", "items": [
+     {"tag": "1-on-1 &middot; Booked via TidyCal", "headline": "Drum lessons: $35 per hour", "body": ["Live lessons with DrummerJawkneeD, scheduled through the Work With Me section of drummerjawkneed.com. Level and format are worked out when you book."]},
+     {"tag": "1-on-1 &middot; Booked via TidyCal", "headline": "Streamer consultation: $55 per hour", "body": ["For creators building a drum-streaming setup: OBS, multi-platform routing and gear choices. Same booking flow as lessons."]}],
+     "note": "These are the two bookable services listed on drummerjawkneed.com as of this issue. Prices and availability are set on the booking page."},
+   {"id": "newsletter", "type": "newsletter", "label": "Newsletter", "tone": "r", "kicker": "Free &middot; Monthly &middot; No spam", "headline": "Get October in your inbox",
+     "body": "A Drummer Spotlight, a Pick of the Month and the month's verified drum news, on the first of every month."},
+   {"id": "corr", "type": "corrections", "label": "Corrections", "tone": "g", "items": [
+     "<b>Nickname.</b> The first version said &ldquo;the Professor&rdquo; came from Peart treating the drums as something to study. It comes from his resemblance to the <em>Gilligan's Island</em> character of that name.",
+     "<b>Zildjian Blast Bell.</b> The first version said Zildjian released a Matt Greiner signature Blast Bell on September 21. The Zildjian FX Blast Bell, designed with Greiner, was released in 2022. What happened on September 21 was a Drumming News Network item about signed bells for sale on Greiner's own site. We removed it.",
+     "<b>Code Drum Heads.</b> The first version dated the UK distribution deal with BR Distribution to September 20. The deal was announced on June 29, 2026; Drumming News Network ran the release on September 20. We removed it as not new.",
+     "<b>Rush lineup.</b> The first version called Loren Gold a full member of Rush. He is the tour's keyboardist and backing vocalist, like Anika Nilles in the touring lineup; Geddy Lee and Alex Lifeson are the band.",
+     "<b>Memorial and stream schedule.</b> The first version described the Peart memorial statues with more certainty than the sources allow and repeated a stream schedule we could not verify. Both are gone; the memorial is covered, with sources, in the October issue.",
+     "<b>Photos.</b> The first version ran without real photographs of its subjects. Every photo here is credited with a licence link."]},
+   {"id": "next", "type": "next", "label": "What's Next", "tone": "r", "items": [
+     {"tag": "October issue", "headline": "The Peart documentary", "body": ["Neil Peart: No One's Disciple premieres at TIFF on September 16; October's cover looks at what it shows."]},
+     {"tag": "October issue", "headline": "Drummer Spotlight and Pick of the Month", "body": ["Both departments return with sources on every story and a named photographer on every picture."]},
+     {"tag": "Watch", "headline": "The Fifty Something tour", "body": ["Houston opens the new run on October 1; we will report what we can source."]}]}
+  ]
+}
+try:
+    st = json.load(open(os.path.join(HERE, "streamers.json"), encoding="utf-8"))
+    for i, s in enumerate(c["sections"]):
+        if s["id"] == "streamers": c["sections"][i] = st
+    print("streamers.json merged")
+except FileNotFoundError:
+    c["sections"] = [s for s in c["sections"] if s["id"] != "streamers"]; print("no streamers.json; section omitted")
+json.dump(c, open(os.path.join(HERE, "content.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+print("content.json written:", len(c["sections"]), "sections")
