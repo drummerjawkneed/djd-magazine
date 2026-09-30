@@ -27,7 +27,10 @@ Monthly eMagazine for the global drum streaming community.
 Cloudflare Pages auto-deploys on every push to `main`.
 Custom domain: `magazine.drummerjawkneed.com`
 
-## New Issue Workflow
+## New Issue Workflow (as of Oct 2026)
+Issues are now built from `<month-year>/content.json` by `scripts/build_issue.py` (photo-led template, sources + credits enforced by the build's validator). Images are sourced with real licensed photos (Wikimedia Commons CC, manufacturer press images, DJD's own footage) — never stock, never hotlinked. The n8n monthly workflow only drafts to branch `draft/next-issue`; nothing publishes without review.
+
+### Older manual workflow
 
 1. Run n8n `DJD Magazine Monthly Generation Pipeline` workflow
 2. Rename output to `[month-year]/index.html`
