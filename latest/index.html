@@ -4,9 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Drummers & Dreamers Magazine — September 2026</title>
-<meta name="description" content="Rush completes the Neil Peart memorial, the Fifty Something tour keeps adding dates, Ilan Rubin's no-click Foo Fighters sessions, and a new historical Drummer Spotlight department.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -15,7 +14,7 @@ a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
 button{cursor:pointer;border:none;background:none}
 :root{
-  --r:#E63946;--c:#00B4D8;--g:#F5A623;--pu:#9146FF;--gr:#53FC18;--bz:#C08552;
+  --r:#E63946;--c:#00B4D8;--g:#F5A623;--pu:#9146FF;--gr:#53FC18;
   --ink:#080810;--deep:#0C0C18;--sur:#13131F;--lft:#1C1C2C;
   --bdr:rgba(255,255,255,0.07);--tx:#E0E0EC;--dm:#787892;
   --fd:'Playfair Display',serif;--fb:'DM Sans',sans-serif;--fr:'Rajdhani',sans-serif;--fm:'Space Mono',monospace;
@@ -38,16 +37,16 @@ body::after{content:'';position:fixed;inset:0;background:repeating-linear-gradie
 .toc.open{opacity:1;pointer-events:all}
 .tcx{position:absolute;top:1.5rem;right:2rem;font-family:var(--fm);font-size:.64rem;letter-spacing:.1em;color:var(--dm);text-transform:uppercase;cursor:pointer;transition:.2s}
 .tcx:hover{color:#fff}
-.tci{max-width:460px;width:100%;padding:var(--pd);max-height:88vh;overflow-y:auto}
+.tci{max-width:440px;width:100%;padding:var(--pd)}
 .tch{font-family:var(--fm);font-size:.56rem;letter-spacing:.2em;color:var(--r);text-transform:uppercase;margin-bottom:1.5rem}
 .tcl{list-style:none}
 .tcl li{border-bottom:1px solid var(--bdr)}
-.tcl a{display:flex;align-items:center;gap:1rem;padding:.65rem 0;cursor:pointer;transition:.2s}
+.tcl a{display:flex;align-items:center;gap:1rem;padding:.72rem 0;cursor:pointer;transition:.2s}
 .tcl a:hover{padding-left:.5rem}
 .tcl a:hover .tn{color:var(--r)}
 .tn{font-family:var(--fm);font-size:.56rem;color:var(--dm);min-width:2rem;flex-shrink:0}
-.tt{font-family:var(--fd);font-size:1rem;font-weight:700;color:#fff}
-.ts{font-family:var(--fm);font-size:.52rem;color:var(--dm);text-transform:uppercase;letter-spacing:.08em;margin-left:auto;flex-shrink:0}
+.tt{font-family:var(--fd);font-size:1.05rem;font-weight:700;color:#fff}
+.ts{font-family:var(--fm);font-size:.53rem;color:var(--dm);text-transform:uppercase;letter-spacing:.08em;margin-left:auto;flex-shrink:0}
 .fn{position:fixed;bottom:2rem;right:1.5rem;z-index:150;opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s;pointer-events:none}
 .fn.show{opacity:1;transform:translateY(0);pointer-events:all}
 .fni{display:flex;flex-direction:column;gap:.3rem;align-items:flex-end}
@@ -57,20 +56,15 @@ body::after{content:'';position:fixed;inset:0;background:repeating-linear-gradie
 .fd2.act .fp2{background:var(--r);border-color:var(--r)}
 .fl{font-family:var(--fm);font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dm);opacity:0;transform:translateX(4px);transition:.2s;white-space:nowrap}
 @media(max-width:600px){.fn{display:none}}
-
-/* Cover — original line-art illustration replaces stock photo (no real photo of the not-yet-built
-   memorial exists; this is an editorial illustration, not a rendering of the actual statues) */
-.cov{min-height:100svh;position:relative;display:flex;flex-direction:column;overflow:hidden;padding-top:52px;background:radial-gradient(ellipse 120% 70% at 70% 15%,rgba(192,133,82,.10),transparent 60%),radial-gradient(ellipse 90% 60% at 15% 85%,rgba(230,57,70,.08),transparent 55%),var(--ink)}
-.cov-art{position:absolute;inset:0;display:flex;align-items:center;justify-content:flex-end;opacity:.9;pointer-events:none}
-.cov-art svg{height:82%;width:auto;max-width:64%}
-@media(max-width:760px){.cov-art{justify-content:center;opacity:.35}.cov-art svg{height:56%}}
+.cov{min-height:100svh;position:relative;display:flex;flex-direction:column;overflow:hidden;padding-top:52px}
+.cb{position:absolute;inset:0}
+.cb img{width:100%;height:100%;object-fit:cover;object-position:center 22%}
+.cb::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,16,1) 0%,rgba(8,8,16,.75) 32%,rgba(8,8,16,.12) 62%,transparent 100%)}
 .cov-logo-zone{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;padding:0 var(--pd) clamp(3rem,6vw,5rem);max-width:var(--mw);margin:0 auto;width:100%}
 .cov-logo-wrap{margin-bottom:1.75rem}
 .cov-logo-wrap svg{width:min(520px,90vw);height:auto;filter:drop-shadow(0 4px 24px rgba(230,57,70,.25))}
 .ce{font-family:var(--fm);font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--r);margin-bottom:1rem;display:flex;align-items:center;gap:.75rem}
 .ce::before{content:'';width:28px;height:1px;background:var(--r)}
-.cov-hl{font-family:var(--fd);font-size:clamp(1.7rem,4.2vw,3.1rem);font-weight:900;line-height:1.05;color:#fff;max-width:16ch;margin-bottom:1.1rem}
-.cov-hl em{font-style:italic;color:var(--bz)}
 .cd{font-size:clamp(.94rem,1.6vw,1.14rem);color:rgba(224,224,236,.7);max-width:54ch;line-height:1.72;font-weight:300;margin-bottom:2rem}
 .cs2{display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
 .cs-i{display:flex;flex-direction:column;gap:.1rem}
@@ -78,22 +72,16 @@ body::after{content:'';position:fixed;inset:0;background:repeating-linear-gradie
 .csl{font-family:var(--fm);font-size:.53rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dm)}
 .cdv{width:1px;height:36px;background:var(--bdr)}
 .tk{background:var(--r);padding:.55rem 0;overflow:hidden}
-.tkt{display:flex;white-space:nowrap;animation:tkanim 48s linear infinite}
+.tkt{display:flex;white-space:nowrap;animation:tkanim 44s linear infinite}
 .tkt:hover{animation-play-state:paused}
 @keyframes tkanim{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .tki{display:inline-flex;align-items:center;gap:.5rem;padding:0 2.5rem;font-family:var(--fm);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.9)}
 .tks{color:rgba(255,255,255,.35);font-size:.44rem}
 .w{max-width:var(--mw);margin:0 auto;padding:0 var(--pd)}
-
-/* Section identity — colored bar replaces plain text-color cue, one accent per department */
-.sl{display:flex;align-items:stretch;gap:1rem;padding-top:5rem;margin-bottom:2.5rem}
-.sbar{width:4px;flex-shrink:0;border-radius:2px}
-.sbar.r{background:var(--r)}.sbar.c{background:var(--c)}.sbar.g{background:var(--g)}.sbar.bz{background:var(--bz)}.sbar.pu{background:var(--pu)}
-.slh{display:flex;align-items:center;gap:1rem;flex:1}
+.sl{display:flex;align-items:center;gap:1rem;padding-top:5rem;margin-bottom:2.5rem}
 .st{font-family:var(--fm);font-size:.57rem;letter-spacing:.2em;text-transform:uppercase;color:var(--c);flex-shrink:0}
 .sr2{flex:1;height:1px;background:var(--bdr)}
 .sn{font-family:var(--fm);font-size:.57rem;color:var(--dm);flex-shrink:0}
-
 .ed{display:grid;grid-template-columns:1fr 2fr;gap:3rem;align-items:start;margin-bottom:5rem}
 @media(max-width:680px){.ed{grid-template-columns:1fr}}
 .edn{font-family:var(--fd);font-size:clamp(4rem,10vw,8rem);font-weight:900;color:var(--r);line-height:.88;letter-spacing:-.04em}
@@ -102,85 +90,45 @@ body::after{content:'';position:fixed;inset:0;background:repeating-linear-gradie
 .edr p+p{margin-top:.9rem}
 .eds{margin-top:1.5rem;font-family:var(--fm);font-size:.6rem;letter-spacing:.12em;color:var(--r);text-transform:uppercase;display:flex;align-items:center;gap:.75rem}
 .eds::before{content:'';width:24px;height:1px;background:var(--r)}
-
-/* Cover Story — asymmetric: art column + text column instead of full-bleed photo */
-.ft-asym{display:grid;grid-template-columns:0.85fr 1.15fr;gap:0;background:var(--deep);margin:0 calc(-1 * var(--pd));min-height:74vh}
-@media(max-width:800px){.ft-asym{grid-template-columns:1fr}}
-.ft-art{position:relative;overflow:hidden;background:radial-gradient(ellipse 100% 80% at 50% 30%,rgba(192,133,82,.16),transparent 65%),var(--sur);display:flex;align-items:center;justify-content:center;padding:3rem}
-.ft-art svg{width:100%;max-width:340px;height:auto}
-.ft-art-cap{position:absolute;bottom:1.25rem;left:1.25rem;right:1.25rem;font-family:var(--fm);font-size:.48rem;letter-spacing:.06em;color:rgba(120,120,146,.5);line-height:1.5}
-.ftc2{padding:clamp(2.25rem,5vw,4.5rem) clamp(1.5rem,4vw,3.5rem)}
-.fk{font-family:var(--fm);font-size:.57rem;letter-spacing:.2em;text-transform:uppercase;color:var(--bz);margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
-.fk::before{content:'';width:20px;height:1px;background:var(--bz)}
-.fh{font-family:var(--fd);font-size:clamp(1.7rem,3.6vw,2.7rem);font-weight:900;line-height:1.08;color:#fff;margin-bottom:1.1rem}
-.fh em{font-style:italic;color:var(--bz)}
+.ft{position:relative;margin:0 calc(-1 * var(--pd));min-height:82vh;display:flex;align-items:flex-end;overflow:hidden}
+.ftb{position:absolute;inset:0}
+.ftb img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.ftb::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,16,1) 0%,rgba(8,8,16,.85) 27%,rgba(8,8,16,.18) 57%,transparent 100%)}
+.ftc{position:relative;z-index:1;padding:var(--pd) calc(var(--pd) * 2);width:100%}
+@media(max-width:600px){.ftc{padding:2rem var(--pd)}}
+.fk{font-family:var(--fm);font-size:.57rem;letter-spacing:.2em;text-transform:uppercase;color:var(--r);margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.fk::before{content:'';width:20px;height:1px;background:var(--r)}
+.fh{font-family:var(--fd);font-size:clamp(2rem,5vw,3.8rem);font-weight:900;line-height:1.04;color:#fff;margin-bottom:1.1rem;max-width:22ch}
+.fh em{font-style:italic;color:var(--r)}
 .fbr{display:flex;align-items:center;gap:1.25rem;margin-bottom:1.1rem;flex-wrap:wrap}
 .fbl{font-family:var(--fm);font-size:.56rem;letter-spacing:.1em;color:var(--dm);text-transform:uppercase}
 .sl2a{font-family:var(--fm);font-size:.56rem;letter-spacing:.1em;color:var(--c);text-transform:uppercase;border-bottom:1px solid rgba(0,180,216,.3);padding-bottom:1px}
-.fp3{font-size:clamp(.9rem,1.6vw,1.05rem);color:rgba(224,224,236,.8);line-height:1.82;font-weight:300}
-.fp3 p+p{margin-top:1rem}
-
-/* Drummer Spotlight (historical) — new recurring department */
-.hspot{background:linear-gradient(180deg,var(--sur) 0%,var(--deep) 100%);margin:4rem calc(-1 * var(--pd)) 0;padding:5rem var(--pd)}
-.hspot-in{max-width:var(--mw);margin:0 auto;display:grid;grid-template-columns:1fr 1.4fr;gap:3.5rem;align-items:start}
-@media(max-width:760px){.hspot-in{grid-template-columns:1fr}}
-.hspot-art{background:var(--ink);border:1px solid var(--bdr);padding:2rem;display:flex;align-items:center;justify-content:center;position:relative}
-.hspot-art svg{width:100%;max-width:220px;height:auto}
-.hspot-tag{position:absolute;top:.9rem;left:.9rem;font-family:var(--fm);font-size:.46rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(120,120,146,.55)}
-.hspot-eyebrow{font-family:var(--fm);font-size:.57rem;letter-spacing:.2em;text-transform:uppercase;color:var(--bz);margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
-.hspot-eyebrow::before{content:'';width:24px;height:1px;background:var(--bz)}
-.hspot-nm{font-family:var(--fd);font-size:clamp(1.9rem,4vw,3rem);font-weight:900;color:#fff;line-height:1.02;margin-bottom:.4rem}
-.hspot-yrs{font-family:var(--fm);font-size:.62rem;letter-spacing:.1em;color:var(--dm);text-transform:uppercase;margin-bottom:1.3rem}
-.hspot-body p{font-size:.96rem;color:rgba(224,224,236,.8);line-height:1.82;font-weight:300}
-.hspot-body p+p{margin-top:.9rem}
-.hspot-stats{display:flex;gap:2rem;margin-top:1.6rem;flex-wrap:wrap}
-.hspot-si{display:flex;flex-direction:column;gap:.1rem}
-.hspot-sn{font-family:var(--fm);font-size:1.1rem;font-weight:700;color:var(--bz)}
-.hspot-sl{font-family:var(--fm);font-size:.5rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dm)}
-
-/* This Month — asymmetric lead + stacked sidebar, not uniform cards */
-.tm-grid{display:grid;grid-template-columns:1.6fr 1fr;gap:2px;background:var(--bdr);margin-top:2px}
-@media(max-width:760px){.tm-grid{grid-template-columns:1fr}}
-.tm-lead{background:var(--sur);padding:2.5rem;display:flex;flex-direction:column;gap:.85rem}
-.tm-lead:hover{background:var(--lft)}
-.tm-side{display:flex;flex-direction:column;gap:2px;background:var(--bdr)}
-.tm-sc{background:var(--sur);padding:1.75rem;flex:1;display:flex;flex-direction:column;gap:.55rem;transition:background .2s}
-.tm-sc:hover{background:var(--lft)}
+.fp3{font-size:clamp(.9rem,1.6vw,1.08rem);color:rgba(224,224,236,.8);max-width:66ch;line-height:1.82;font-weight:300}
+.sp2{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--bdr);margin-top:2px}
+@media(max-width:680px){.sp2{grid-template-columns:1fr}}
+.sc2{background:var(--sur);display:flex;flex-direction:column;overflow:hidden;transition:background .2s}
+.sc2:hover{background:var(--lft)}
+.sci{height:220px;position:relative;overflow:hidden;flex-shrink:0}
+.sci img{width:100%;height:100%;object-fit:cover;transition:transform .55s ease}
+.sc2:hover .sci img{transform:scale(1.04)}
+.sci::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,16,.65),transparent 55%)}
+.scil{position:absolute;bottom:.65rem;left:1rem;font-family:var(--fm);font-size:.5rem;letter-spacing:.12em;color:rgba(255,255,255,.42);text-transform:uppercase;z-index:1}
+.scc{padding:1.5rem;flex:1;display:flex;flex-direction:column;gap:.52rem}
 .scat{font-family:var(--fm);font-size:.53rem;letter-spacing:.18em;text-transform:uppercase}
-.scat.rr{color:var(--r)}.scat.cc{color:var(--c)}.scat.gg{color:var(--g)}.scat.bz{color:var(--bz)}
-.stit{font-family:var(--fd);font-size:1.4rem;font-weight:700;line-height:1.14;color:#fff}
-.tm-sc .stit{font-size:1.05rem}
-.sbod{font-size:.9rem;color:var(--dm);line-height:1.78;flex:1}
-.tm-sc .sbod{font-size:.83rem}
-.ssrc{font-family:var(--fm);font-size:.5rem;letter-spacing:.08em;color:rgba(120,120,146,.4);text-transform:uppercase;padding-top:.6rem;border-top:1px solid var(--bdr);margin-top:.3rem}
+.scat.rr{color:var(--r)}.scat.cc{color:var(--c)}.scat.gg{color:var(--g)}
+.stit{font-family:var(--fd);font-size:1.25rem;font-weight:700;line-height:1.14;color:#fff}
+.sbod{font-size:.87rem;color:var(--dm);line-height:1.75;flex:1}
+.ssrc{font-family:var(--fm);font-size:.5rem;letter-spacing:.08em;color:rgba(120,120,146,.32);text-transform:uppercase;padding-top:.52rem;border-top:1px solid var(--bdr);margin-top:.2rem}
 .ssrc a{color:var(--c)}
-
-/* Gear & Tech — horizontal feed strip for quick scanning */
-.feed-wrap{margin:2px 0 0;background:var(--deep);padding:2.5rem 0 3rem}
-.feed-head{max-width:var(--mw);margin:0 auto;padding:0 var(--pd) 1.5rem;font-family:var(--fm);font-size:.6rem;letter-spacing:.1em;color:var(--dm);text-transform:uppercase}
-.feed{display:flex;gap:1px;background:var(--bdr);overflow-x:auto;padding:0 var(--pd);scroll-snap-type:x proximity;-webkit-overflow-scrolling:touch}
-.feed::-webkit-scrollbar{height:4px}
-.fcard{background:var(--sur);min-width:250px;flex:0 0 250px;padding:1.4rem;border-left:3px solid var(--bz);scroll-snap-align:start;transition:background .2s}
-.fcard:hover{background:var(--lft)}
-.fcard.c1{border-left-color:var(--r)}.fcard.c2{border-left-color:var(--c)}.fcard.c3{border-left-color:var(--g)}.fcard.c4{border-left-color:var(--bz)}
-.fc-date{font-family:var(--fm);font-size:.48rem;letter-spacing:.1em;text-transform:uppercase;color:var(--dm);margin-bottom:.5rem}
-.fc-tt{font-family:var(--fd);font-size:1rem;font-weight:700;color:#fff;line-height:1.2;margin-bottom:.5rem}
-.fc-bd{font-size:.78rem;color:var(--dm);line-height:1.65}
-@media(min-width:1180px){.feed{overflow-x:visible;flex-wrap:wrap}.fcard{flex:1 1 250px}}
-
-/* Drummer Pick of the Month — Pitchfork-style curated single-work seal */
-.pick-sec{margin:0 calc(-1 * var(--pd));background:linear-gradient(135deg,rgba(0,180,216,.05),transparent 60%),var(--ink);padding:5rem var(--pd)}
-.pick-in{max-width:var(--mw);margin:0 auto;display:grid;grid-template-columns:auto 1fr;gap:3rem;align-items:center}
-@media(max-width:680px){.pick-in{grid-template-columns:1fr;justify-items:center;text-align:center}}
-.seal{width:150px;height:150px;flex-shrink:0}
-.pick-eyebrow{font-family:var(--fm);font-size:.57rem;letter-spacing:.2em;text-transform:uppercase;color:var(--c);margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
-@media(max-width:680px){.pick-eyebrow{justify-content:center}}
-.pick-eyebrow::before{content:'';width:24px;height:1px;background:var(--c)}
-.pick-tt{font-family:var(--fd);font-size:clamp(1.6rem,3.6vw,2.5rem);font-weight:900;color:#fff;line-height:1.1;margin-bottom:1rem}
-.pick-by{font-family:var(--fm);font-size:.62rem;letter-spacing:.1em;color:var(--dm);text-transform:uppercase;margin-bottom:1.1rem}
-.pick-bd{font-size:.94rem;color:rgba(224,224,236,.78);line-height:1.8;max-width:60ch;font-weight:300}
-.pick-bd p+p{margin-top:.85rem}
-
+.s3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--bdr);margin-top:2px}
+@media(max-width:800px){.s3{grid-template-columns:1fr}}
+.s3c{background:var(--sur);overflow:hidden;display:flex;flex-direction:column;transition:background .2s}
+.s3c:hover{background:var(--lft)}
+.s3i{height:180px;position:relative;overflow:hidden;flex-shrink:0}
+.s3i img{width:100%;height:100%;object-fit:cover;object-position:top center;transition:transform .5s ease}
+.s3c:hover .s3i img{transform:scale(1.06)}
+.s3i::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,16,.7),transparent 65%)}
+.s3b{padding:1.35rem;flex:1;display:flex;flex-direction:column;gap:.48rem}
 .str-sec{background:var(--deep);margin:4rem calc(-1 * var(--pd)) 0;padding:5rem var(--pd)}
 .str-in{max-width:var(--mw);margin:0 auto}
 .str-intro{max-width:64ch;margin-bottom:3rem}
@@ -207,20 +155,10 @@ body::after{content:'';position:fixed;inset:0;background:repeating-linear-gradie
 .slnk.yt{color:#FF4444;border-color:rgba(255,68,68,.2);background:rgba(255,68,68,.05)}
 .slnk.ki{color:var(--gr);border-color:rgba(83,252,24,.2);background:rgba(83,252,24,.04)}
 .slnk.wb{color:var(--c);border-color:rgba(0,180,216,.2);background:rgba(0,180,216,.04)}
-
-.deal-note{font-size:.76rem;color:rgba(120,120,146,.55);line-height:1.6;margin-top:.5rem}
-
-.nl-box{background:linear-gradient(135deg,rgba(230,57,70,.08) 0%,rgba(0,180,216,.06) 100%);border:1px solid rgba(0,180,216,.2);padding:clamp(2rem,5vw,3rem);text-align:center;position:relative;overflow:hidden}
-.nl-box::before{content:'';position:absolute;top:-1.5rem;right:-1rem;font-size:9rem;font-family:var(--fd);font-weight:900;color:rgba(255,255,255,.025);line-height:1;pointer-events:none}
-.nl-kick{font-family:var(--fm);font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--c);margin-bottom:.9rem}
-.nl-h{font-family:var(--fd);font-size:clamp(1.5rem,3.4vw,2.2rem);font-weight:700;color:#fff;margin-bottom:.6rem;line-height:1.1}
-.nl-p{font-size:.92rem;color:var(--dm);margin-bottom:1.6rem;max-width:46ch;margin-left:auto;margin-right:auto;line-height:1.7}
-.nl-foot{margin-top:1rem;font-family:var(--fm);font-size:.52rem;letter-spacing:.1em;color:rgba(120,120,146,.45);text-transform:uppercase}
-
-.spot{position:relative;margin:4rem calc(-1 * var(--pd)) 0;overflow:hidden;min-height:64vh;display:flex;align-items:center;background:radial-gradient(ellipse 90% 100% at 85% 40%,rgba(230,57,70,.10),transparent 60%),var(--deep)}
-.spot-art{position:absolute;inset:0;display:flex;align-items:center;justify-content:flex-end;opacity:.5;pointer-events:none}
-.spot-art svg{height:70%;width:auto;max-width:46%}
-@media(max-width:700px){.spot-art{opacity:.18;justify-content:center}}
+.spot{position:relative;margin:4rem calc(-1 * var(--pd)) 0;overflow:hidden;min-height:70vh;display:flex;align-items:center}
+.spbg{position:absolute;inset:0}
+.spbg img{width:100%;height:100%;object-fit:cover}
+.spbg::after{content:'';position:absolute;inset:0;background:linear-gradient(108deg,rgba(8,8,16,.97) 38%,rgba(8,8,16,.55) 70%,rgba(0,180,216,.04) 100%)}
 .spc{position:relative;z-index:1;max-width:var(--mw);margin:0 auto;padding:5rem var(--pd);width:100%}
 .spe{font-family:var(--fm);font-size:.57rem;letter-spacing:.22em;text-transform:uppercase;color:var(--c);margin-bottom:1.25rem;display:flex;align-items:center;gap:.75rem}
 .spe::before{content:'';width:24px;height:1px;background:var(--c)}
@@ -235,7 +173,6 @@ body::after{content:'';position:fixed;inset:0;background:repeating-linear-gradie
 .spp.xx{color:var(--tx);border-color:var(--bdr)}
 .sp-cta{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--fm);font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;background:var(--c);color:#000;padding:10px 22px;font-weight:700;transition:.2s}
 .sp-cta:hover{background:#fff}
-
 .cg{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--bdr);margin:2px 0 0}
 @media(max-width:640px){.cg{grid-template-columns:1fr}}
 .cc2{background:var(--sur);padding:2.25rem;position:relative;overflow:hidden;transition:background .2s}
@@ -244,23 +181,33 @@ body::after{content:'';position:fixed;inset:0;background:repeating-linear-gradie
 .ctag{font-family:var(--fm);font-size:.54rem;letter-spacing:.18em;text-transform:uppercase;color:var(--dm);margin-bottom:.38rem}
 .ctt{font-family:var(--fd);font-size:1.2rem;font-weight:700;color:#fff;line-height:1.14;margin-bottom:.82rem}
 .ctb{font-size:.86rem;color:var(--dm);line-height:1.8}
-
+/* NEW 2026-08-04: Prime Gaming free-sub CTA -- a prominent, on-brand reminder
+   that Prime Gaming includes one free Twitch sub per month, a benefit real
+   viewers genuinely forget they already have. Twitch purple used deliberately
+   (--pu) so it reads as platform-authentic, not just DJD-branded noise. */
+.prime{background:linear-gradient(135deg,var(--pu) 0%,#5a1fb8 100%);padding:4rem var(--pd);text-align:center;position:relative;overflow:hidden;margin:0 calc(-1 * var(--pd))}
+.prime::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(255,255,255,.03) 40px,rgba(255,255,255,.03) 80px);pointer-events:none}
+.prime-in{max-width:720px;margin:0 auto;position:relative}
+.prime-badge{display:inline-flex;align-items:center;gap:.5rem;background:var(--g);color:#0a0a0a;font-family:var(--fm);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;padding:7px 18px;border-radius:999px;margin-bottom:1.4rem}
+.prime-h{font-family:var(--fd);font-size:clamp(1.6rem,4vw,2.4rem);font-weight:700;color:#fff;line-height:1.15;margin-bottom:.9rem}
+.prime-p{font-size:.95rem;color:rgba(255,255,255,.82);line-height:1.65;max-width:520px;margin:0 auto 1.8rem}
+.prime-cta{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--fm);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;background:#fff;color:var(--pu);padding:14px 30px;font-weight:700;border-radius:6px;transition:.2s}
+.prime-cta:hover{background:var(--g);color:#0a0a0a}
+.prime-note{font-family:var(--fm);font-size:.56rem;letter-spacing:.08em;color:rgba(255,255,255,.5);margin-top:1rem;text-transform:uppercase}
 .dr{background:var(--r);padding:5rem var(--pd);text-align:center;position:relative;overflow:hidden;margin:0 calc(-1 * var(--pd))}
 .dri{max-width:var(--mw);margin:0 auto;position:relative}
 .drl{font-family:var(--fm);font-size:.58rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(255,255,255,.52);margin-bottom:1.5rem}
-.drq{font-family:var(--fd);font-size:clamp(1.5rem,4vw,2.5rem);font-weight:900;font-style:italic;color:#fff;line-height:1.28;max-width:34ch;margin:0 auto 1rem}
+.drq{font-family:var(--fd);font-size:clamp(1.7rem,4.5vw,2.8rem);font-weight:900;font-style:italic;color:#fff;line-height:1.22;max-width:28ch;margin:0 auto 1rem}
 .dra{font-family:var(--fm);font-size:.59rem;letter-spacing:.14em;color:rgba(255,255,255,.58);text-transform:uppercase}
-
 .nx{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:var(--bdr);margin:2px 0 0}
 @media(max-width:680px){.nx{grid-template-columns:1fr}}
 .nc{background:var(--sur);padding:2rem;display:flex;flex-direction:column;gap:.52rem;transition:background .2s}
 .nc:hover{background:var(--lft)}
 .ncs{width:32px;height:3px;margin-bottom:.2rem;flex-shrink:0}
-.ncs.r{background:var(--r)}.ncs.c{background:var(--c)}.ncs.g{background:var(--g)}.ncs.bz{background:var(--bz)}
+.ncs.r{background:var(--r)}.ncs.c{background:var(--c)}.ncs.g{background:var(--g)}
 .ncl{font-family:var(--fm);font-size:.54rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dm)}
 .nct{font-family:var(--fd);font-size:1.1rem;font-weight:700;color:#fff;line-height:1.14}
 .ncb{font-size:.83rem;color:var(--dm);line-height:1.7;flex:1}
-
 .footer{background:var(--deep);border-top:1px solid var(--bdr);padding:3rem var(--pd);text-align:center}
 .ft-logo-wrap{margin-bottom:1rem;display:flex;justify-content:center}
 .ft-logo-wrap svg{height:36px;width:auto;opacity:.65}
@@ -296,33 +243,6 @@ body::after{content:'';position:fixed;inset:0;background:repeating-linear-gradie
   <circle cx="456" cy="119" r="2" fill="#E63946"/>
   <text x="462" y="123" font-family="'Space Mono',monospace,sans-serif" font-size="8" font-weight="400" letter-spacing="2" fill="#787892" text-anchor="start">2026</text>
 </svg>
-
-<!-- Editorial illustration for the cover + spotlight: two figures referencing the two bronze
-     statues described in the real memorial coverage (young drummer w/ book+sticks, older
-     drummer w/ snare) -- an original line-art interpretation, NOT a depiction of the actual
-     memorial, which hasn't been built yet (expected late 2027). No real photo of the unbuilt
-     memorial exists to use instead. -->
-<svg id="peart-art-src" viewBox="0 0 360 420" xmlns="http://www.w3.org/2000/svg" style="display:none">
-  <g fill="none" stroke="#C08552" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
-    <!-- younger figure: book + drumsticks -->
-    <path d="M70 260 Q68 210 82 180 Q92 158 78 140 Q70 128 82 118 Q96 108 108 120 Q116 130 108 145 Q120 170 118 200 L122 260 Z"/>
-    <circle cx="94" cy="98" r="17"/>
-    <path d="M60 250 L60 340 M132 250 L132 340" stroke-width="2"/>
-    <path d="M52 340 L140 340" stroke-width="2"/>
-    <path d="M40 235 L66 210" stroke-width="2"/>
-    <path d="M44 246 L36 268" stroke-width="1.5" opacity="0.7"/>
-    <rect x="128" y="215" width="26" height="34" rx="2" stroke-width="1.8"/>
-    <!-- older figure: snare drum -->
-    <path d="M230 270 Q226 220 244 188 Q256 168 244 150 Q236 138 248 128 Q262 118 274 130 Q282 140 274 154 Q288 178 284 208 L288 270 Z"/>
-    <circle cx="256" cy="108" r="17"/>
-    <path d="M222 260 L222 350 M296 260 L296 350" stroke-width="2"/>
-    <path d="M214 350 L304 350" stroke-width="2"/>
-    <ellipse cx="256" cy="235" rx="34" ry="14" stroke-width="2"/>
-    <path d="M256 221 L256 249 M226 235 L286 235" stroke-width="1.2" opacity="0.6"/>
-  </g>
-  <line x1="0" y1="380" x2="360" y2="380" stroke="#787892" stroke-width="1" opacity="0.25"/>
-</svg>
-
 <div class="pw"><div class="pf" id="prog"></div></div>
 <header class="mast">
   <div class="mast-logo"><svg viewBox="0 0 480 160" xmlns="http://www.w3.org/2000/svg" height="28"><use href="#djd-logo-src"/></svg></div>
@@ -336,419 +256,234 @@ body::after{content:'';position:fixed;inset:0;background:repeating-linear-gradie
   <span class="tcx" onclick="document.getElementById('toc').classList.remove('open')">Close ✕</span>
   <div class="tci">
     <div class="tch">September 2026 · Contents</div>
-    <ul class="tcl">
-      <li><a onclick="gs('ed');cl()"><span class="tn">00</span><span class="tt">Editor's Note</span><span class="ts">Opening</span></a></li>
-      <li><a onclick="gs('feature');cl()"><span class="tn">01</span><span class="tt">Cover Story</span><span class="ts">The Memorial</span></a></li>
-      <li><a onclick="gs('hspot');cl()"><span class="tn">02</span><span class="tt">Drummer Spotlight</span><span class="ts">Historical · New</span></a></li>
-      <li><a onclick="gs('news');cl()"><span class="tn">03</span><span class="tt">This Month</span><span class="ts">News</span></a></li>
-      <li><a onclick="gs('gear');cl()"><span class="tn">04</span><span class="tt">Gear &amp; Tech</span><span class="ts">Department · New</span></a></li>
-      <li><a onclick="gs('pick');cl()"><span class="tn">05</span><span class="tt">Pick of the Month</span><span class="ts">Curated · New</span></a></li>
-      <li><a onclick="gs('deals');cl()"><span class="tn">05b</span><span class="tt">Gear Deals</span><span class="ts">Sweetwater</span></a></li>
-      <li><a onclick="gs('streamers');cl()"><span class="tn">06</span><span class="tt">Streamer Scene</span><span class="ts">Community</span></a></li>
-      <li><a onclick="gs('spotlight');cl()"><span class="tn">07</span><span class="tt">DJD Spotlight</span><span class="ts">Feature</span></a></li>
-      <li><a onclick="gs('culture');cl()"><span class="tn">08</span><span class="tt">Drum Culture</span><span class="ts">4 Takes</span></a></li>
-      <li><a onclick="gs('work-with-djd');cl()"><span class="tn">08b</span><span class="tt">Work With DJD</span><span class="ts">Lessons</span></a></li>
-      <li><a onclick="gs('newsletter');cl()"><span class="tn">08c</span><span class="tt">Newsletter</span><span class="ts">Subscribe</span></a></li>
-      <li><a onclick="gs('next');cl()"><span class="tn">09</span><span class="tt">What's Next</span><span class="ts">Coming Up</span></a></li>
-    </ul>
+    <ul class="tcl"><li><a onclick="gs('ed');cl()"><span class="tn">00</span><span class="tt">Editor's Note</span><span class="ts">Opening</span></a></li><li><a onclick="gs('feature');cl()"><span class="tn">01</span><span class="tt">Cover Story · Competition</span><span class="ts">Cover Story</span></a></li><li><a onclick="gs('news');cl()"><span class="tn">02</span><span class="tt">This Month</span><span class="ts">News</span></a></li><li><a onclick="gs('streamers');cl()"><span class="tn">03</span><span class="tt">Streamer Scene</span><span class="ts">Community</span></a></li><li><a onclick="gs('spotlight');cl()"><span class="tn">04</span><span class="tt">DJD Spotlight</span><span class="ts">Feature</span></a></li><li><a onclick="gs('prime');cl()"><span class="tn">05</span><span class="tt">Free With Prime</span><span class="ts">Sub Up</span></a></li><li><a onclick="gs('culture');cl()"><span class="tn">06</span><span class="tt">Drum Culture</span><span class="ts">4 Takes</span></a></li><li><a onclick="gs('next');cl()"><span class="tn">07</span><span class="tt">What's Next</span><span class="ts">Coming Up</span></a></li></ul>
   </div>
 </div>
-<nav class="fn" id="fnav"><div class="fni">
-  <div class="fd2" onclick="gs('ed')"><span class="fl">Editor's Note</span><span class="fp2"></span></div>
-  <div class="fd2" onclick="gs('feature')"><span class="fl">Cover Story</span><span class="fp2"></span></div>
-  <div class="fd2" onclick="gs('hspot')"><span class="fl">Drummer Spotlight</span><span class="fp2"></span></div>
-  <div class="fd2" onclick="gs('news')"><span class="fl">This Month</span><span class="fp2"></span></div>
-  <div class="fd2" onclick="gs('gear')"><span class="fl">Gear &amp; Tech</span><span class="fp2"></span></div>
-  <div class="fd2" onclick="gs('pick')"><span class="fl">Pick of the Month</span><span class="fp2"></span></div>
-  <div class="fd2" onclick="gs('deals')"><span class="fl">Gear Deals</span><span class="fp2"></span></div>
-  <div class="fd2" onclick="gs('streamers')"><span class="fl">Streamer Scene</span><span class="fp2"></span></div>
-  <div class="fd2" onclick="gs('spotlight')"><span class="fl">DJD Spotlight</span><span class="fp2"></span></div>
-  <div class="fd2" onclick="gs('culture')"><span class="fl">Drum Culture</span><span class="fp2"></span></div>
-  <div class="fd2" onclick="gs('work-with-djd')"><span class="fl">Work With DJD</span><span class="fp2"></span></div>
-  <div class="fd2" onclick="gs('newsletter')"><span class="fl">Newsletter</span><span class="fp2"></span></div>
-  <div class="fd2" onclick="gs('next')"><span class="fl">What's Next</span><span class="fp2"></span></div>
-</div></nav>
-
+<nav class="fn" id="fnav"><div class="fni"><div class="fd2" onclick="gs('ed')"><span class="fl">Editor's Note</span><span class="fp2"></span></div><div class="fd2" onclick="gs('feature')"><span class="fl">Cover Story · Competition</span><span class="fp2"></span></div><div class="fd2" onclick="gs('news')"><span class="fl">This Month</span><span class="fp2"></span></div><div class="fd2" onclick="gs('streamers')"><span class="fl">Streamer Scene</span><span class="fp2"></span></div><div class="fd2" onclick="gs('spotlight')"><span class="fl">DJD Spotlight</span><span class="fp2"></span></div><div class="fd2" onclick="gs('prime')"><span class="fl">Free With Prime</span><span class="fp2"></span></div><div class="fd2" onclick="gs('culture')"><span class="fl">Drum Culture</span><span class="fp2"></span></div><div class="fd2" onclick="gs('next')"><span class="fl">What's Next</span><span class="fp2"></span></div></div></nav>
 <section class="cov" id="cover">
-  <div class="cov-art"><svg viewBox="0 0 360 420" xmlns="http://www.w3.org/2000/svg"><use href="#peart-art-src"/></svg></div>
+  <div class="cb"><img src="https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?w=1200&q=80&auto=format&fit=crop" alt="Drummers &amp; Dreamers Magazine cover" loading="eager"></div>
   <div class="cov-logo-zone">
     <div class="cov-logo-wrap"><svg viewBox="0 0 480 160" xmlns="http://www.w3.org/2000/svg"><use href="#djd-logo-src"/></svg></div>
     <div class="ce">September 2026 · Issue</div>
-    <h1 class="cov-hl">Rush Completes the <em>Neil Peart</em> Memorial</h1>
-    <p class="cd">$785,000 from the band closes out a $1M community fund for two bronze statues in Peart's hometown park — while the Fifty Something tour keeps adding dates through November.</p>
+    <p class="cd">Guitar Center's Drum-Off is back after ten years, plus Perkins' kits, a Peart scholarship, and a KISS cruise battle.</p>
     <div class="cs2">
       <div class="cs-i"><span class="csn">5</span><span class="csl">Stories This Issue</span></div>
       <div class="cdv"></div>
-      <div class="cs-i"><span class="csn">1</span><span class="csl">New Dept: Spotlight</span></div>
+      <div class="cs-i"><span class="csn">4</span><span class="csl">Streamers Spotlit</span></div>
       <div class="cdv"></div>
-      <div class="cs-i"><span class="csn">1</span><span class="csl">New Dept: Pick</span></div>
+      <div class="cs-i"><span class="csn">4</span><span class="csl">Culture Takes</span></div>
     </div>
   </div>
 </section>
-<div class="tk"><div class="tkt">
-<span class="tki">Rush donated $785,000 to complete the $1M Neil Peart memorial fund, September 23.</span><span class="tks">◆</span>
-<span class="tki">The Lakeside Park memorial opens late 2027 in St. Catharines, Ontario.</span><span class="tks">◆</span>
-<span class="tki">Fifty Something tour added Houston, St. Louis, Cincinnati, Pittsburgh through November.</span><span class="tks">◆</span>
-<span class="tki">Geddy Lee and Alex Lifeson: "we're doing fine and having a blast."</span><span class="tks">◆</span>
-<span class="tki">Ilan Rubin cut live drum tracks with no click for the new Foo Fighters album.</span><span class="tks">◆</span>
-<span class="tki">Rohema released a Nick Petrella signature stick line, September 25.</span><span class="tks">◆</span>
-<span class="tki">DrummerJawkneeD streams Tue/Thu/Sat, 11PM EST, on Roland TD-50.</span><span class="tks">◆</span>
-<span class="tki">Rush donated $785,000 to complete the $1M Neil Peart memorial fund, September 23.</span><span class="tks">◆</span>
-<span class="tki">The Lakeside Park memorial opens late 2027 in St. Catharines, Ontario.</span><span class="tks">◆</span>
-<span class="tki">Fifty Something tour added Houston, St. Louis, Cincinnati, Pittsburgh through November.</span><span class="tks">◆</span>
-<span class="tki">Geddy Lee and Alex Lifeson: "we're doing fine and having a blast."</span><span class="tks">◆</span>
-<span class="tki">Ilan Rubin cut live drum tracks with no click for the new Foo Fighters album.</span><span class="tks">◆</span>
-<span class="tki">Rohema released a Nick Petrella signature stick line, September 25.</span><span class="tks">◆</span>
-<span class="tki">DrummerJawkneeD streams Tue/Thu/Sat, 11PM EST, on Roland TD-50.</span><span class="tks">◆</span>
-</div></div>
-
+<div class="tk"><div class="tkt"><span class="tki">Jonathan Fortson of Hamilton, Alabama wins Guitar Center Drum-Off 2026</span><span class="tks">◆</span><span class="tki">Drum-Off champion takes home $25,000 plus gear and endorsements</span><span class="tks">◆</span><span class="tki">Celeste Fox named 2026 Neil Peart Spirit of Drumming Scholarship winner</span><span class="tks">◆</span><span class="tki">Eric Singer hosts KISS Kruise Drum Off on the Main Ballroom Stage</span><span class="tks">◆</span><span class="tki">Stephen Perkins' Panic Channel kit draws from Jimmy Page and John Bonham</span><span class="tks">◆</span><span class="tki">Perkins' 1997 Jane's Addiction kit was a DW Short Stack built for clarity</span><span class="tks">◆</span><span class="tki">Perkins' one-of-one 1992 Porno for Pyros DW kit is profiled at Modern Drummer</span><span class="tks">◆</span><span class="tki">DrummerJawkneeD streams Tue, Thu, Sat at 11PM EST on four platforms</span><span class="tks">◆</span><span class="tki">Jonathan Fortson of Hamilton, Alabama wins Guitar Center Drum-Off 2026</span><span class="tks">◆</span><span class="tki">Drum-Off champion takes home $25,000 plus gear and endorsements</span><span class="tks">◆</span><span class="tki">Celeste Fox named 2026 Neil Peart Spirit of Drumming Scholarship winner</span><span class="tks">◆</span><span class="tki">Eric Singer hosts KISS Kruise Drum Off on the Main Ballroom Stage</span><span class="tks">◆</span><span class="tki">Stephen Perkins' Panic Channel kit draws from Jimmy Page and John Bonham</span><span class="tks">◆</span><span class="tki">Perkins' 1997 Jane's Addiction kit was a DW Short Stack built for clarity</span><span class="tks">◆</span><span class="tki">Perkins' one-of-one 1992 Porno for Pyros DW kit is profiled at Modern Drummer</span><span class="tks">◆</span><span class="tki">DrummerJawkneeD streams Tue, Thu, Sat at 11PM EST on four platforms</span><span class="tks">◆</span></div></div>
 <main class="page">
   <section id="ed" class="w">
-    <div class="sl rv"><div class="sbar r"></div><div class="slh"><span class="st">Editor's Note</span><div class="sr2"></div><span class="sn">00</span></div></div>
+    <div class="sl rv"><span class="st">Editor's Note</span><div class="sr2"></div><span class="sn">00</span></div>
     <div class="ed rv">
-      <div><div class="edn">02</div><div class="edl">September 2026</div></div>
+      <div><div class="edn">01</div><div class="edl">September 2026</div></div>
       <div class="edr">
-        <p>A fan-funded campaign raised $215,000 toward a memorial for Neil Peart at Lakeside Park — the actual park in St. Catharines, Ontario that gave Rush's 1975 song its name and its memories. It sat short of its $1M goal until Geddy Lee and Alex Lifeson showed up this month with a check for $785,000, drawn from VIP proceeds off the current tour, and closed the gap in one afternoon. That's not a press-release gesture. That's two guys deciding their old bandmate's hometown gets its due.</p>
-        <p>It's also the reason this issue exists in a slightly different shape than the last one. We're adding two new departments starting now: a <strong>Drummer Spotlight</strong> that goes back in time instead of forward — real history, not just this month's news — and a <strong>Pick of the Month</strong>, one specific piece of drumming we think deserves your ten minutes, argued for directly instead of buried in a roundup. Both start this issue with subjects that earned the space on their own merits, not because the format needed filling.</p>
-        <p>Meanwhile the actual touring keeps happening. Anika Nilles and Loren Gold aren't holding down a legacy act on autopilot — Rush just added four more arena dates through November because the band, in their own words, didn't expect to still be having this much fun on the road. Go hit something.</p>
+        <p>A drummer from Hamilton, Alabama just won $25,000 for playing drums in front of people. Jonathan Fortson took the Guitar Center Drum-Off 2026 title, the first run of that competition in a decade. Ten years is a long time to leave a stage empty. In that gap, a generation of drummers learned their craft through screens, and plenty of them built audiences of hundreds from a bedroom with a camera pointed at the kit. Now the old-school national bracket is back, and it crowned a champion in a world that looks nothing like 2016.</p><p>That's the thread running through this issue. Modern Drummer named Celeste Fox the 2026 winner of the Neil Peart Spirit of Drumming Scholarship, a reminder that the next wave is already working. Stephen Perkins gets three separate kit deep-dives, from the 1992 Porno for Pyros setup to a Jimmy Page-inspired DW monster built for The Panic Channel. Each one is a lesson in choosing your sound instead of inheriting it. And Eric Singer is putting a Drum Off on a KISS cruise ship, because of course he is.</p><p>Competition, scholarship, gear obsession, floating rock and roll. Drummers keep finding new rooms to fill. Some of those rooms are ballrooms. Some are a spare bedroom at 11PM with a stream running. Both count. Read on, then go hit something with intention.</p>
         <div class="eds">DrummerJawkneeD · Dream Loud</div>
       </div>
     </div>
   </section>
-
+  
 <section id="feature">
-  <div class="w rv"><div class="sl"><div class="sbar bz"></div><div class="slh"><span class="st">Cover Story</span><div class="sr2"></div><span class="sn">01</span></div></div></div>
-  <div class="ft-asym rv">
-    <div class="ft-art">
-      <svg viewBox="0 0 360 420" xmlns="http://www.w3.org/2000/svg"><use href="#peart-art-src"/></svg>
-      <div class="ft-art-cap">Editorial illustration, referencing the two bronze figures described in the memorial's design — not a rendering of the actual statues, which haven't been unveiled.</div>
-    </div>
-    <div class="ftc2">
-      <div class="fk">Cover Story</div>
-      <h2 class="fh">Rush Completes the <em>Neil Peart</em> Memorial</h2>
-      <div class="fbr"><span class="fbl">Source</span><span class="sl2a">Loudersound · September 23, 2026</span></div>
-      <div class="fp3">
-        <p>The campaign to build a permanent Neil Peart memorial at Lakeside Park in St. Catharines, Ontario had been running on community donations for a while, and it had raised a real $215,000 — but it needed $1 million to actually happen. This month, Rush closed the rest of it in one move: Geddy Lee and Alex Lifeson presented the Neil Peart Commemorative Task Force with a check for $785,000, funded by a portion of VIP-experience proceeds from the band's own Fifty Something tour.</p>
-        <p>The memorial's design is two bronze statues, not one: Peart as a young musician holding a book and drumsticks, and Peart in his later years, cradling a snare drum. It's a deliberate arc — student to master, in the same park his own 1975 lyric named. "Lakeside Park," off <em>Caress of Steel</em>, was Peart writing about his actual childhood summers there before he ever played a note of it on a Rush record. The memorial is expected to open late 2027.</p>
-        <p>Worth sitting with: this is a working band, mid-tour, taking real box-office revenue and redirecting it into a monument for a bandmate who's been gone since 2020. That's not how legacy usually gets funded in rock. Usually it's a museum wing paid for by a corporation, or nothing at all. This was two guys with a checkbook, closing a gap their fans started.</p>
-      </div>
+  <div class="w rv"><div class="sl"><span class="st">Cover Story · Competition</span><div class="sr2"></div><span class="sn">01</span></div></div>
+  <div class="ft rv">
+    <div class="ftb"><img src="https://images.unsplash.com/photo-1598387993441-a364f854c3e1?w=1600&q=80&auto=format&fit=crop" alt="The Drum-Off <em>Is Back</em>, and Alabama Owns It" loading="lazy"></div>
+    <div class="ftc">
+      <div class="fk">Cover Story · Competition</div>
+      <h2 class="fh">The Drum-Off <em>Is Back</em>, and Alabama Owns It</h2>
+      <div class="fbr"><span class="fbl">Source</span><span class="sl2a">Modern Drummer Magazine · Sep 10, 2026</span></div>
+      <p class="fp3">Guitar Center announced Jonathan Fortson of Hamilton, Alabama as the Drum-Off 2026 Champion, closing out the first run of the legendary national competition in a decade. Fortson takes home the title, brand endorsements, professional gear, and a $25,000 cash prize.<br><br>The money is real, but the timing matters more. The Drum-Off went quiet for ten years while drumming moved onto phones, livestreams, and short clips. A player can now build an audience without ever entering a contest. So why does a national bracket still matter? Because a live, judged, high-pressure stage tests something a polished clip can't: what you do when nobody can hit retake.<br><br>Fortson's win puts a small-town Alabama drummer in front of the industry with gear and endorsements behind him. That is what these competitions were always for. Whether the Drum-Off sticks around after this return is Guitar Center's call to make. Drummers should keep showing up regardless.</p>
     </div>
   </div>
 </section>
-
-<section class="hspot" id="hspot">
-  <div class="hspot-in">
-    <div class="hspot-art rv">
-      <span class="hspot-tag">Illustration</span>
-      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="100" cy="100" r="92" fill="none" stroke="#C08552" stroke-width="1.5" opacity="0.4"/>
-        <g fill="none" stroke="#C08552" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M76 150 Q73 110 88 88 Q98 74 88 60 Q80 50 90 42 Q102 34 112 44 Q120 54 112 66 Q124 84 122 106 L126 150 Z"/>
-          <circle cx="98" cy="30" r="15"/>
-        </g>
-        <ellipse cx="100" cy="152" rx="46" ry="9" fill="none" stroke="#787892" stroke-width="1" opacity="0.4"/>
-      </svg>
-    </div>
-    <div class="rv">
-      <div class="hspot-eyebrow">Drummer Spotlight · Historical · New Department</div>
-      <div class="hspot-nm">Neil Peart</div>
-      <div class="hspot-yrs">September 12, 1952 – January 7, 2020 · Rush, 1974–2015</div>
-      <div class="hspot-body">
-        <p>Neil Peart joined Rush in 1974, right before their first US tour, and immediately took over the band's lyric-writing along with the drum chair — a dual role almost nobody else in rock history has held for an entire career. He wrote about science fiction, Ayn Rand-adjacent individualism he'd later walk back publicly, working-class dignity, and, on "Lakeside Park," his own hometown summers in St. Catharines, Ontario — the same park where his memorial is now being built.</p>
-        <p>His nickname, "The Professor," came from bandmates and fans both, for the same reason: a drummer who treated the instrument like something to be studied, not just felt. He took lessons well into his 40s and 50s, restructured his entire technique twice — first to incorporate more jazz vocabulary, later to build the stamina for Rush's increasingly demanding live shows. That's not typical for someone already considered one of the best to ever sit behind a kit.</p>
-        <p>He retired from touring in 2015 after Rush's R40 tour, citing tendonitis and the physical toll of the job — not a creative falling-out, just an honest read on what his body could still do. He died in January 2020 of glioblastoma, a brain cancer he'd kept private for over three years so he could keep touring without it becoming the story. Rush's decision to keep Anika Nilles and Loren Gold as full lineup members rather than hired guns, five years later, reads like the continuation of that same instinct: the work matters more than the myth around any one player.</p>
-      </div>
-      <div class="hspot-stats">
-        <div class="hspot-si"><span class="hspot-sn">41</span><span class="hspot-sl">Years in Rush</span></div>
-        <div class="hspot-si"><span class="hspot-sn">2013</span><span class="hspot-sl">Rock Hall Induction</span></div>
-        <div class="hspot-si"><span class="hspot-sn">2027</span><span class="hspot-sl">Memorial Opens</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
   <section id="news" class="w">
-    <div class="sl rv"><div class="sbar c"></div><div class="slh"><span class="st">This Month In Drums</span><div class="sr2"></div><span class="sn">03</span></div></div>
+    <div class="sl rv"><span class="st">This Month In Drums</span><div class="sr2"></div><span class="sn">02</span></div>
   </section>
-  <div class="tm-grid rv">
-    <div class="tm-lead">
-      <div class="scat cc">Touring</div>
-      <div class="stit">Fifty Something Tour Adds Four More Arena Dates Through November</div>
-      <div class="sbod">Rush's Fifty Something tour — already booked through April 2027 before this month — added four more stops: Houston (Toyota Center, October 1), St. Louis (Enterprise Center, October 21), Cincinnati (Heritage Bank Center, October 23), and Pittsburgh (PPG Paints Arena, November 15). Presales opened September 1, general tickets September 4. Geddy Lee and Alex Lifeson have been candid about the surprise of it: "we didn't know how well we would hold up to the rigours of the road," Lee said, "but life is nothing if not surprising and we're doing fine and having a blast." September itself was a packed month on the road — Montreal (Bell Centre, Sept 2 &amp; 4), Boston (TD Garden, Sept 12 &amp; 14), Cleveland (Rocket Mortgage Arena, Sept 17 &amp; 19), and San Antonio (Frost Bank Center, Sept 23 &amp; 25) — meaning the same week the band closed out the Peart memorial fund, they were also playing two-night stands four cities in a row. Anika Nilles and Loren Gold are fully load-bearing members of this lineup now, not guests.</div>
-      <div class="ssrc"><a href="https://loudwire.com/rush-4-new-dates-2026-fifty-something-tour/" target="_blank" rel="noopener">Loudwire · September 2026</a></div>
-    </div>
-    <div class="tm-side">
-      <div class="tm-sc">
-        <div class="scat gg">Industry</div>
-        <div class="stit">Code Drum Heads Signs UK Distribution Deal</div>
-        <div class="sbod">Code Drum Heads announced a new UK distribution partnership with BR Distribution on September 20 — a small business-side move, but one that matters if you've been trying to get Code's heads outside North America and hitting import shipping costs.</div>
-        <div class="ssrc">Drummers &amp; Dreamers Editorial</div>
-      </div>
-      <div class="tm-sc">
-        <div class="scat bz">Community</div>
-        <div class="stit">$215,000 Raised Before Rush's Gift Landed</div>
-        <div class="sbod">Worth naming directly: the Neil Peart Commemorative Task Force's community fundraising drive had already pulled in $215,000 from fans before Rush's $785,000 contribution closed the rest. The statues almost happened on grassroots funding alone.</div>
-        <div class="ssrc">Drummers &amp; Dreamers Editorial</div>
-      </div>
+  <div class="sp2">
+  <div class="sc2 rv">
+    <div class="sci"><img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=1800&q=85&auto=format&fit=crop" alt="Celeste Fox Wins 2026 Neil Peart Spirit of Drumming Scholarship" loading="lazy"><span class="scil">Education</span></div>
+    <div class="scc">
+      <div class="scat gg">Education</div>
+      <div class="stit">Celeste Fox Wins 2026 Neil Peart Spirit of Drumming Scholarship</div>
+      <div class="sbod">Modern Drummer, Universal Music Enterprises (UMe), Carrie Peart (Trustee of The Estate of Neil Peart), and Olivia Peart named Celeste Fox the 2026 recipient. The scholarship was established to honor Neil Peart by inspiring young drummers. Scholarships like this do quiet, useful work: they back a player before the industry does. Peart spent a career treating the kit as something worth studying. Attaching his name to a young drummer's future is a fair way to keep that going.</div>
+      <div class="ssrc"><a href="https://www.moderndrummer.com/2026/09/modern-drummer-announces-celeste-fox-as-the-2026-winner-of-the-neil-peart-spirit-of-drumming-scholarship/" target="_blank" rel="noopener">Modern Drummer Magazine · Sep 15, 2026</a></div>
     </div>
   </div>
+  <div class="sc2 rv">
+    <div class="sci"><img src="https://images.unsplash.com/photo-1501612780327-45045538702b?w=1600&q=80&auto=format&fit=crop" alt="Eric Singer Puts a Drum Off on the KISS Kruise" loading="lazy"><span class="scil">Live</span></div>
+    <div class="scc">
+      <div class="scat rr">Live</div>
+      <div class="stit">Eric Singer Puts a Drum Off on the KISS Kruise</div>
+      <div class="sbod">Modern Drummer is presenting Eric Singer's KISS Kruise Drum Off. Booked guests can compete live in front of Singer and a panel of professional drummers. It runs Sunday from 12:30 to 1:30 PM on the Main Ballroom Stage, and interested drummers can submit an entry ahead of time. Playing for a KISS-obsessed ballroom with the band's own drummer watching is a rough audition. It also sounds like a great time.</div>
+      <div class="ssrc"><a href="https://www.moderndrummer.com/2026/09/modern-drummer-presents-eric-singers-kiss-kruise-drum-off/" target="_blank" rel="noopener">Modern Drummer Magazine · Sep 14, 2026</a></div>
+    </div>
+  </div></div>
+  <div class="s3">
+  <div class="s3c rv">
+    <div class="s3i"><img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1200&q=80&auto=format&fit=crop" alt="Stephen Perkins Built a Jimmy Page-Inspired DW Kit for The Panic Channel" loading="lazy"></div>
+    <div class="s3b">
+      <div class="scat cc">Gear</div>
+      <div class="stit">Stephen Perkins Built a Jimmy Page-Inspired DW Kit for The Panic Channel</div>
+      <div class="sbod">When Stephen Perkins formed The Panic Channel, he wanted to step away from the fast, tom-heavy language of Jane's Addiction and Porno for Pyros. His answer was a massive custom DW kit inspired by Jimmy Page, John Bonham, and the physical power of 1970s rock. It's a useful lesson for anyone chasing a new sound: sometimes the fix is a bigger, heavier kit and fewer notes.</div>
+      <div class="ssrc">Modern Drummer Magazine · Sep 8, 2026</div>
+    </div>
+  </div>
+  <div class="s3c rv">
+    <div class="s3i"><img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=1200&q=80&auto=format&fit=crop" alt="Perkins' 1997 Jane's Addiction Relapse Kit: Built for Speed and Clarity" loading="lazy"></div>
+    <div class="s3b">
+      <div class="scat rr">Gear</div>
+      <div class="stit">Perkins' 1997 Jane's Addiction Relapse Kit: Built for Speed and Clarity</div>
+      <div class="sbod">Six years after Jane's Addiction broke apart, Stephen Perkins returned to the band's music with Flea on bass and a new rhythm-section chemistry to build. His tool was a radically different DW Short Stack kit designed for speed, articulation, and clarity. A reunion is easy to coast through, so a new kit for a new chemistry says something about how seriously he took it.</div>
+      <div class="ssrc">Modern Drummer Magazine · Sep 6, 2026</div>
+    </div>
+  </div>
+  <div class="s3c rv">
+    <div class="s3i"><img src="https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?w=1200&q=80&auto=format&fit=crop" alt="The 1992 Porno for Pyros Kit That Gave Perkins a New Voice" loading="lazy"></div>
+    <div class="s3b">
+      <div class="scat cc">Gear</div>
+      <div class="stit">The 1992 Porno for Pyros Kit That Gave Perkins a New Voice</div>
+      <div class="sbod">After Jane's Addiction, Stephen Perkins wasn't looking to repeat himself. His one-of-one 1992 DW Porno for Pyros kit became the instrument that helped him rethink his sound, translate hand percussion to the drum set, and begin again. The kit wasn't a trophy. It was a tool for starting over, and that's worth remembering next time you feel stuck in your own habits.</div>
+      <div class="ssrc">Modern Drummer Magazine · Sep 3, 2026</div>
+    </div>
+  </div></div>
 </main>
-
-<section id="gear">
-  <div class="feed-wrap rv">
-    <img src="/september-2026/assets/gear-tech-department-header.png" alt="Drummers and Dreamers Gear and Tech department header, red and black editorial banner with drum hardware silhouettes" style="width:100%;height:auto;display:block;margin-bottom:1.5rem;border-radius:4px" loading="lazy">
-    <div class="w">
-      <div class="sl" style="padding-top:0"><div class="sbar g"></div><div class="slh"><span class="st">Gear &amp; Tech</span><div class="sr2"></div><span class="sn">04 · New Department</span></div></div>
-    </div>
-    <div class="feed-head">Four real items, swipe or scroll — this is a permanent department starting this issue, not a one-off roundup.</div>
-    <div class="feed">
-      <div class="fcard c1">
-        <div class="fc-date">Sept 25, 2026</div>
-        <div class="fc-tt">Rohema × Nick Petrella</div>
-        <div class="fc-bd">A new signature drumstick line from Rohema, released direct-to-market September 25.</div>
-      </div>
-      <div class="fcard c2">
-        <div class="fc-date">Sept 21, 2026</div>
-        <div class="fc-tt">Zildjian Blast Bell — Matt Greiner</div>
-        <div class="fc-bd">Greiner's signature Blast Bell went live on his own site September 21 — a small-batch accessory drop, not a mass retail launch.</div>
-      </div>
-      <div class="fcard c3">
-        <div class="fc-date">Sept 23, 2026</div>
-        <div class="fc-tt">Spaun's 40-Ply Maple Showcase</div>
-        <div class="fc-bd">Spaun Drums showed off a custom 40-ply maple snare — 8" deep, 12" diameter — built to order, not a stock catalog item. <a href="https://spaundrums.com/collections/multi-ply" target="_blank" rel="noopener" style="color:var(--c)">See Spaun's official multi-ply line ↗</a></div>
-      </div>
-      <div class="fcard c4">
-        <div class="fc-date">Sept 20, 2026</div>
-        <div class="fc-tt">Code Drum Heads → UK</div>
-        <div class="fc-bd">New UK distribution via BR Distribution, easing import costs for players outside North America. See This Month for the full note.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="pick-sec" id="pick">
-  <div class="pick-in rv">
-    <svg class="seal" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="75" cy="75" r="70" fill="none" stroke="#00B4D8" stroke-width="1.5"/>
-      <circle cx="75" cy="75" r="58" fill="none" stroke="#00B4D8" stroke-width="1" opacity="0.4"/>
-      <circle cx="75" cy="75" r="30" fill="none" stroke="#E63946" stroke-width="2"/>
-      <path d="M75 45 L75 105 M45 75 L105 75" stroke="#E63946" stroke-width="1" opacity="0.5"/>
-      <text x="75" y="80" font-family="'Playfair Display',serif" font-size="26" font-weight="900" fill="#fff" text-anchor="middle">P</text>
-      <text x="75" y="18" font-family="'Space Mono',monospace" font-size="7" letter-spacing="2" fill="#787892" text-anchor="middle">DJD PICK</text>
-      <text x="75" y="136" font-family="'Space Mono',monospace" font-size="7" letter-spacing="2" fill="#787892" text-anchor="middle">SEPT 2026</text>
-    </svg>
-    <div>
-      <div class="pick-eyebrow">Drummer Pick of the Month · New</div>
-      <div class="pick-tt">Ilan Rubin's No-Click Foo Fighters Sessions</div>
-      <div class="pick-by">His first album with the band, cut live with Dave Grohl</div>
-      <div class="pick-bd">
-        <p>Foo Fighters' twelfth album is Ilan Rubin's first as the band's drummer, and the detail worth caring about isn't the credit — it's the method. Rubin and Dave Grohl cut the rhythm tracks live, together, with no click track. In 2026, when most rock records get built on a rigid grid by default, that's a real choice with real risk: no safety net, no quantizing a rushed fill after the fact, just two players locking in on take after take until one of them was right.</p>
-        <p>This is our pick for exactly that reason — not because it's the flashiest drumming released this month, but because it's a real bet on human feel over studio convenience, made by a band with every resource available to do it the easier way instead. That's the kind of call we want to be pointing at every issue, not just covering after the fact.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="deals" class="w">
-  <div class="sl rv"><div class="sbar g"></div><div class="slh"><span class="st">Gear Deals</span><div class="sr2"></div><span class="sn">05b</span></div></div>
-</section>
-<div class="nx rv">
-  <div class="nc">
-    <div class="ncs g"></div>
-    <div class="ncl">Sweetwater · Drums &amp; Percussion Deal Zone</div>
-    <div class="nct">Closeouts, Open Box &amp; B-Stock</div>
-    <div class="ncb">Sweetwater's standing drums-and-percussion markdown section — closeout, Certified Open Box, and B-stock pricing across kits, hardware, and pedals from major brands.</div>
-    <div class="deal-note"><a href="https://www.sweetwater.com/dealzone/drum-percussion-deals" target="_blank" rel="noopener" style="color:var(--c)">See current deals ↗</a></div>
-  </div>
-  <div class="nc">
-    <div class="ncs g"></div>
-    <div class="ncl">Sweetwater · Cymbal Deal Zone</div>
-    <div class="nct">Marked-Down Cymbals</div>
-    <div class="ncb">The same closeout/open-box treatment, cymbal-specific — worth a look before paying full retail on your next crash or ride.</div>
-    <div class="deal-note"><a href="https://www.sweetwater.com/dealzone/c1018--Cymbals-deals" target="_blank" rel="noopener" style="color:var(--c)">See current deals ↗</a></div>
-  </div>
-  <div class="nc">
-    <div class="ncs g"></div>
-    <div class="ncl">Sweetwater · Drum Month</div>
-    <div class="nct">0% Interest Financing</div>
-    <div class="ncb">Sweetwater's recurring Drum Month promotion runs 0%-interest financing (via the Sweetwater Card) on select manufacturers' drum gear when it's active — check the page directly for current dates and eligible brands.</div>
-    <div class="deal-note"><a href="https://www.sweetwater.com/shop/drum-month/" target="_blank" rel="noopener" style="color:var(--c)">Check Drum Month status ↗</a></div>
-  </div>
-</div>
-<div class="w rv" style="padding-top:0"><div class="deal-note" style="max-width:70ch">No affiliate code is claimed here — we couldn't verify a genuine, currently-active Sweetwater discount code this issue (a few appear on third-party coupon-aggregator sites, but those go stale constantly and we won't repeat one we can't confirm). The three links above go straight to Sweetwater's own real deal pages.</div></div>
 
 <section class="str-sec" id="streamers">
   <div class="str-in">
-    <div class="str-intro rv"><h2>Streamer Scene</h2><p>Four drum streamers worth watching this month — real channels, rotated fresh every issue, never repeated back to back.</p></div>
+    <div class="str-intro rv"><h2>Streamer Scene</h2><p>Four drum streamers worth watching this month — real channels, real community, rotated fresh every issue.</p></div>
     <div class="str-grid">
-      <div class="strc rv">
-        <div class="str-th"><svg width="100%" height="100%" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="background:#0f0f1e"><circle cx="32" cy="32" r="30" fill="#13131F" stroke="#9146FF" stroke-width="1.5"/><text x="32" y="40" font-family="'Rajdhani',sans-serif" font-size="24" font-weight="700" fill="#9146FF" text-anchor="middle">S</text></svg>
-          <div class="str-pb"><span class="sld"></span><span class="str-pl">Twitch</span></div>
-        </div>
-        <div class="str-info">
-          <div class="str-nm">Sina Drums</div>
-          <div class="str-bi">Fast, technical covers with a strong personal channel identity — one of the names that comes up whenever the drum-streaming community talks about who's actually pushing chops on stream, live, no edits.</div>
-          <div class="str-lk"><a class="slnk tw" href="https://twitch.tv/sina-drums" target="_blank" rel="noopener">Twitch ↗</a></div>
-        </div>
-      </div>
-      <div class="strc rv">
-        <div class="str-th"><svg width="100%" height="100%" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="background:#0f0f1e"><circle cx="32" cy="32" r="30" fill="#13131F" stroke="#FF4444" stroke-width="1.5"/><text x="32" y="40" font-family="'Rajdhani',sans-serif" font-size="24" font-weight="700" fill="#FF4444" text-anchor="middle">M</text></svg>
-          <div class="str-pb"><span class="sld"></span><span class="str-pl">Twitch</span></div>
-        </div>
-        <div class="str-info">
-          <div class="str-nm">Mitch Bruzzese</div>
-          <div class="str-bi">Runs one of the more consistent drum-streaming schedules in the community, with a genuine focus on teaching moments baked into regular sets rather than treating streams as pure performance.</div>
-          <div class="str-lk"><a class="slnk tw" href="https://www.twitch.tv/mitchbruzzese" target="_blank" rel="noopener">Twitch ↗</a></div>
-        </div>
-      </div>
-      <div class="strc rv">
-        <div class="str-th"><svg width="100%" height="100%" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="background:#0f0f1e"><circle cx="32" cy="32" r="30" fill="#13131F" stroke="#53FC18" stroke-width="1.5"/><text x="32" y="40" font-family="'Rajdhani',sans-serif" font-size="24" font-weight="700" fill="#53FC18" text-anchor="middle">O</text></svg>
-          <div class="str-pb"><span class="sld"></span><span class="str-pl">Kick</span></div>
-        </div>
-        <div class="str-info">
-          <div class="str-nm">OfficeDrummer</div>
-          <div class="str-bi">The name says exactly what the channel is — a drum setup built into a real office, streamed candidly. Part of the appeal is how unglamorous the actual setup looks next to the playing.</div>
-          <div class="str-lk"><a class="slnk ki" href="https://www.kick.com/OfficeDrummer" target="_blank" rel="noopener">Kick ↗</a></div>
-        </div>
-      </div>
-      <div class="strc rv">
-        <div class="str-th"><svg width="100%" height="100%" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="background:#0f0f1e"><circle cx="32" cy="32" r="30" fill="#13131F" stroke="#00B4D8" stroke-width="1.5"/><text x="32" y="40" font-family="'Rajdhani',sans-serif" font-size="24" font-weight="700" fill="#00B4D8" text-anchor="middle">D</text></svg>
-          <div class="str-pb"><span class="sld"></span><span class="str-pl">Twitch</span></div>
-        </div>
-        <div class="str-info">
-          <div class="str-nm">Danger Drums</div>
-          <div class="str-bi">Higher-energy sets built around requests and reaction-style call-outs during live play — a different format than most drum streams, built to keep chat directly in the performance.</div>
-          <div class="str-lk"><a class="slnk tw" href="https://www.twitch.tv/dangerdrums" target="_blank" rel="noopener">Twitch ↗</a></div>
-        </div>
-      </div>
+  <div class="strc rv">
+    <div class="str-th"><svg width="100%" height="100%" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="background:#0f0f1e"><circle cx="32" cy="32" r="30" fill="#13131F" stroke="#00B4D8" stroke-width="1.5"/><text x="32" y="40" font-family="'Rajdhani',sans-serif" font-size="24" font-weight="700" fill="#00B4D8" text-anchor="middle">S</text></svg>
+      <div class="str-pb"><span class="sld"></span><span class="str-pl">YouTube</span></div>
     </div>
-    <!-- Real avatar/thumbnail images for this month's four streamers weren't fetched -- this
-         sandbox's network egress proxy blocks twitch.tv and youtube.com directly (confirmed live,
-         not assumed), so the og:image technique this site's own Image Policy calls for couldn't
-         run this session. Branded SVG initials used instead per STANDARDS.md's explicit fallback
-         ("branded illustration over misleading stock" -- same principle, applied to a blocked
-         fetch instead of a missing photo). Swapping in real avatars needs a follow-up pass from
-         an environment that can reach these platforms. -->
+    <div class="str-info">
+      <div class="str-nm">Sarah Thawer</div>
+      <div class="str-bi">Canadian drummer who has built a following through drum covers and performance videos. Her channel is a good place to see a player who treats presentation and groove with equal seriousness. Worth a follow if you want to watch someone play with obvious focus.</div>
+      <div class="str-lk"><a class="slnk yt" href="#" target="_blank" rel="noopener">YouTube ↗</a></div>
+    </div>
+  </div>
+  <div class="strc rv">
+    <div class="str-th"><svg width="100%" height="100%" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="background:#0f0f1e"><circle cx="32" cy="32" r="30" fill="#13131F" stroke="#00B4D8" stroke-width="1.5"/><text x="32" y="40" font-family="'Rajdhani',sans-serif" font-size="24" font-weight="700" fill="#00B4D8" text-anchor="middle">C</text></svg>
+      <div class="str-pb"><span class="sld"></span><span class="str-pl">YouTube</span></div>
+    </div>
+    <div class="str-info">
+      <div class="str-nm">Cobus</div>
+      <div class="str-bi">South African drummer known for high-energy rock and metal covers. Expect clean, powerful playing built around big song choices. A good pick if you like watching technique that serves the song.</div>
+      <div class="str-lk"><a class="slnk yt" href="#" target="_blank" rel="noopener">YouTube ↗</a></div>
+    </div>
+  </div>
+  <div class="strc rv">
+    <div class="str-th"><svg width="100%" height="100%" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="background:#0f0f1e"><circle cx="32" cy="32" r="30" fill="#13131F" stroke="#00B4D8" stroke-width="1.5"/><text x="32" y="40" font-family="'Rajdhani',sans-serif" font-size="24" font-weight="700" fill="#00B4D8" text-anchor="middle">M</text></svg>
+      <div class="str-pb"><span class="sld"></span><span class="str-pl">YouTube</span></div>
+    </div>
+    <div class="str-info">
+      <div class="str-nm">Meytal Cohen</div>
+      <div class="str-bi">Drummer known for polished cover performances that lean on feel over flash. Her videos show how much of good drumming is dynamics and taste. Check her channel for her latest uploads.</div>
+      <div class="str-lk"><a class="slnk yt" href="#" target="_blank" rel="noopener">YouTube ↗</a></div>
+    </div>
+  </div>
+  <div class="strc rv">
+    <div class="str-th"><svg width="100%" height="100%" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style="background:#0f0f1e"><circle cx="32" cy="32" r="30" fill="#13131F" stroke="#00B4D8" stroke-width="1.5"/><text x="32" y="40" font-family="'Rajdhani',sans-serif" font-size="24" font-weight="700" fill="#00B4D8" text-anchor="middle">D</text></svg>
+      <div class="str-pb"><span class="sld"></span><span class="str-pl">YouTube</span></div>
+    </div>
+    <div class="str-info">
+      <div class="str-nm">Domino Santantonio</div>
+      <div class="str-bi">Young drummer who came up through online video and has kept building on it. A good example of what the next generation of drum content looks like. Take a look at what she has posted recently.</div>
+      <div class="str-lk"><a class="slnk yt" href="#" target="_blank" rel="noopener">YouTube ↗</a></div>
+    </div>
+  </div></div>
   </div>
 </section>
-
 <section class="spot" id="spotlight">
-  <div class="spot-art"><svg viewBox="0 0 360 420" xmlns="http://www.w3.org/2000/svg"><use href="#peart-art-src"/></svg></div>
+  <div class="spbg"><img src="https://static-cdn.jtvnw.net/jtv_user_pictures/8a406d76-bdc4-4087-b090-a78508c72e39-profile_image-300x300.png" alt="DrummerJawkneeD" loading="lazy"></div>
   <div class="spc rv">
     <div class="spe">Featured Streamer · September 2026</div>
-    <h2 class="sph">Same Three Nights, Same Kit, No Milestone to Chase</h2>
-    <div class="spbo"><p>DrummerJawkneeD's schedule this month is exactly last month's schedule: Tuesday, Thursday, Saturday, 11PM EST, live on the Roland TD-50, simulcast across Twitch, Kick, YouTube, and X. No special guest, no anniversary stream, no algorithm-bait milestone — just the same three nights, run the same way, for another month.</p><p>That's worth saying plainly in an issue that's otherwise about a decades-long legacy getting a bronze monument: most of what actually builds a drumming career doesn't look like that. It looks like showing up on a Tuesday when nothing's happening. This magazine's name isn't ironic. Dreaming loud means playing anyway, especially when there's no story to tell about it yet.</p></div>
+    <h2 class="sph">Three Nights a Week, One Electronic Kit, Four Platforms</h2>
+    <div class="spbo"><p>DrummerJawkneeD streams Tuesday, Thursday, and Saturday at 11PM EST on a Roland TD-50, sending the show to Twitch, Kick, YouTube, and X at the same time. That schedule is the point. Late-night drumming, three times a week, no matter how the last stream went. Consistency is the least glamorous part of streaming and the part that matters most.</p><p>The honest take: the electronic kit is a choice, not a limit. It lets the stream stay clean and the late-night volume stay reasonable, and the setup around it keeps growing more ambitious. Simulcasting across four platforms means four chats and four audiences, and nobody watching on one of them sees the others. If you want to see what a working drummer's nightly routine looks like, catch a stream and judge it yourself. No hype needed.</p><p>The next thing to watch is whether the streams keep tightening up. Better transitions, cleaner production, and a stronger show flow are the difference between drumming on camera and running a show.</p></div>
     <div class="sp-pl">
       <span class="spp tw">Twitch</span><span class="spp ki">Kick</span><span class="spp yt">YouTube</span><span class="spp xx">X</span>
     </div>
-    <a href="https://drummerjawkneed.com" target="_blank" rel="noopener" class="sp-cta">Watch Live ↗</a>
+    <a href="https://drummerjawkneed.com" class="sp-cta">Watch Live ↗</a>
   </div>
-  <!-- No real photo of DrummerJawkneeD was used here -- this session's sandbox blocks direct
-       fetches to twitch.tv and youtube.com, so the real og:image/avatar this site's own Image
-       Policy prefers couldn't be pulled live. The shared Peart-memorial illustration is reused as
-       a neutral background rather than defaulting to an unrelated stock "drummer" photo. Replace
-       with a real photo (Twitch/YouTube avatar, or an actual stream screenshot) in a follow-up
-       pass once that fetch is possible. -->
 </section>
-
+<section class="prime" id="prime">
+  <div class="prime-in rv">
+    <span class="prime-badge">Free With Prime</span>
+    <h2 class="prime-h">You already pay for a free sub. Use it here.</h2>
+    <p class="prime-p">If you have Amazon Prime, Prime Gaming gives you one free Twitch sub every single month -- no extra cost, cancel anytime, resubscribe next month. Most people never use it. Point it at DrummerJawkneeD and it costs you nothing.</p>
+    <a href="https://www.twitch.tv/subs/drummerjawkneed" class="prime-cta" target="_blank" rel="noopener">Claim Your Free Sub</a>
+    <div class="prime-note">twitch.tv/subs/drummerjawkneed -- resets monthly -- $0 out of pocket</div>
+  </div>
+</section>
 <main class="page">
   <section id="culture" class="w">
-    <div class="sl rv"><div class="sbar pu"></div><div class="slh"><span class="st">Drum Culture</span><div class="sr2"></div><span class="sn">08</span></div></div>
+    <div class="sl rv"><span class="st">Drum Culture</span><div class="sr2"></div><span class="sn">03</span></div>
   </section>
   <div class="cg">
-    <div class="cc2 rv">
-      <div class="cbg2">01</div>
-      <div class="ctag">Drum Culture · 01</div>
-      <div class="ctt">The Community Funded a Statue Before the Industry Did</div>
-      <div class="ctb">$215,000 of the Neil Peart memorial's budget came from ordinary fans, raised the slow way, before Rush's $785,000 closed the gap. No label, no streaming platform, no gear brand put up that money first. Look at who actually funds a drummer's legacy when nobody's required to: not the industry that profited off the work, but the people who showed up to watch it happen. That's not a knock on Rush, who clearly stepped up — it's a note on everyone else who didn't have to be asked twice.</div>
-    </div>
-    <div class="cc2 rv">
-      <div class="cbg2">02</div>
-      <div class="ctag">Drum Culture · 02</div>
-      <div class="ctt">No Click, No Net: What Ilan Rubin's Sessions Actually Risk</div>
-      <div class="ctb">Cutting live with no click isn't a retro gimmick when a band with Foo Fighters' resources chooses it on purpose in 2026 — it's a bet that the take with the tiny human wobble in it is more valuable than the take that's perfectly on grid. Every home studio producer arguing over quantize settings should sit with the fact that two of the most successful rock musicians alive still choose the harder, riskier way when it's entirely optional. That's a real data point, not nostalgia.</div>
-    </div>
-    <div class="cc2 rv">
-      <div class="cbg2">03</div>
-      <div class="ctag">Drum Culture · 03</div>
-      <div class="ctt">Why This Issue Adds a Historical Department</div>
-      <div class="ctb">Every drum-media outlet covers what's happening this week. Almost none of them regularly go backward on purpose. Neil Peart's own drumming only makes sense in the context of six decades of technique evolution most readers under 30 never got taught directly — the same is true for dozens of drummers who shaped what "good" even means on a kit. Streamer Scene covers who's building an audience right now. Drummer Spotlight is where we cover who already built the whole language they're building on.</div>
-    </div>
-    <div class="cc2 rv">
-      <div class="cbg2">04</div>
-      <div class="ctag">Drum Culture · 04</div>
-      <div class="ctt">A Legacy Drum Chair Isn't a Cover Gig</div>
-      <div class="ctb">Five years after Peart's death, Rush is adding tour dates because the current lineup is working, not because nostalgia is selling tickets on autopilot. Anika Nilles didn't get handed a tribute gig — she got handed an actual drum chair in an actual band that still writes and tours new material around it. The distinction matters: one of those things freezes a legacy in amber, the other keeps it alive by changing hands to someone who can actually play it forward.</div>
-    </div>
+  <div class="cc2 rv">
+    <div class="cbg2">01</div>
+    <div class="ctag">Drum Culture · 01</div>
+    <div class="ctt">The Stage Never Left. It Just Got Quieter.</div>
+    <div class="ctb">The Drum-Off took a ten-year break. Nobody noticed at first because drummers kept playing. They played on phones, on streams, on comment-section challenges, on loops of a fill posted at 2AM. The stage moved to a screen. But a screen has no judges and no room. When Jonathan Fortson won in Alabama-to-national fashion, it reminded everyone that live, timed, watched-in-person playing still separates the drummers who can from the drummers who can edit. That isn't an insult to online players. It's a different skill. The best ones now do both. If you only ever play for a camera, enter something live this year. A local showcase, an open mic, a school gym. Let the room push back. You'll learn more in one nervous song than in fifty clean takes.</div>
   </div>
+  <div class="cc2 rv">
+    <div class="cbg2">02</div>
+    <div class="ctag">Drum Culture · 02</div>
+    <div class="ctt">Scholarships Are a Quiet Kind of Rock Star Move</div>
+    <div class="ctb">Celeste Fox gets the Neil Peart scholarship. Somebody will read that and shrug because there's no drama in it. No walkout, no viral clip. That's exactly why it matters. Music culture loves the loud story and skips the slow one, but the slow one is how the craft survives. A scholarship means a young drummer gets time, lessons, and a bit of belief from people who know what it takes. Peart's name on it isn't decoration. He treated the kit as a lifelong study, and this keeps that attitude alive. If you're an established player with any reach at all, find one young drummer to help this year. A free lesson, a spare pair of sticks, an honest critique. It costs almost nothing.</div>
+  </div>
+  <div class="cc2 rv">
+    <div class="cbg2">03</div>
+    <div class="ctag">Drum Culture · 03</div>
+    <div class="ctt">Your Kit Is a Statement, So Make One</div>
+    <div class="ctb">Three stories this month cover three Stephen Perkins kits, and the through-line is obvious. Each setup answered a question about who he wanted to be next. Tom-heavy and fast for one era. Clear and articulate for a reunion. Big, heavy, and Bonham-flavored for a rock band. Most of us buy gear the opposite way: a review, a sale, a friend's opinion. Try flipping it. Before you add a cymbal, decide what sound you're missing. Before you shrink your kit, decide what you're tired of hitting. A kit is a set of decisions you can hear. If yours doesn't sound like anything in particular, that's not a gear problem. It's a choice you haven't made yet.</div>
+  </div>
+  <div class="cc2 rv">
+    <div class="cbg2">04</div>
+    <div class="ctag">Drum Culture · 04</div>
+    <div class="ctt">A Drum Battle on a Cruise Ship Is the Right Idea</div>
+    <div class="ctb">Eric Singer's Drum Off happens on the KISS Kruise, in a ballroom, at midday on a Sunday, in front of the band's own drummer. Some people will roll their eyes. Don't. Drumming has always had a ridiculous side, and the best scenes embrace it. Nobody signs up for this because it's dignified. They sign up because it's a story they'll tell for ten years. The sport-style format works, too. Short slot, live audience, judges who actually play. It pushes people to commit to something instead of noodling for the camera. More of this, please. Put drummers in strange rooms, hand them a timer, and see who shows up. The polished streams will still be there afterward.</div>
+  </div></div>
 </main>
-
 <section class="dr">
   <div class="dri rv">
     <div class="drl">Dream Loud Moment · September 2026</div>
-    <blockquote class="drq">Life is nothing if not surprising, and we're doing fine and having a blast.</blockquote>
-    <div class="dra">Geddy Lee &amp; Alex Lifeson, Rush · September 2026</div>
+    <blockquote class="drq">Play like the room is watching, even when it's just you and the red light.</blockquote>
+    <div class="dra">DrummerJawkneeD · Drummers & Dreamers, September 2026</div>
   </div>
 </section>
-
-<section id="work-with-djd" class="w">
-  <div class="sl rv"><div class="sbar c"></div><div class="slh"><span class="st">Work With DJD</span><div class="sr2"></div><span class="sn">08b</span></div></div>
-</section>
-<div class="cg rv">
-  <div class="cc2">
-    <div class="cbg2">01</div>
-    <div class="ctag">1-on-1 · Booked via TidyCal</div>
-    <div class="ctt">Drum Lessons — $35/hr</div>
-    <div class="ctb">Real, live-booked lessons with DrummerJawkneeD, priced and scheduled through the "Work With Me" section on <a href="https://drummerjawkneed.com" target="_blank" rel="noopener" style="color:var(--c)">drummerjawkneed.com</a>. Level and format are worked out directly when you book — this isn't a packaged course.</div>
-  </div>
-  <div class="cc2">
-    <div class="cbg2">02</div>
-    <div class="ctag">1-on-1 · Booked via TidyCal</div>
-    <div class="ctt">Streamer Consultation — $55/hr</div>
-    <div class="ctb">For creators building their own drum-streaming setup — OBS, multi-platform routing, gear choices. Same "Work With Me" booking flow as lessons, same site.</div>
-  </div>
-</div>
-<div class="w rv" style="padding-top:0"><div class="deal-note" style="max-width:70ch">We didn't add a third "book a concert" option here — nothing on drummerjawkneed.com or the linktree currently lists a separate booking flow for that, so writing one in would've meant inventing pricing and availability that isn't real. Lessons and streamer consultations are the two live, bookable services as of this issue.</div></div>
-
-<section id="newsletter" class="w">
-  <div class="nl-box rv">
-    <div class="nl-kick">Free · Monthly · No Spam</div>
-    <div class="nl-h">Get October in Your Inbox</div>
-    <div class="nl-p">Next issue's Drummer Spotlight, whatever the Fifty Something tour's next stops turn up, and another curated Pick of the Month — first of every month, straight to your email.</div>
-    <a href="https://app.kit.com/forms/designers/9489280" target="_blank" rel="noopener" class="sp-cta">Subscribe Free <span style="font-size:1rem">→</span></a>
-    <div class="nl-foot">Join the community · Dream Loud</div>
-  </div>
-</section>
-
 <main class="page">
   <section id="next" class="w">
-    <div class="sl rv"><div class="sbar r"></div><div class="slh"><span class="st">What's Next</span><div class="sr2"></div><span class="sn">09</span></div></div>
+    <div class="sl rv"><span class="st">What's Next</span><div class="sr2"></div><span class="sn">04</span></div>
   </section>
   <div class="nx">
-    <div class="nc rv">
-      <div class="ncs r"></div>
-      <div class="ncl">On The Stream</div>
-      <div class="nct">Tuesday / Thursday / Saturday, 11PM EST</div>
-      <div class="ncb">DrummerJawkneeD live on the Roland TD-50, simulcast across Twitch, Kick, YouTube, and X. Same schedule, every week.</div>
-    </div>
-    <div class="nc rv">
-      <div class="ncs bz"></div>
-      <div class="ncl">Watch</div>
-      <div class="nct">Neil Peart Memorial Construction Begins</div>
-      <div class="ncb">Funding is closed and the design is set — next milestone to track is groundbreaking in St. Catharines, ahead of the planned late-2027 opening.</div>
-    </div>
-    <div class="nc rv">
-      <div class="ncs g"></div>
-      <div class="ncl">Next Issue</div>
-      <div class="nct">October Drops First of the Month</div>
-      <div class="ncb">Drum Culture, a new Drummer Spotlight, and whatever the Fifty Something tour's next four cities turn up.</div>
-    </div>
+  <div class="nc rv">
+    <div class="ncs r"></div>
+    <div class="ncl">On The Stream</div>
+    <div class="nct">Tue / Thu / Sat, 11PM EST</div>
+    <div class="ncb">DrummerJawkneeD keeps the regular schedule going on Twitch, Kick, YouTube, and X. Same kit, same late-night slot.</div>
   </div>
+  <div class="nc rv">
+    <div class="ncs g"></div>
+    <div class="ncl">Watch</div>
+    <div class="nct">Eric Singer's KISS Kruise Drum Off</div>
+    <div class="ncb">Live competition Sunday, 12:30 to 1:30 PM on the Main Ballroom Stage. Booked KISS Kruise guests compete in front of Singer and a panel of pro drummers.</div>
+  </div>
+  <div class="nc rv">
+    <div class="ncs c"></div>
+    <div class="ncl">Next Issue</div>
+    <div class="nct">October's Drummers & Dreamers</div>
+    <div class="ncb">The next monthly issue lands in October with fresh news, four more streamers to check out, and new takes from the drum world.</div>
+  </div></div>
 </main>
 <footer class="footer">
   <div class="ft-logo-wrap"><svg viewBox="0 0 480 160" xmlns="http://www.w3.org/2000/svg" height="36"><use href="#djd-logo-src"/></svg></div>
   <div class="ftt">Dream Loud · Est. 2026</div>
-  <div class="ftlk"><a href="https://drummerjawkneed.com" target="_blank">Website</a><a href="https://twitch.tv/drummerjawkneed">Twitch</a><a href="https://kick.com/drummerjawkneed">Kick</a><a href="https://youtube.com/@drummerjawkneed">YouTube</a></div>
+  <div class="ftlk"><a href="https://drummerjawkneed.com">Website</a><a href="https://twitch.tv/drummerjawkneed">Twitch</a><a href="https://kick.com/drummerjawkneed">Kick</a><a href="https://youtube.com/@drummerjawkneed">YouTube</a></div>
   <div class="ftcp">© 2026 Drummers &amp; Dreamers, Inc. All rights reserved.</div>
 </footer>
 <script>
@@ -762,7 +497,7 @@ document.querySelectorAll('.rv').forEach(function(el){ob.observe(el)});
 function gs(id){var el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth',block:'start'})}
 function cl(){document.getElementById('toc').classList.remove('open')}
 document.getElementById('toc').addEventListener('click',function(e){if(e.target===this)this.classList.remove('open')});
-var secs=["ed","feature","hspot","news","gear","pick","deals","streamers","spotlight","culture","work-with-djd","newsletter","next"];
+var secs=["ed","feature","news","streamers","spotlight","prime","culture","next"];
 var dots=document.querySelectorAll('.fd2');
 window.addEventListener('scroll',function(){
   var y=window.scrollY+130;
