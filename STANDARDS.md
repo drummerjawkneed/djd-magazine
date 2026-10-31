@@ -182,6 +182,7 @@ Editorial news commentary, criticism, and education = generally protected. Produ
 | Drummer Pick of the Month | 100-200 words | **Added September 2026.** One specific, curated piece of drumming, argued for directly (Pitchfork-style single-work focus) — not a roundup entry |
 | Drum Lesson | 1 lesson + 4 steps | Intermediate or beginner, rotating difficulty |
 | Streamer Scene | 4 streamers | Rotate monthly, always verified data, never the same 4 as last issue |
+| Free Prime Sub | 1 `streamer`-type section, 150-200 words, every issue | **Added Nov 2026 (Johnny, 08-04).** Direct, easy, eye-catching: how to use the free monthly Amazon Prime Twitch sub (link accounts, tick Use Prime Sub, no auto-renew, Partner/Affiliate only, iPhone use Safari) with a button to twitch.tv/subs/drummerjawkneed. Verify against Amazon/Twitch help pages each month. Place right after Streamer Scene |
 | DJD Spotlight | 250-300 words | Honest, not hype |
 | Drum Culture | 4 takes, 150-200 words each | Opinionated, linked |
 | Gear Picks | 4 affiliate cards | Mark clearly as affiliate |
