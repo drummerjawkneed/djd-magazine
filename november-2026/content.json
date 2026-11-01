@@ -1,0 +1,670 @@
+{
+  "issue_number": "06",
+  "month": "November 2026",
+  "kicker": "November 2026 · Cover Story",
+  "headline": "Forty-Two Years on a Single Pedal. Nicko McBrain Tells It Himself.",
+  "dek": "Iron Maiden's drummer published his autobiography, Hello Boys And Girls!, on October 22, and took it on the road four days later.",
+  "summary": "Nicko McBrain's memoir lands, Joey Kramer rejoins Aerosmith for the Hollywood Bowl, Dream Theater start album 17 with Mike Portnoy, Alesis and Gretsch launch new kit tech, and Gene Krupa gets this month's Drummer Spotlight.",
+  "headline_short": "Nicko McBrain Tells It Himself",
+  "date_published": "2026-11-01T12:00:00Z",
+  "hero_image": "mcbrain",
+  "images": {
+    "mcbrain": {
+      "file": "iron-maiden-nicko-mcbrain-jpg.webp",
+      "alt": "Nicko McBrain playing drums on stage with Iron Maiden under stage lights.",
+      "caption": "Nicko McBrain with Iron Maiden in Newcastle, July 23, 2011.",
+      "credit": "Photo: Mike Lawrence / <a href=\"https://commons.wikimedia.org/wiki/File:Iron_Maiden_Nicko_McBrain.jpg\" target=\"_blank\" rel=\"noopener\">Wikimedia Commons</a> (CC BY-SA 2.0)",
+      "w": 1600,
+      "h": 1200
+    },
+    "kramer": {
+      "file": "joey-kramer-2013-10-01-001-jpg.webp",
+      "alt": "Joey Kramer playing drums on stage with Aerosmith.",
+      "caption": "Joey Kramer with Aerosmith in Caracas, Venezuela, October 1, 2013.",
+      "credit": "Photo: Ed Vill / <a href=\"https://commons.wikimedia.org/wiki/File:Joey_Kramer_2013-10-01_001.jpg\" target=\"_blank\" rel=\"noopener\">Wikimedia Commons</a> (CC BY 2.0)",
+      "w": 1600,
+      "h": 2285
+    },
+    "portnoy": {
+      "file": "mike-portnoy-2025-tons-of-rock-1-jpg.webp",
+      "alt": "Mike Portnoy behind his drum kit on an outdoor festival stage with Dream Theater.",
+      "caption": "Mike Portnoy with Dream Theater at Tons of Rock, Oslo, June 2025.",
+      "credit": "Photo: Birgit Fostervold / <a href=\"https://commons.wikimedia.org/wiki/File:Mike_Portnoy_2025_Tons_of_Rock-1.jpg\" target=\"_blank\" rel=\"noopener\">Wikimedia Commons</a> (CC BY-SA 4.0)",
+      "w": 1398,
+      "h": 1748
+    },
+    "krupa": {
+      "file": "gene-krupa-400-restaurant-new-york-n-y-ca-june-1946-william-p-gottlieb-05451-jpg.webp",
+      "alt": "Gene Krupa at a drum kit on a bandstand, black-and-white photograph.",
+      "caption": "Gene Krupa at the 400 Restaurant, New York, around June 1946.",
+      "credit": "Photo: William P. Gottlieb / <a href=\"https://commons.wikimedia.org/wiki/File:Gene_Krupa,_400_Restaurant,_New_York,_N.Y.,_ca._June_1946_(William_P._Gottlieb_05451).jpg\" target=\"_blank\" rel=\"noopener\">Wikimedia Commons</a> (Public domain)",
+      "w": 1024,
+      "h": 1346
+    }
+  },
+  "ticker": [
+    "Nicko McBrain's autobiography Hello Boys And Girls! published October 22",
+    "Joey Kramer back with Aerosmith for the Hollywood Bowl, Oct. 29 and Nov. 1",
+    "Dream Theater start album 17 with Mike Portnoy (Oct. 13)",
+    "Alesis Kitstream: a $399 kick-hoop mic and trigger for acoustic kits (Oct. 27)",
+    "Gretsch launches its first electronic kit, the Catalina EVO (Oct. 22)"
+  ],
+  "sections": [
+    {
+      "id": "ed",
+      "type": "editor",
+      "label": "Editor's Note",
+      "tone": "r",
+      "body": [
+        "Nicko McBrain spent 42 years behind Iron Maiden, famously on a single kick pedal, and this month he did something drummers rarely get to do. He told the story himself, in his own book, on his own terms.",
+        "<em>Hello Boys And Girls!</em> came out on October 22. Four days later McBrain opened a spoken-word tour in Frankfurt: stories, not songs. We have not read the book yet and we won't pretend otherwise. What we can tell you is why it matters, and that the most useful thing he has said about leaving the road is also the most honest. He wasn't doing the songs justice any more, so he stopped.",
+        "October was hard on drummers' bodies. Anika Nilles played a Rush show with the flu, and the band postponed the next one rather than ask her to do it again. Neil Sanderson ruptured a bicep tendon. Jussi 69 announced he has viral meningitis, and his drum tech got the call. Our Drum Culture page takes a position on what bands, and drummers, should learn from it.",
+        "Streamer Scene is back at full size, with four channels and follower counts we read ourselves on October 28. So is the Drum Lesson: one rudiment, four steps, and the sticks you already own.",
+        "Look after your arms. Then go play."
+      ],
+      "sign": "DRUMMERJAWKNEED &middot; DREAM LOUD"
+    },
+    {
+      "id": "cover",
+      "type": "cover",
+      "label": "Cover Story",
+      "tone": "g",
+      "image": "mcbrain",
+      "headline": "Nicko McBrain, in his own words",
+      "dek": "He replaced Clive Burr in 1982, played on 14 Iron Maiden studio albums and retired from touring in 2024. Now the drummer is the one holding the microphone.",
+      "body": [
+        "McBrain played his last show with Iron Maiden on December 7, 2024, at Allianz Parque in S&atilde;o Paulo, and announced his retirement from touring the same day. Simon Dawson, Steve Harris's bandmate in British Lion, now plays the shows. McBrain remains a member of the band for studio projects.",
+        "His autobiography, <em>Hello Boys And Girls!</em>, came out from Harper Nonfiction on October 22 in hardback, ebook and audio. On October 26 he opened a spoken-word tour in Frankfurt, with theatre dates booked across Germany, the Netherlands, Scandinavia, Ireland and the UK. The promotional copy promises the backstage stories you would expect, and also the parts he mostly kept out of public view: a stage 1 laryngeal cancer diagnosis, a stroke that he said left him paralysed down one side when he went public with it in August 2023, and his religious faith.",
+        "The backstory is pure working drummer. McBrain was born in Hackney, East London, in 1952 and practised on his mother's pots and pans until his father bought him a first kit at 11. He was playing pubs and weddings by 14, then did session work and played with Streetwalkers, the Pat Travers Band and the French band Trust. Trust supported Iron Maiden on the UK leg of the Killers tour in 1981, and McBrain joined Maiden in December 1982, replacing Clive Burr. Burr's exit had not been announced yet, so McBrain's first appearance with the band, on German TV, was in disguise as Eddie, the band's mascot. His first Maiden album, <em>Piece of Mind</em>, came out on May 16, 1983."
+      ],
+      "pull": {
+        "text": "&ldquo;I wasn't doing the songs justice because of the handicap that I had.&rdquo;",
+        "cite": "Nicko McBrain on Trunk Nation with Eddie Trunk, July 2025 &middot; as reported by Blabbermouth"
+      },
+      "body2": [
+        "That interview is the best argument for the book. McBrain said he was told off at Maiden's 2024 rehearsals for playing the songs too fast, because he had been gigging them with Titanium Tart, his Florida side project. Driving the band was never the issue. Playing the fills he had played for 42 years was. Few drummers can describe their own decline that precisely, and fewer would say it on the radio.",
+        "Then there is the playing. Blabbermouth's profile describes Burr as heavy-handed and punk-oriented, and credits McBrain with the finesse and technique that let Harris take the band down more adventurous paths. McBrain writes all of Maiden's drum parts. He is known for refusing a double pedal, and he has played barefoot on a DW 5000 Accelerator single pedal since 2000. He is the band's third-longest-serving member, behind Harris and Dave Murray.",
+        "Why it matters if you stream: the spoken-word show is billed as part stand-up and part audience interaction. That is a drum stream with the kit taken away. The talking between songs, the stories, the moments when chat answers back, is half of what people come for. McBrain is 74 and doing it in theatres. Read the book, then tell your own audience where your parts came from."
+      ],
+      "gallery": [],
+      "sources": [
+        [
+          "Blabbermouth (Oct. 21, 2026): Nicko McBrain unboxes his autobiography Hello Boys And Girls!",
+          "https://blabbermouth.net/news/watch-iron-maiden-drummer-nicko-mcbrain-unboxes-his-autobiography-hello-boys-and-girls"
+        ],
+        [
+          "Wikipedia: Nicko McBrain",
+          "https://en.wikipedia.org/wiki/Nicko_McBrain"
+        ],
+        [
+          "Wikipedia: Piece of Mind",
+          "https://en.wikipedia.org/wiki/Piece_of_Mind"
+        ],
+        [
+          "Wikipedia: Clive Burr",
+          "https://en.wikipedia.org/wiki/Clive_Burr"
+        ]
+      ]
+    },
+    {
+      "id": "news",
+      "type": "news",
+      "label": "This Month",
+      "tone": "c",
+      "items": [
+        {
+          "tag": "Comeback",
+          "headline": "Joey Kramer is back behind Aerosmith",
+          "image": "kramer",
+          "body": [
+            "Aerosmith posted rehearsal photos on October 20 showing all five classic members, Joey Kramer included, ahead of two Aerosmith + Friends shows at the Hollywood Bowl on October 29 and November 1, with Guns N' Roses in support. They are the band's first shows since 2023.",
+            "Kramer last played with Aerosmith on February 15, 2020, during the Deuces Are Wild residency in Las Vegas. He missed shows in 2019 through injury, sued his bandmates in early 2020 hoping to play with them during Grammy week, and took leave in 2022 to focus on his family; his wife died later that year. We went to press before the first show. If Kramer played on October 29, as the rehearsal photos indicate, it was his first Aerosmith show in more than six and a half years. We will report on both nights in December."
+          ],
+          "sources": [
+            [
+              "Loudwire (Oct. 21, 2026): Rehearsal photos reveal Joey Kramer will play with Aerosmith",
+              "https://loudwire.com/rehearsal-photos-joey-kramer-aerosmith/"
+            ],
+            [
+              "Drumming News Network: Joey Kramer set for Hollywood Bowl return",
+              "https://www.drummingnewsnetwork.com/aerosmiths-joey-kramer-set-for-hollywood-bowl-comeback-shows/"
+            ]
+          ]
+        },
+        {
+          "tag": "Studio",
+          "headline": "Dream Theater start album 17, with Portnoy",
+          "image": "portnoy",
+          "body": [
+            "On October 13 Dream Theater posted a photo of all five members at Ytse Jam Studios with the caption &ldquo;#DT17 is underway&rdquo;. It will follow <em>Parasomnia</em>, released February 7, 2025.",
+            "Mike Portnoy co-founded the band, left in 2010 and came back in October 2023. In between, Mike Mangini played on five studio albums. Portnoy's first show back was October 20, 2024, at the O2 in London."
+          ],
+          "sources": [
+            [
+              "Rock To Roll Radio (Oct. 15, 2026): Dream Theater starts work on 17th studio album",
+              "https://rocktoroll.com/2026/10/15/dream-theater-starts-work-on-17th-studio-album-with-mike-portnoy-back-on-drums/"
+            ]
+          ]
+        },
+        {
+          "tag": "Touring",
+          "headline": "Anika Nilles gets the flu; Rush move San Jose",
+          "body": [
+            "Rush postponed their October 17 show at the SAP Center in San Jose because Anika Nilles was too ill to play. The new date is December 6, same venue, and existing tickets are honoured. Alex Lifeson said in a video message that Nilles had played the first San Jose night, October 15, in the early stages of the flu, calling it &ldquo;a testament to her willpower.&rdquo;",
+            "The Fifty Something tour carries on with Nilles and keyboardist Loren Gold alongside Geddy Lee and Lifeson."
+          ],
+          "sources": [
+            [
+              "Blabbermouth (Oct. 17, 2026): Rush postpone San Jose concert after Anika Nilles falls ill",
+              "https://blabbermouth.net/news/rush-postpones-tonights-concert-in-san-jose-after-drummer-anika-nilles-falls-ill"
+            ]
+          ]
+        },
+        {
+          "tag": "Memorial",
+          "headline": "Peart memorial: fan campaign closed, opening tentatively late 2027",
+          "body": [
+            "In October we promised to report any update from St. Catharines. The latest city update we could find is its September announcement: the $1 million goal is met, the fan donation campaign (including engraved commemorative fan panels) was set to close on October 15, and staff tentatively expect the memorial at Lakeside Park to open in late 2027. Sculptor Morgan MacDonald's design is two larger-than-life bronzes of Peart joined by a pathway, next to the Neil Peart Pavilion. We found no construction or unveiling news in October."
+          ],
+          "sources": [
+            [
+              "City of St. Catharines: Rush donation secures $1M goal for Neil Peart memorial",
+              "https://www.stcatharines.ca/news/posts/rush-donation-strikes-final-triumphant-cord-for-neil-peart-memorial-fundraising-campaign/"
+            ]
+          ]
+        },
+        {
+          "tag": "Fill-ins",
+          "headline": "Two drummers down, two drummers up",
+          "body": [
+            "Three Days Grace's Neil Sanderson fully ruptured the bicep tendon in his left arm and needed surgery, so former Breaking Benjamin drummer Shaun Foist is covering the fall Alienation tour. Sanderson is staying on the road on keyboards and backing vocals, apart from three shows he missed for the operation (Houston, San Antonio and Rogers, Arkansas).",
+            "In Finland, The 69 Eyes' Jussi 69 announced on October 22 that he has viral meningitis. His drum tech, Vilho Rajala, who Jussi says knows the songs by heart, is playing the first weeks of dates."
+          ],
+          "sources": [
+            [
+              "Blabbermouth (Oct. 25, 2026): Neil Sanderson to undergo emergency surgery",
+              "https://blabbermouth.net/news/three-days-grace-drummer-neil-sanderson-to-undergo-emergency-surgery-for-ruptured-bicep-tendon"
+            ],
+            [
+              "Blabbermouth (Oct. 22, 2026): Jussi 69 to sit out upcoming shows",
+              "https://blabbermouth.net/news/the-69-eyes-drummer-jussi-69-to-sit-out-upcoming-shows-after-being-diagnosed-with-viral-meningitis"
+            ]
+          ]
+        },
+        {
+          "tag": "Competition",
+          "headline": "Jahdiel Aviles wins Zildjian US Young Drummer of the Year",
+          "body": [
+            "Ten finalists played the live final on October 11 at Ingram Hall, Vanderbilt University's Blair School of Music in Nashville, in front of a panel that included Jay Weinberg, Keith Carlock, Ginger Hamilton and JJ Wallace. Zildjian's winner video names Jahdiel Aviles as the 2026 US Young Drummer of the Year."
+          ],
+          "sources": [
+            [
+              "Blair School of Music: 2026 finals announcement",
+              "https://blair.vanderbilt.edu/2026/10/02/zildjian-us-young-drummer-of-the-year-2026-finals/"
+            ],
+            [
+              "Zildjian on YouTube: 2026 US Young Drummer of the Year winner",
+              "https://www.youtube.com/watch?v=ipkBoxjJspk"
+            ]
+          ]
+        },
+        {
+          "tag": "In memoriam",
+          "headline": "Nigel Durham, 61",
+          "body": [
+            "Former Saxon drummer Nigel Durham has died at 61. Saxon announced it on October 24; no cause was given. Durham was Saxon's drummer from 1987 to 1988, replacing Nigel Glockler, and played on <em>Destiny</em> (1988). He later recorded with Oliver/Dawson Saxon and joined Morpheus Rising in 2013. Glockler wrote that he would see his friend on the other side."
+          ],
+          "sources": [
+            [
+              "Blabbermouth (Oct. 25, 2026): Former Saxon drummer Nigel Durham dead at 61",
+              "https://blabbermouth.net/news/former-saxon-drummer-nigel-durham-dead-at-61"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hspot",
+      "type": "spotlight",
+      "label": "Drummer Spotlight",
+      "tone": "bz",
+      "image": "krupa",
+      "kicker": "Historical",
+      "headline": "Gene Krupa: the man who moved the drums to the front",
+      "dek": "Born January 15, 1909. Died October 16, 1973, 53 years ago last month.",
+      "body": [
+        "Eugene Bertram Krupa was born in Chicago, the youngest of nine children of Polish Catholic parents who hoped he would become a priest. He tried a year at Saint Joseph's College, decided it was not his calling, studied with Sanford Moeller, and made his first records in 1927 with Red McKenzie and Eddie Condon.",
+        "In December 1934 he joined Benny Goodman, and his tom-tom passages on Goodman's 1937 &ldquo;Sing, Sing, Sing&rdquo; were the first extended drum solos recorded commercially. Before that, the drummer kept time at the back. After it, the drummer was a star. He left Goodman shortly after the Carnegie Hall concert of January 1938 to lead his own orchestra.",
+        "His fingerprints are on the kit you play. He was Slingerland's first endorser and pushed the company to build toms with tuneable top and bottom heads. With Avedis Zildjian he developed the modern hi-hat and helped standardise the names ride, crash and splash. One of his Slingerland bass drums is in the Smithsonian.",
+        "The life was not smooth. A falsified marijuana charge in 1943 brought a short jail sentence and broke up his band. He rebuilt, staged drum battles with Buddy Rich (their September 1952 Carnegie Hall set came out on Verve as <em>The Drum Battle</em>), and in 1954 opened a drum school with Cozy Cole whose students included Peter Criss and Jerry Nolan. He died in Yonkers, New York, in 1973, at 64. Five years later he became the first drummer inducted into the Modern Drummer Hall of Fame."
+      ],
+      "facts": [
+        [
+          "1937",
+          "Sing, Sing, Sing"
+        ],
+        [
+          "1952",
+          "The Drum Battle with Buddy Rich"
+        ],
+        [
+          "1978",
+          "first in the MD Hall of Fame"
+        ]
+      ],
+      "sources": [
+        [
+          "Wikipedia: Gene Krupa",
+          "https://en.wikipedia.org/wiki/Gene_Krupa"
+        ]
+      ]
+    },
+    {
+      "id": "gear",
+      "type": "gear",
+      "label": "Gear & Tech",
+      "tone": "c",
+      "items": [
+        {
+          "tag": "Recording &amp; streaming",
+          "headline": "Alesis Kitstream",
+          "body": [
+            "Announced October 27 and available now at US$399. Kitstream is a single unit that mounts on the bass drum hoop, with a built-in stereo mic and a kick trigger, so there is no separate module. It adds 500 onboard sounds, reverb, compression and EQ on knobs, a USB-C audio and MIDI interface for recording or going live, Bluetooth and aux inputs for backing tracks, and a 1/4-inch input for a vocal or extra drum mic. It ships with Ableton Live Lite and 90 days of Drumeo.",
+            "digitalDrummer reads it as a sign of a booming category: Medeli recently entered it too, and Yamaha announced on October 15 that its EAD50 won the Grand Award at Japan's Good Design Award 2026. We have not tested Kitstream. One hoop-mounted stereo mic will hear your room as much as your kit, so listen before you sell your overheads."
+          ],
+          "specs": [
+            "US$399",
+            "Stereo mic + kick trigger",
+            "USB-C audio/MIDI",
+            "1/4-inch mic input"
+          ],
+          "sources": [
+            [
+              "digitalDrummer (Oct. 27, 2026): Alesis joins EAD race",
+              "https://digitaldrummermag.com/2026/10/27/alesis-joins-ead-race/"
+            ],
+            [
+              "Alesis press release via MusicPlayers.com",
+              "https://musicplayers.com/2026/10/alesis-drums-introduces-kitstream-an-all-in-one-recording-streaming-and-content-creation-system-for-acoustic-drummers/"
+            ],
+            [
+              "Yamaha (Oct. 15, 2026): EAD50 wins Good Design Grand Award",
+              "https://www.yamaha.com/en/news_release/2026/26101501/"
+            ]
+          ]
+        },
+        {
+          "tag": "Electronic kits",
+          "headline": "Gretsch Catalina EVO",
+          "body": [
+            "Gretsch's first electronic kit, launched October 22, and it looks like a Gretsch: full-size Catalina shells with 3-ply mesh heads, a real hi-hat with a bottom cymbal, and 3-zone cymbals. The module's samples come from Gretsch USA Custom, Brooklyn and Broadkaster kits, with selectable mic layers including snare-bottom and subkick.",
+            "Two configurations: J484 (18-inch kick, 10 and 12) and F405 (20-inch kick, 10, 12 and 14), in Black Sparkle or Walnut Glaze, with an Explorer hardware pack. USB audio and MIDI plus four direct outputs make it workable on stream. The announcements we read did not give a price, so check a dealer."
+          ],
+          "specs": [
+            "Full-size shells",
+            "Real bottom hi-hat",
+            "USB audio/MIDI",
+            "4 direct outs"
+          ],
+          "sources": [
+            [
+              "Drumming News Network (Oct. 22, 2026): Gretsch launches Catalina EVO",
+              "https://www.drummingnewsnetwork.com/gretsch-drums-launches-e-drum-series-catalina-evo/"
+            ],
+            [
+              "Gretsch: Catalina EVO",
+              "https://gretschdrums.com/edrums/catalina-evo"
+            ]
+          ]
+        },
+        {
+          "tag": "Electronic kits",
+          "headline": "Roland TD-07DMK2 and TD-07KV2",
+          "body": [
+            "Roland refreshed its entry-level V-Drums on October 15. Both five-piece kits get snare and tom pads from the V-Drums 3 Series, a freestanding KD-10 kick pad, a rack with many parts pre-installed, an updated coach mode and Melodics Drum Pass lessons. The KV2 has larger pads and two crashes; the DMK2 is the compact one, with an arm for a second crash later. US prices: $899.99 and $1,099.99."
+          ],
+          "specs": [
+            "DMK2: $899.99",
+            "KV2: $1,099.99",
+            "V-Drums 3 Series pads",
+            "Bluetooth"
+          ],
+          "sources": [
+            [
+              "Music Instrument News (Oct. 15, 2026): Roland updates the TD-07 series",
+              "https://www.musicinstrumentnews.co.uk/2026/10/15/roland-updates-the-popular-td-07-series-v-drums-lineup/"
+            ]
+          ]
+        },
+        {
+          "tag": "Cymbals",
+          "headline": "Sabian effects: Stratus Zero, AA Holy China, Alto Stax, HHX Complex Splash",
+          "body": [
+            "Four small, fast models. The 14-inch Stratus Zero has an aero-style cutout pattern. The 14-inch AA Holy China has a raw bell and 12 sets of triple holes, in natural or brilliant. The Stratus Alto Stax pairs those two as a ready-made stack. The 8-inch HHX Complex Splash is extra-thin and dark. If your stream mix struggles with long cymbal wash, short effects like these are easier to tame than another big crash."
+          ],
+          "specs": [
+            "14\" Stratus Zero",
+            "14\" AA Holy China",
+            "14\" Alto Stax",
+            "8\" HHX Complex Splash"
+          ],
+          "sources": [
+            [
+              "Sabian: New from Sabian, effects product launch",
+              "https://sabian.com/new-from-sabian-effects-product-launch/"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pick",
+      "type": "pick",
+      "label": "Pick of the Month",
+      "tone": "r",
+      "kicker": "Drummer Pick of the Month",
+      "headline": "Nicko McBrain, &ldquo;Where Eagles Dare&rdquo; (<em>Piece of Mind</em>, 1983)",
+      "dek": "One foot, no excuses.",
+      "body": [
+        "If the memoir sends you back to the records, start with track one of McBrain's first Iron Maiden album. &ldquo;Where Eagles Dare&rdquo; opens <em>Piece of Mind</em>, and the band's 2004 documentary uses it to show what McBrain does with a single bass drum pedal and fast tom fills. Bruce Dickinson has said McBrain refused to use a double pedal on it because he considered them &ldquo;undrummerish&rdquo;.",
+        "Listen three times. First for the song. Second only for the kick, and remember that the speed you hear is one foot. Third only for the toms: count where each fill starts and where it lands. Then set a metronome slower than you think you need and try one bar of the kick part. Two pedals would be easier. That was never the point."
+      ],
+      "sources": [
+        [
+          "Wikipedia: Nicko McBrain (Artistry)",
+          "https://en.wikipedia.org/wiki/Nicko_McBrain"
+        ],
+        [
+          "Wikipedia: Piece of Mind",
+          "https://en.wikipedia.org/wiki/Piece_of_Mind"
+        ]
+      ]
+    },
+    {
+      "id": "lesson",
+      "type": "news",
+      "label": "Drum Lesson",
+      "tone": "g",
+      "items": [
+        {
+          "tag": "Step 1 &middot; Hands only",
+          "headline": "The single paradiddle on a pad",
+          "body": [
+            "The sticking is R L R R, L R L L. Play it as sixteenth notes on a pad or a pillow, with a metronome at a tempo where every note comes out even. Accent only the first note of each group of four. The Percussive Arts Society's advice for every rudiment applies here: start slow, speed up, then slow back down."
+          ],
+          "sources": [
+            [
+              "Percussive Arts Society: International Drum Rudiments",
+              "https://pas.org/rudiments/"
+            ]
+          ]
+        },
+        {
+          "tag": "Step 2 &middot; Split the hands",
+          "headline": "Right hand to the hi-hat, left to the snare",
+          "body": [
+            "Keep the same sticking, but every R now goes on the closed hi-hat and every L on the snare. Keep the unaccented snare notes quiet, almost ghost notes. The accents land on the hi-hat on beat 1 and on the snare on beat 2, and suddenly the rudiment sounds like a groove."
+          ],
+          "sources": [
+            [
+              "Percussive Arts Society: International Drum Rudiments",
+              "https://pas.org/rudiments/"
+            ]
+          ]
+        },
+        {
+          "tag": "Step 3 &middot; Add the foot",
+          "headline": "Bass drum on 1 and 3",
+          "body": [
+            "One paradiddle covers two beats, so play it twice per bar. Add the bass drum with the first note of each paradiddle, on beats 1 and 3. The left-hand accents now fall on beats 2 and 4: that is a backbeat. Play eight bars without stopping before you speed up."
+          ],
+          "sources": [
+            [
+              "Percussive Arts Society: International Drum Rudiments",
+              "https://pas.org/rudiments/"
+            ]
+          ]
+        },
+        {
+          "tag": "Step 4 &middot; Make it a fill",
+          "headline": "Move the right hand to the floor tom",
+          "body": [
+            "Play three bars of the groove from Step 3. In bar four, move the right hand from the hi-hat to the floor tom, keep the left on the snare, and play the same paradiddles as a fill. Crash with the kick on the next beat 1. If the crash arrives late, the fill was rushed, not slow."
+          ],
+          "sources": [
+            [
+              "Percussive Arts Society: International Drum Rudiments",
+              "https://pas.org/rudiments/"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "streamers",
+      "type": "news",
+      "label": "Streamer Scene",
+      "tone": "c",
+      "items": [
+        {
+          "tag": "Twitch &middot; 81,876 followers",
+          "headline": "<a href=\"https://www.twitch.tv/smoothmcgroove\" target=\"_blank\" rel=\"noopener\">SmoothMcGroove</a>",
+          "body": [
+            "Video-game music on drums. The channel has been on Twitch since April 2013, and its current stream title is simply &ldquo;VGM drum stream&rdquo;. It went live 11 times in the 30 days to October 28, about three hours a session, all in the Music category."
+          ],
+          "sources": [
+            [
+              "SullyGnome: SmoothMcGroove (read Oct. 28, 2026)",
+              "https://sullygnome.com/channel/smoothmcgroove"
+            ]
+          ]
+        },
+        {
+          "tag": "Twitch &middot; 37,260 followers",
+          "headline": "<a href=\"https://www.twitch.tv/davidfrankdrums\" target=\"_blank\" rel=\"noopener\">davidfrankdrums</a>",
+          "body": [
+            "The workhorse of this list: 89 hours in the Music category in the 30 days to October 28, in sessions of roughly four hours most weeknights, starting around 9:30 p.m. Eastern. A sub, resub or gift buys a song request, and five or more gifted subs skip the queue."
+          ],
+          "sources": [
+            [
+              "SullyGnome: davidfrankdrums (read Oct. 28, 2026)",
+              "https://sullygnome.com/channel/davidfrankdrums"
+            ]
+          ]
+        },
+        {
+          "tag": "Twitch &middot; 2,359 followers",
+          "headline": "<a href=\"https://www.twitch.tv/grundyonthedrums\" target=\"_blank\" rel=\"noopener\">GRUNDYontheDRUMS</a>",
+          "body": [
+            "On Twitch since 2016, with 37 hours of Music in the 30 days to October 28. The current title advertises Saturday party jams and drums for viewers, with text-to-speech, sub animations and chat commands built into the show. A small channel that treats the overlay as part of the kit."
+          ],
+          "sources": [
+            [
+              "SullyGnome: GRUNDYontheDRUMS (read Oct. 28, 2026)",
+              "https://sullygnome.com/channel/grundyonthedrums"
+            ]
+          ]
+        },
+        {
+          "tag": "Twitch &middot; 2,143 followers",
+          "headline": "<a href=\"https://www.twitch.tv/drummermiles\" target=\"_blank\" rel=\"noopener\">DrummerMiles</a>",
+          "body": [
+            "&ldquo;I drum your requests, any song, any genre&rdquo; is the current stream title, and the schedule backs it up: 19 streams and 59 hours in the 30 days to October 28, just over three hours each. An average of 19 viewers is exactly the size of room where your request actually gets played."
+          ],
+          "sources": [
+            [
+              "SullyGnome: DrummerMiles (read Oct. 28, 2026)",
+              "https://sullygnome.com/channel/drummermiles"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prime-sub",
+      "type": "streamer",
+      "label": "Free Sub",
+      "tone": "r",
+      "kicker": "Costs you nothing",
+      "headline": "Your free monthly Twitch sub: put it on the drums",
+      "body": [
+        "If you have Amazon Prime, you get one free Twitch channel subscription every month, and most people never use it. It costs you nothing, it does not auto-renew, and it tells a streamer you showed up.",
+        "To use it: link your Amazon and Twitch accounts once, open a channel in a web browser, press Subscribe, tick <strong>Use Prime Sub</strong>, then confirm. On an iPhone, do it in Safari. The channel needs to be a Twitch Partner or Affiliate, and because it does not auto-renew, you re-sub by hand each month. The button below takes you to the sub page on Twitch, where you finish the steps.",
+        "This month, spend it on a drummer you want to keep seeing. If you want to aim it at my chair, my channel is <a href=\"https://www.twitch.tv/drummerjawkneed\" target=\"_blank\" rel=\"noopener\">DrummerJawkneeD</a>, and the Streamer Scene above has four more worth your free sub."
+      ],
+      "link": "https://www.twitch.tv/subs/drummerjawkneed",
+      "cta": "Open my Twitch sub page",
+      "sources": [
+        [
+          "Amazon Customer Service: Get a free Twitch channel subscription with Prime",
+          "https://www.amazon.com/gp/help/customer/display.html?nodeId=TRUblLscpKkaWkNtDn"
+        ],
+        [
+          "Twitch Help: How to Subscribe",
+          "https://help.twitch.tv/s/article/how-to-subscribe?language=en_US"
+        ]
+      ]
+    },
+    {
+      "id": "culture",
+      "type": "culture",
+      "label": "Drum Culture",
+      "tone": "c",
+      "items": [
+        {
+          "headline": "Postpone the show, not the drummer",
+          "body": [
+            "Anika Nilles played San Jose with the flu on October 15. Two nights later Rush moved the next show to December rather than send her out sick again. That was the right call, and it should be normal.",
+            "Drummers are the athletes of the band. A singer with a cold can lean on the crowd. A drummer with a fever still has to play two sets of Neil Peart's parts. Fans lose a night; a drummer who plays hurt can lose a season. Bands that can afford to reschedule should do it, and fans should back them when they do."
+          ],
+          "sources": [
+            [
+              "Blabbermouth: Rush postpone San Jose",
+              "https://blabbermouth.net/news/rush-postpones-tonights-concert-in-san-jose-after-drummer-anika-nilles-falls-ill"
+            ]
+          ]
+        },
+        {
+          "headline": "Learn the set like a drum tech",
+          "body": [
+            "When Jussi 69 got sick, The 69 Eyes handed the sticks to Vilho Rajala, the drum tech who, in Jussi's words, knows the songs by heart. When Neil Sanderson's arm gave out, Three Days Grace had Shaun Foist ready to cover a whole tour.",
+            "Request streamers are training for exactly this. Every night you learn a song you did not pick, fast, in front of people. Keep a list of everything you can play cold. One day somebody will need it."
+          ],
+          "sources": [
+            [
+              "Blabbermouth: Jussi 69 to sit out upcoming shows",
+              "https://blabbermouth.net/news/the-69-eyes-drummer-jussi-69-to-sit-out-upcoming-shows-after-being-diagnosed-with-viral-meningitis"
+            ],
+            [
+              "Blabbermouth: Neil Sanderson to undergo emergency surgery",
+              "https://blabbermouth.net/news/three-days-grace-drummer-neil-sanderson-to-undergo-emergency-surgery-for-ruptured-bicep-tendon"
+            ]
+          ]
+        },
+        {
+          "headline": "The mic stand is moving to the kick hoop",
+          "body": [
+            "Yamaha's EAD systems put a mic and trigger sensor on the bass drum hoop. Medeli and now Alesis are selling the next step: no separate module, just one box on the hoop with a stereo mic, a trigger and a USB cable. For a drummer who streams from a spare room, that removes the two most painful parts of the job, the mic stands and the mixer.",
+            "But a box that hears everything also hears your room, your cymbals and your neighbour's dog. Use one as a starting point, not a finish line. Record ten minutes, listen on headphones and on a phone speaker, and only then decide which mics you can live without."
+          ],
+          "sources": [
+            [
+              "digitalDrummer: Alesis joins EAD race",
+              "https://digitaldrummermag.com/2026/10/27/alesis-joins-ead-race/"
+            ]
+          ]
+        },
+        {
+          "headline": "Gene Krupa was the first drum streamer",
+          "body": [
+            "Before Krupa, the drummer was background. After &ldquo;Sing, Sing, Sing&rdquo; and the drum battles with Buddy Rich, the drummer was the show.",
+            "Every drum channel that points a camera at the kit and invites a crowd is working in the lane Krupa opened. Showmanship is not the opposite of musicianship. Krupa had both, and he helped shape the toms and hi-hats you are playing on."
+          ],
+          "sources": [
+            [
+              "Wikipedia: Gene Krupa",
+              "https://en.wikipedia.org/wiki/Gene_Krupa"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "work",
+      "type": "work",
+      "label": "Work With DJD",
+      "tone": "c",
+      "items": [
+        {
+          "tag": "Live booking &middot; Booked via TidyCal",
+          "headline": "Build a Concert: $95 for 1 hour 30 minutes",
+          "body": [
+            "A custom drum show live on stream: you pick the songs, played on a Roland TD-50 with full band backing tracks and multiple cameras."
+          ]
+        },
+        {
+          "tag": "1-on-1 &middot; Booked via TidyCal",
+          "headline": "Drum lessons: $35 per hour",
+          "body": [
+            "Song-based lessons for beginners through advanced players: you pick the tracks, DrummerJawkneeD teaches the parts."
+          ]
+        },
+        {
+          "tag": "1-on-1 &middot; Booked via TidyCal",
+          "headline": "Streamer consultation: $55 per hour",
+          "body": [
+            "Streaming setup, OBS, content strategy and brand building, with limited spots each month."
+          ]
+        }
+      ],
+      "note": "These are the three bookable services listed on drummerjawkneed.com when we checked on October 28, 2026. Prices and availability are set on the booking page."
+    },
+    {
+      "id": "newsletter",
+      "type": "newsletter",
+      "label": "Newsletter",
+      "tone": "r",
+      "kicker": "Free &middot; Monthly &middot; No spam",
+      "headline": "Get December in your inbox",
+      "body": "A Drummer Spotlight, a Pick of the Month, a Drum Lesson, Streamer Scene and the month's verified drum news, on the first of every month."
+    },
+    {
+      "id": "corr",
+      "type": "corrections",
+      "label": "Corrections",
+      "tone": "g",
+      "items": [
+        "<b>October, This Month (clarification).</b> We wrote that St. Catharines expects to finish the Peart memorial &ldquo;next year.&rdquo; The city's own wording is that staff tentatively expect it to open in late 2027. We found no errors in the October issue while re-checking its follow-up stories for this one. If you spot one, tell us."
+      ]
+    },
+    {
+      "id": "next",
+      "type": "next",
+      "label": "What's Next",
+      "tone": "r",
+      "items": [
+        {
+          "tag": "December issue",
+          "headline": "All four departments return",
+          "body": [
+            "Drummer Spotlight, Pick of the Month, a new rudiment in the Drum Lesson, and Streamer Scene with four different channels and counts read inside the seven-day window."
+          ]
+        },
+        {
+          "tag": "December issue",
+          "headline": "Kramer at the Hollywood Bowl",
+          "body": [
+            "What happened when Joey Kramer sat back down with Aerosmith on October 29 and November 1, from published reports and setlists."
+          ]
+        },
+        {
+          "tag": "December issue",
+          "headline": "The Peart memorial check-in",
+          "body": [
+            "We will check with the City of St. Catharines again and report what we find, including if there is nothing new."
+          ]
+        }
+      ]
+    }
+  ]
+}
